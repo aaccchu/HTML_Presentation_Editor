@@ -6,6 +6,8 @@
 
 [打开 GitHub Pages](https://aaccchu.github.io/HTML_Presentation_Editor/)
 
+![HTML Presentation Editor 预览](showcase.png)
+
 ## 直接下载
 
 [下载 HTML 模板文件](https://github.com/aaccchu/HTML_Presentation_Editor/raw/refs/heads/main/index.html)
