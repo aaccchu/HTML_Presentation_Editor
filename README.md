@@ -1,4 +1,4 @@
-# HTML Presentation Template
+# HTML Presentation Editor
 
 一个可直接在浏览器打开和编辑的 19 页通用 HTML 演示模板。
 
