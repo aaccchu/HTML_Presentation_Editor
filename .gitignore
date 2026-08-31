@@ -1,0 +1,8 @@
+.DS_Store
+*.backup
+*.bak
+*.tmp
+node_modules/
+.env
+.env.*
+!.env.example

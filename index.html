@@ -1,0 +1,1451 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Premium Presentation Design System · 19 Page Templates</title>
+<style>
+:root,.export-root{
+  --paper:#fff;--paper-warm:#fbfaf7;--surface:#f5f7fa;--surface-2:#eef2f6;--ink:#142238;--ink-soft:#4d5d72;--ink-faint:#8190a3;
+  --primary:#2057a5;--primary-deep:#173e78;--primary-pale:#eaf1fb;--secondary:#6d63c8;--positive:#2f8064;--warning:#c9782c;--danger:#b94747;
+  --line:#dce3eb;--line-strong:#bdc9d6;--space-1:4px;--space-2:8px;--space-3:12px;--space-4:16px;--space-5:24px;--space-6:32px;--space-7:48px;--space-8:64px;
+  --radius-sm:4px;--radius-md:8px;--radius-lg:12px;--radius-pill:999px;--shadow-subtle:0 4px 16px rgba(20,34,56,.06);--shadow-panel:0 14px 36px rgba(20,34,56,.12);
+  --font-cn:"Noto Sans SC","Source Han Sans SC","PingFang SC","Microsoft YaHei",sans-serif;--font-en:Inter,"SF Pro Display","Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box}html,body{height:100%;margin:0}body{overflow:hidden;background:#e9edf2;color:var(--ink);font-family:var(--font-cn);font-size:14px}button,input,select,textarea{font:inherit}.app{height:100%;display:grid;grid-template-columns:252px minmax(0,1fr);grid-template-rows:minmax(0,1fr);background:linear-gradient(120deg,#f4f6f8,#e8edf3)}
+.sidebar{border-right:1px solid var(--line);background:rgba(255,255,255,.9);padding:18px 14px;display:flex;flex-direction:column;min-width:0}.brand{display:flex;gap:10px;align-items:center;padding:2px 8px 16px}.brand-mark{width:28px;height:28px;border-radius:7px;background:var(--primary);color:white;display:grid;place-items:center;font-weight:800;font-size:13px}.brand-title{font-weight:800;letter-spacing:.01em}.brand-sub{color:var(--ink-faint);font-size:10px;margin-top:2px}.rail-label{font-size:10px;text-transform:uppercase;color:var(--ink-faint);letter-spacing:.12em;padding:12px 8px 7px}.thumbs{overflow:auto;display:flex;flex-direction:column;gap:8px;padding-bottom:12px}.thumb{display:flex;flex-direction:column;gap:7px;padding:7px;border:1px solid transparent;background:transparent;border-radius:8px;cursor:pointer;text-align:left;color:var(--ink)}.thumb:hover{background:#f4f7fb}.thumb.active{background:var(--primary-pale);border-color:#c6d8ef}.thumb-head{display:flex;gap:8px;align-items:center;min-width:0}.thumb-no{font-family:var(--font-en);font-size:10px;font-weight:800;color:var(--primary);font-variant-numeric:tabular-nums}.thumb-title{font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.thumb-preview{position:relative;display:block;width:100%;aspect-ratio:16/9;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:5px}.thumb-frame{position:absolute;top:0;left:0;width:960px;height:540px;transform-origin:0 0;overflow:hidden;pointer-events:none}.thumb-frame .slide{display:block !important}.thumb-frame .reveal{opacity:1 !important;transform:none !important;transition:none !important}.sidebar-foot{margin-top:auto;border-top:1px solid var(--line);padding:12px 8px 0;color:var(--ink-faint);font-size:10px;line-height:1.6}.workspace{min-width:0;display:flex;flex-direction:column}.topbar{height:58px;display:flex;align-items:center;justify-content:space-between;padding:0 18px;border-bottom:1px solid var(--line);background:rgba(255,255,255,.86)}.topbar h1{font-size:14px;margin:0;font-weight:800}.topbar p{font-size:10px;color:var(--ink-faint);margin:3px 0 0}.top-actions{display:flex;gap:7px;align-items:center}.btn{border:1px solid var(--line);background:#fff;color:var(--ink-soft);border-radius:6px;padding:7px 10px;cursor:pointer;font-size:11px}.btn:hover{border-color:var(--primary);color:var(--primary)}.btn.primary{background:var(--primary);color:#fff;border-color:var(--primary)}.btn.icon{width:30px;padding:7px 0;text-align:center}.stage-area{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;padding:20px}.stage-frame{position:relative;width:min(100%,calc((100vh - 116px)*16/9));aspect-ratio:16/9;box-shadow:0 24px 80px rgba(20,34,56,.16);background:#fff}.stage{position:absolute;inset:0;background:var(--paper);overflow:hidden;transform-origin:0 0;transition:transform .12s ease;will-change:transform;touch-action:none}.deck-progress{position:absolute;z-index:48;left:7%;right:7%;top:2.8%;height:3px;background:rgba(20,34,56,.10);overflow:hidden}.deck-progress i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--primary),var(--danger));transition:width .35s ease}.slide{position:absolute;inset:0;display:none;background:var(--paper);overflow:hidden}.slide.active{display:block}.slide-inner{position:absolute;inset:0;padding:6.5% 7% 7%;}.slide.imported-slide{min-height:0!important;height:100%!important;max-height:100%!important;box-sizing:border-box}.slide.imported-slide>.imported-slide-inner{transform:translate(var(--slide-content-offset-x,0px),var(--slide-content-offset-y,0px)) scale(var(--slide-content-scale,1));transform-origin:0 0;overflow:visible;pointer-events:none;will-change:transform}.slide.imported-slide>.imported-slide-inner>*{pointer-events:auto}.slide.dark{background:var(--primary-deep);color:#fff}.slide.dark .ink-soft,.slide.dark .caption{color:#c7d6e9}.slide.dark .line{border-color:rgba(255,255,255,.24)}
+/* Typography scale */
+.type-hero{font-size:clamp(30px,4.4vw,64px);line-height:1.08;font-weight:750;letter-spacing:-.045em}.type-page-title{font-size:clamp(21px,2.2vw,34px);line-height:1.12;font-weight:750;letter-spacing:-.03em}.type-section-title{font-size:clamp(15px,1.5vw,24px);line-height:1.2;font-weight:700}.type-subtitle{font-size:clamp(12px,1.1vw,18px);line-height:1.45;color:var(--ink-soft)}.type-body{font-size:clamp(10px,.9vw,15px);line-height:1.62;color:var(--ink-soft)}.type-caption{font-size:clamp(8px,.7vw,11px);line-height:1.45;color:var(--ink-faint)}.type-metric{font-family:var(--font-en);font-size:clamp(28px,3.3vw,52px);line-height:1;font-weight:750;letter-spacing:-.05em;color:var(--ink)}
+/* Keep template typography tied to the presentation canvas, not the browser viewport. */.stage{--presentation-font-scale:1}.stage .type-hero:not([data-user-font-size]){font-size:clamp(calc(30px * var(--presentation-font-scale,1)),calc(4.4 * var(--presentation-font-scale,1) * 1vw),calc(64px * var(--presentation-font-scale,1)))}.stage .type-page-title:not([data-user-font-size]){font-size:clamp(calc(21px * var(--presentation-font-scale,1)),calc(2.2 * var(--presentation-font-scale,1) * 1vw),calc(34px * var(--presentation-font-scale,1)))}.stage .type-section-title:not([data-user-font-size]){font-size:clamp(calc(15px * var(--presentation-font-scale,1)),calc(1.5 * var(--presentation-font-scale,1) * 1vw),calc(24px * var(--presentation-font-scale,1)))}.stage .type-subtitle:not([data-user-font-size]){font-size:clamp(calc(12px * var(--presentation-font-scale,1)),calc(1.1 * var(--presentation-font-scale,1) * 1vw),calc(18px * var(--presentation-font-scale,1)))}.stage .type-body:not([data-user-font-size]){font-size:clamp(calc(10px * var(--presentation-font-scale,1)),calc(.9 * var(--presentation-font-scale,1) * 1vw),calc(15px * var(--presentation-font-scale,1)))}.stage .type-caption:not([data-user-font-size]){font-size:clamp(calc(8px * var(--presentation-font-scale,1)),calc(.7 * var(--presentation-font-scale,1) * 1vw),calc(11px * var(--presentation-font-scale,1)))}.stage .type-metric:not([data-user-font-size]){font-size:clamp(calc(28px * var(--presentation-font-scale,1)),calc(3.3 * var(--presentation-font-scale,1) * 1vw),calc(52px * var(--presentation-font-scale,1)))}.type-label{font-size:clamp(8px,.7vw,11px);font-weight:750;letter-spacing:.08em;text-transform:uppercase;color:var(--primary)}.eyebrow{font-size:clamp(8px,.7vw,11px);font-weight:800;letter-spacing:.1em;color:var(--primary);text-transform:uppercase}.muted{color:var(--ink-faint)}.ink-soft{color:var(--ink-soft)}.accent{color:var(--primary)}.red{color:var(--danger)}.green{color:var(--positive)}.purple{color:var(--secondary)}
+
+/* Premium layout hardening: every grid column must be allowed to shrink without
+   forcing long Chinese strings into one-character columns. */
+.grid-2,.grid-3,.grid-4,.arch,.decision,.compare,.timeline,.metric-grid{min-width:0}
+.grid-2>*,.grid-3>*,.grid-4>*,.arch>*,.decision>*,.compare>*,.timeline>*,.metric-grid>*{min-width:0}
+.grid-2{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.grid-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.type-page-title,.type-section-title,.type-body,.type-caption,.action b,.conclusion-kicker{overflow-wrap:anywhere;word-break:normal}
+
+/* Conclusion page: a deliberate close, not a loose two-column placeholder. */
+.conclusion-slide .slide-inner{padding-left:7.5%;padding-right:7.5%;padding-bottom:7.2%}
+.conclusion-slide .slide-head{margin-bottom:0;align-items:flex-start}
+.conclusion-slide .slide-head .title-wrap{max-width:min(78%,780px)}
+.conclusion-slide .conclusion-layout{display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);gap:5.8%;align-items:start;margin-top:5.2%;min-height:0}
+.conclusion-slide .conclusion-lead{min-width:0;padding:8px 0 10px}
+.conclusion-slide .conclusion-kicker{display:flex;align-items:center;gap:10px;margin-bottom:18px;font:800 clamp(10px,.78vw,12px)/1 var(--font-en);letter-spacing:.12em;color:var(--primary);text-transform:uppercase}
+.conclusion-slide .conclusion-kicker:before{content:"";width:34px;height:3px;background:var(--danger);border-radius:2px;flex:0 0 auto}
+.conclusion-slide .conclusion-lead .type-hero{font-size:clamp(36px,4.1vw,62px);line-height:1.03;letter-spacing:-.055em}
+.conclusion-slide .conclusion-lead .type-body{max-width:31em;margin-top:22px;font-size:clamp(13px,1.05vw,17px);line-height:1.65}
+.conclusion-slide .conclusion-lead:after{content:"";display:block;width:100px;height:1px;background:var(--line-strong);margin-top:28px}
+.conclusion-slide .conclusion-actions{min-width:0;background:linear-gradient(135deg,#f5f8fc 0%,#eef3f8 100%);border:1px solid #cfdae7;border-radius:14px;padding:10px 20px;box-shadow:0 14px 30px rgba(20,34,56,.08);margin-top:1px}
+.conclusion-slide .conclusion-actions-head{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:7px 2px 12px;border-bottom:1px solid #d5e0eb;color:var(--ink-soft);font:800 clamp(10px,.76vw,12px)/1 var(--font-en);letter-spacing:.11em;text-transform:uppercase}
+.conclusion-slide .conclusion-actions-head span:last-child{color:var(--primary);font-weight:700;letter-spacing:.04em}
+.conclusion-slide .action-list{display:grid;gap:0}
+.conclusion-slide .action{display:grid;grid-template-columns:40px minmax(0,1fr) 24px;gap:14px;align-items:center;min-height:84px;padding:14px 2px;border-bottom:1px solid #d5e0eb}
+.conclusion-slide .action:last-child{border-bottom:0}
+.conclusion-slide .action .number-badge{width:36px;min-width:36px;height:28px;border-radius:7px;font-size:12px;box-shadow:0 4px 10px rgba(32,87,165,.18)}
+.conclusion-slide .action-copy{min-width:0}
+.conclusion-slide .action b{display:block;color:var(--ink);font-size:clamp(15px,1.18vw,19px);line-height:1.3;font-weight:750;letter-spacing:-.02em}
+.conclusion-slide .action .type-caption{display:block;margin-top:5px;font-size:clamp(11px,.82vw,13px);line-height:1.45;color:var(--ink-soft)}
+.conclusion-slide .action .action-arrow{justify-self:end;font:800 22px/1 var(--font-en);color:var(--danger)}
+.conclusion-slide .footer{left:7.5%;right:7.5%;bottom:3.2%}
+@media(max-width:720px){.conclusion-slide .conclusion-layout{grid-template-columns:1fr;gap:24px;margin-top:5%}.conclusion-slide .conclusion-actions{max-width:none}.conclusion-slide .conclusion-lead .type-hero{font-size:clamp(34px,8vw,56px)}}
+@media(max-height:760px) and (min-width:901px){.conclusion-slide .slide-inner{padding-top:5.5%;padding-bottom:6.8%}.conclusion-slide .conclusion-layout{margin-top:3.8%;gap:4.8%}.conclusion-slide .conclusion-lead .type-hero{font-size:clamp(34px,3.7vw,54px)}.conclusion-slide .conclusion-lead .type-body{margin-top:16px}.conclusion-slide .action{min-height:72px;padding:10px 2px}.conclusion-slide .conclusion-actions-head{padding-bottom:9px}}
+
+/* system primitives */
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:3.2%}.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:2.2%}.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:1.8%}.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius-md);padding:18px;box-shadow:var(--shadow-subtle)}.card.soft{background:var(--surface)}.card.blue{background:var(--primary-pale);border-color:#c9d9ed}.card.green{background:#edf6f1;border-color:#cae2d5}.card.orange{background:#fff4e9;border-color:#f0d7bd}.card.purple{background:#f2f0fb;border-color:#ddd8f3}.number-badge{display:inline-grid;place-items:center;min-width:27px;height:22px;padding:0 6px;border-radius:5px;background:var(--primary);color:white;font:800 11px var(--font-en)}.rule{height:2px;width:30px;background:var(--primary);margin:14px 0}.hairline{height:1px;background:var(--line)}.pill{display:inline-flex;align-items:center;gap:5px;border:1px solid var(--line);border-radius:var(--radius-pill);padding:4px 8px;color:var(--ink-soft);font-size:10px}.dot{width:7px;height:7px;border-radius:50%;background:var(--primary);display:inline-block}.dot.green{background:var(--positive)}.dot.orange{background:var(--warning)}.dot.purple{background:var(--secondary)}.mini-list{display:grid;gap:8px}.mini-list div{display:flex;justify-content:space-between;gap:8px;border-bottom:1px solid var(--line);padding-bottom:7px}.mini-list div:last-child{border:0}.footer{position:absolute;left:7%;right:7%;bottom:3.2%;display:grid;grid-template-columns:1fr 2fr 1fr;align-items:end;gap:12px;font-size:9px;color:var(--ink-faint)}.footer .center{text-align:center}.footer .right{text-align:right;font:700 10px var(--font-en);color:var(--primary)}.dark .footer{color:#a8bad0}.dark .footer .right{color:#fff}.slide-head{display:flex;justify-content:space-between;align-items:start;margin-bottom:4%}.slide-head .title-wrap{max-width:78%}.section-tag{font:800 10px var(--font-en);letter-spacing:.09em;color:var(--primary);margin-bottom:8px}.editable,[data-editable]{outline:0;cursor:text}.editor-mode .editable:hover,.editor-mode [data-editable]:hover{outline:1px dashed rgba(32,87,165,.45);outline-offset:4px}.selected{outline:2px solid var(--primary)!important;outline-offset:4px}.selected:after{content:"";position:absolute;inset:-7px;border:1px dashed rgba(32,87,165,.35);pointer-events:none}.editor-mode .editable.selected{cursor:move}.editor-mode .editable.selected:not([data-no-text]){cursor:text}.editor-mode .editable.selected[data-no-text]{cursor:move}.editor-mode .editable.is-dragging,.editor-mode .editable.is-resizing,.stage.dragging-element{cursor:grabbing!important}.editor-mode .editable.is-dragging::before,.editor-mode .editable.is-resizing::before{content:"✥ 拖动中";position:absolute;top:-28px;left:0;z-index:20;padding:4px 8px;border-radius:5px;background:var(--primary);color:#fff;font:700 10px/1.2 var(--font-ui);white-space:nowrap;pointer-events:none;box-shadow:0 3px 10px rgba(20,34,56,.18)}.reveal{opacity:0;transform:translateY(7px);transition:opacity .4s ease,transform .4s ease}.slide.reveal-1 .reveal:nth-child(-n+2),.slide.reveal-2 .reveal:nth-child(-n+4),.slide.reveal-3 .reveal:nth-child(-n+7),.slide.reveal-4 .reveal{opacity:1;transform:none}.slide.active .reveal{transition-delay:var(--delay,0ms)}
+/* diagrams / charts */
+.process{display:grid;grid-template-columns:repeat(4,1fr);gap:2.6%;align-items:start}.process-step{position:relative;text-align:center}.process-step:not(:last-child):after{content:"→";position:absolute;right:-20%;top:20%;color:var(--line-strong);font:24px var(--font-en)}.process-icon{width:58px;height:58px;margin:0 auto 12px;border-radius:50%;display:grid;place-items:center;border:1px solid #c9d9ed;background:var(--primary-pale);color:var(--primary);font:700 22px var(--font-en)}.process-icon.green{background:#edf6f1;color:var(--positive);border-color:#cbe4d7}.process-icon.orange{background:#fff4e9;color:var(--warning);border-color:#f1d8bd}.process-icon.purple{background:#f2f0fb;color:var(--secondary);border-color:#ddd8f2}.axis{position:relative;height:190px;border-left:1px solid var(--line-strong);border-bottom:1px solid var(--line-strong);margin:15px 30px 0}.axis:before{content:"";position:absolute;left:0;right:0;bottom:47%;border-top:1px dashed var(--line)}.quad{position:absolute;left:8%;right:3%;top:8%;bottom:8%;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:8px}.quad>div{border-radius:7px;padding:12px;border:1px solid var(--line);font-size:11px}.quad .q1{background:#eef3fb;border-color:#cddbef}.quad .q2{background:#f1effb;border-color:#ddd8f2}.quad .q3{background:#eef7f2;border-color:#d0e6d8}.quad .q4{background:#fff4e9;border-color:#f1dcc4}.timeline{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:3%;padding-top:36px}.timeline:before{content:"";position:absolute;top:22px;left:0;right:0;border-top:1px solid var(--line-strong)}.timeline-item{position:relative}.timeline-item:before{content:"";position:absolute;top:-21px;left:0;width:10px;height:10px;border:2px solid var(--primary);border-radius:50%;background:#fff}.timeline-item:nth-child(2):before{border-color:var(--positive)}.timeline-item:nth-child(3):before{border-color:var(--secondary)}.timeline-item:nth-child(4):before{border-color:var(--warning)}.bars{display:flex;gap:22px;align-items:end;height:150px;padding:0 15px;border-bottom:1px solid var(--line-strong)}.bar-wrap{flex:1;height:100%;display:flex;flex-direction:column;justify-content:end;gap:6px;text-align:center;font-size:10px;color:var(--ink-soft)}.bar{background:var(--primary);min-height:10px;border-radius:4px 4px 0 0}.bar.alt{background:var(--secondary)}.bar.green{background:var(--positive)}.line-chart{position:relative;height:150px;border-left:1px solid var(--line-strong);border-bottom:1px solid var(--line-strong);background:repeating-linear-gradient(to bottom,transparent 0 36px,rgba(220,227,235,.65) 37px 38px)}.line-chart svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}.donut{width:112px;height:112px;border-radius:50%;background:conic-gradient(var(--primary) 0 42%,var(--secondary) 42% 74%,#dce3eb 74% 100%);display:grid;place-items:center}.donut:after{content:"";width:66px;height:66px;border-radius:50%;background:#fff}.metric-card{min-height:126px}.metric-card .trend{font:700 10px var(--font-en);color:var(--positive)}.decision{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2.5%;align-items:stretch}.decision>div{padding:16px;border:1px solid var(--line);border-top:3px solid var(--primary);border-radius:6px;background:#fff}.decision>div:nth-child(2){border-top-color:var(--warning)}.decision>div:nth-child(3){border-top-color:var(--danger)}.arch{display:grid;grid-template-columns:repeat(4,1fr);gap:2.8%;align-items:center}.arch-node{padding:18px 12px;text-align:center;border:1px solid var(--line);border-radius:8px;background:#fff;position:relative}.arch-node:not(:last-child):after{content:"→";position:absolute;right:-23%;top:38%;font:22px var(--font-en);color:var(--line-strong)}.quote{border-left:3px solid var(--primary);padding-left:16px}.action-list{display:grid;gap:10px}.action{display:grid;grid-template-columns:28px 1fr auto;gap:10px;align-items:start;padding:10px 0;border-bottom:1px solid var(--line)}.action:last-child{border-bottom:0}.editable[data-x]{position:absolute}
+.inserted-line{height:0!important;border-top:2px solid var(--primary);min-height:0!important;padding:0!important;background:transparent!important}
+.image-placeholder{position:absolute;display:grid;place-items:center;align-content:center;gap:8px;min-width:24px;min-height:24px;overflow:visible;border:1px dashed var(--line-strong);background:linear-gradient(135deg,rgba(234,241,251,.75),rgba(255,255,255,.9));color:var(--ink-faint);text-align:center}
+.image-placeholder strong{font:800 11px var(--font-en);letter-spacing:.08em;color:var(--primary)}
+.image-placeholder small{font-size:10px;color:var(--ink-faint)}.image-placeholder .uploaded{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:contain;border-radius:inherit;pointer-events:none}.editor-mode .image-placeholder .image-upload-btn{display:block;position:relative;z-index:2}.editor-mode .image-placeholder:not(.selected) .image-upload-btn{display:none}
+.theme-row{display:flex;align-items:center;gap:8px;margin:8px 0 10px;padding:8px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.theme-row label{font-size:9px;color:var(--ink-faint);white-space:nowrap}.theme-row select{flex:1;border:1px solid var(--line);border-radius:5px;padding:6px;background:#fff;color:var(--ink);font-size:11px}
+
+/* editor */
+.editor-panel{flex:0 0 340px;max-width:340px;height:100%;overflow:auto;background:#fff;border-left:1px solid var(--line);box-shadow:-12px 0 28px rgba(20,34,56,.06);padding:18px 16px;display:none;visibility:hidden;pointer-events:none}.editor-mode .editor-panel{display:block;visibility:visible;pointer-events:auto}.editor-panel h3{margin:0 0 4px;font-size:13px}.editor-panel .hint{font-size:10px;color:var(--ink-faint);line-height:1.5;margin:0 0 10px}.format-section-title{grid-column:1/-1;padding:11px 0 2px;border-top:1px solid var(--line);font-size:10px;font-weight:800;letter-spacing:.06em;color:var(--primary);text-transform:uppercase}.stepper{display:grid;grid-template-columns:25px minmax(0,1fr) 25px;gap:3px;align-items:center}.stepper-btn{height:29px;padding:0;border:1px solid var(--line);border-radius:5px;background:var(--surface);color:var(--ink-soft);cursor:pointer;font-size:15px;line-height:1}.stepper-btn:hover{border-color:var(--primary);color:var(--primary);background:var(--primary-pale)}.format-toggle-row{display:flex;gap:5px}.format-toggle{flex:1;height:29px;border:1px solid var(--line);border-radius:5px;background:var(--surface);color:var(--ink-soft);cursor:pointer;font-weight:700}.format-toggle:hover,.format-toggle.active{border-color:var(--primary);color:var(--primary);background:var(--primary-pale)}.editor-panel .field input:disabled,.editor-panel .field textarea:disabled,.editor-panel .field select:disabled{background:#f1f3f6;color:var(--ink-faint);cursor:not-allowed}.editor-panel h3{margin:0 0 4px;font-size:13px}.editor-panel .hint{font-size:10px;color:var(--ink-faint);line-height:1.5;margin:0 0 10px}.field-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px}.field{display:grid;gap:3px}.field.full{grid-column:1/-1}.field label{font-size:9px;color:var(--ink-faint)}.field input,.field select,.field textarea{width:100%;min-width:0;border:1px solid var(--line);border-radius:5px;padding:6px;background:#fff;color:var(--ink);font-size:11px}.field textarea{min-height:58px;resize:vertical}.swatch-row{display:flex;gap:7px}.swatch-row input[type=color]{width:38px;padding:2px;height:29px}.editor-actions{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:10px}.editor-actions button{border:1px solid var(--line);background:#fff;border-radius:5px;padding:7px 5px;font-size:10px;cursor:pointer}.editor-actions button:hover{border-color:var(--primary);color:var(--primary)}.editor-actions .primary{background:var(--primary);border-color:var(--primary);color:#fff}.readout{display:grid;grid-template-columns:1fr 1fr;gap:3px 10px;padding:9px 0;border-top:1px solid var(--line);margin-top:10px}.readout div{display:flex;justify-content:space-between;gap:4px;font-size:9px;color:var(--ink-faint)}.readout b{font-family:var(--font-en);color:var(--ink);font-weight:700}.resize-handle{position:absolute;width:8px;height:8px;border:2px solid #fff;background:var(--primary);border-radius:2px;z-index:5}.rh-nw{left:-5px;top:-5px;cursor:nwse-resize}.rh-n{left:calc(50% - 4px);top:-5px;cursor:ns-resize}.rh-ne{right:-5px;top:-5px;cursor:nesw-resize}.rh-e{right:-5px;top:calc(50% - 4px);cursor:ew-resize}.rh-se{right:-5px;bottom:-5px;cursor:nwse-resize}.rh-s{left:calc(50% - 4px);bottom:-5px;cursor:ns-resize}.rh-sw{left:-5px;bottom:-5px;cursor:nesw-resize}.rh-w{left:-5px;top:calc(50% - 4px);cursor:ew-resize}.stage.cursor-on{cursor:none}.cursor-glow{position:absolute;width:100px;height:100px;border-radius:50%;pointer-events:none;z-index:40;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(32,87,165,.14),rgba(32,87,165,.05) 38%,transparent 70%);mix-blend-mode:multiply}.ripple{position:absolute;width:10px;height:10px;border:2px solid var(--primary);border-radius:50%;transform:translate(-50%,-50%);animation:ripple .65s ease-out forwards;pointer-events:none;z-index:45}@keyframes ripple{to{width:180px;height:180px;opacity:0}}
+@media(max-width:900px){.app{grid-template-columns:1fr;grid-template-rows:minmax(0,1fr)}.sidebar{display:none}.stage-area{padding:8px}.topbar{padding:0 10px}.topbar p{display:none}.editor-panel{flex:0 0 280px;max-width:280px}.stage-frame{width:100%}.sidebar-open{display:none!important}}
+body[data-theme="warm"],.export-root[data-theme="warm"]{--paper:#fffdf8;--surface:#f8f5ef;--primary:#8a4d36;--primary-deep:#583125;--primary-pale:#f7ebe5;--line:#e7ddd6}body[data-theme="ink"],.export-root[data-theme="ink"]{--paper:#f8fafc;--surface:#eef2f6;--primary:#2f8064;--primary-deep:#1e4d42;--primary-pale:#e7f3ee}
+.timer{font-family:var(--font-en);font-variant-numeric:tabular-nums;font-size:11px;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:6px;padding:0 8px;min-width:56px;height:30px;cursor:pointer}.timer:hover{border-color:var(--primary);color:var(--primary)}.page-counter{font-family:var(--font-en);font-variant-numeric:tabular-nums;font-size:11px;color:var(--ink-faint);white-space:nowrap}.help-btn{cursor:help}
+.kbd{display:inline-flex;align-items:center;justify-content:center;min-width:22px;height:22px;padding:0 6px;background:var(--surface);border:1px solid var(--line);border-bottom-width:2px;border-radius:5px;font-family:var(--font-en);font-size:11px;color:var(--ink);white-space:nowrap}
+.help-overlay{position:fixed;inset:0;z-index:200;display:none;background:rgba(20,34,56,.5);backdrop-filter:blur(2px)}
+.help-overlay.open{display:grid;place-items:center}
+.help-dialog{position:relative;width:min(560px,92vw);max-height:86vh;overflow:auto;background:#fff;border-radius:12px;box-shadow:0 24px 60px rgba(20,34,56,.3);padding:20px}
+.help-dialog h2{margin:0 0 4px;font-size:16px}.help-dialog .sub{font-size:11px;color:var(--ink-faint);margin:0}
+.help-close{position:absolute;top:10px;right:12px}.help-row{display:flex;align-items:center;gap:10px;padding:6px 0;border-bottom:1px dashed var(--line);font-size:12px}.help-row:last-child{border-bottom:0}.help-row .desc{flex:1}
+.help-dialog .grid2{display:grid;grid-template-columns:1fr 1fr;gap:0 18px;margin-top:12px}
+#btnHelp{width:30px;padding:0}
+.image-upload-btn{width:100%;border:1px dashed var(--primary);background:var(--primary-pale);color:var(--primary);border-radius:6px;padding:7px 5px;font-size:11px;cursor:pointer}
+.editable img.uploaded{display:block;width:100%;height:100%;object-fit:cover;border-radius:inherit}
+
+/* Tier 1: print export */
+@page{size:1280px 720px;margin:0}
+@media print{
+  body{overflow:visible;background:#fff}
+  .sidebar,.topbar,.topbar-open,.editor-panel,.help-overlay,.presenter-overlay,.presenter-panel,.overview-overlay,.cursor-glow,.ripple,.resize-handle,.deck-progress,.guide-h,.guide-v,.toast,.zoom-controls{display:none!important}
+  .app{display:block;height:auto;background:#fff}
+  .workspace{display:block;height:auto}
+  .stage-area{display:block;padding:0;height:auto}
+  .stage-frame{width:auto;height:auto;aspect-ratio:auto;box-shadow:none}
+  .stage{position:static;overflow:visible;height:auto;background:#fff;transform:none!important}
+  .slide{position:relative;inset:auto;display:block!important;width:1280px;height:720px;page-break-after:always;break-after:page;overflow:hidden;margin:0 auto}
+  .slide:last-of-type{page-break-after:auto;break-after:auto}
+}
+/* Tier 1: sidebar deck & tool blocks */
+.deck-manager{margin:2px 0 8px}
+.deck-manager-title{font-size:10px;text-transform:uppercase;color:var(--ink-faint);letter-spacing:.12em;padding:10px 8px 6px}
+.deck-manager-row{display:flex;gap:6px;align-items:center}
+.deck-select{flex:1;min-width:0;border:1px solid var(--line);border-radius:6px;padding:6px;background:#fff;color:var(--ink);font-size:11px}
+.deck-tools{display:flex;flex-direction:column;gap:6px;margin:0 0 8px}
+.deck-tools .btn{width:100%;text-align:center}
+/* Tier 1: presenter view */
+body.presenter-mode .sidebar,body.presenter-mode .topbar{display:none!important}
+body.presenter-mode .app{grid-template-columns:1fr;height:100vh}
+body.presenter-mode .stage-area{position:fixed;inset:0;padding:0;background:#000;display:flex;align-items:center;justify-content:center}
+body.presenter-mode .stage-frame{width:100vw;height:100vh;aspect-ratio:auto;box-shadow:none}
+body.presenter-mode .editor-panel{display:none!important}
+.presenter-panel{position:fixed;right:0;bottom:0;width:min(440px,94vw);background:rgba(20,34,56,.95);color:#fff;border-radius:12px 0 0 0;padding:14px 16px;z-index:300;display:none;box-shadow:0 -12px 44px rgba(0,0,0,.35)}
+body.presenter-mode .presenter-panel{display:block}
+.presenter-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.presenter-head b{font-variant-numeric:tabular-nums}
+.presenter-panel .btn{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.25);color:#fff}
+.presenter-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:12px;align-items:start}
+.presenter-label{font-size:10px;color:#9fb2c8;letter-spacing:.08em;margin-bottom:6px}
+.presenter-notes-wrap textarea{width:100%;min-height:190px;resize:vertical;border:1px solid rgba(255,255,255,.2);border-radius:8px;padding:10px;background:rgba(255,255,255,.06);color:#fff;font-size:13px;line-height:1.6;font-family:var(--font-cn)}
+.presenter-next-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.15);border-radius:8px;padding:12px;min-height:120px;font-size:12px;line-height:1.5}
+.presenter-next-card .t{font-weight:700;margin-bottom:6px}
+.presenter-next-card .c{color:#c7d6e9;font-size:11px}
+.presenter-timer{font-family:var(--font-en);font-variant-numeric:tabular-nums;font-size:20px;margin-top:10px;color:#fff}
+
+/* Tier 2: editor alignment & layering tools */
+.tool-label{font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint);margin:8px 0 4px}
+.tool-row{display:grid;gap:4px;margin:0 0 8px}
+.tool-row.align{grid-template-columns:repeat(3,1fr)}
+.tool-row.layer{grid-template-columns:repeat(4,1fr)}
+.tool-row .btn{padding:5px 2px;font-size:10px;text-align:center}
+.guide-h,.guide-v{position:absolute;z-index:1000;pointer-events:none;background:var(--warning)}
+.guide-h{height:1px;left:0;right:0}
+.guide-v{width:1px;top:0;bottom:0}
+.toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%) translateY(10px);background:rgba(20,34,56,.94);color:#fff;padding:9px 14px;border-radius:8px;font-size:12px;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;z-index:300}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+/* Tier 3: overview & autoplay */
+.overview-overlay{position:fixed;inset:0;z-index:210;display:none;background:rgba(20,34,56,.78);backdrop-filter:blur(4px);padding:22px}
+.overview-overlay.open{display:flex;flex-direction:column}
+.overview-head{display:flex;justify-content:space-between;align-items:center;color:#fff;margin-bottom:14px}
+.overview-head h2{margin:0;font-size:16px;font-weight:700}
+.overview-head .btn{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.25);color:#fff}
+.overview-grid{flex:1;overflow:auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;align-content:start;padding-right:4px}
+.overview-card{position:relative;text-align:left;font:inherit;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:14px;color:#fff;cursor:pointer;transition:background .15s,border-color .15s,transform .15s}
+.overview-card:hover{background:rgba(255,255,255,.12);transform:translateY(-2px)}
+.overview-card.active{background:var(--primary);border-color:var(--primary)}
+.overview-card .no{font-family:var(--font-en);font-size:11px;letter-spacing:.08em;color:#9fb2c8}
+.overview-card.active .no{color:rgba(255,255,255,.85)}
+.overview-card b{display:block;font-size:14px;margin:8px 0 4px}
+.overview-card span{font-size:11px;line-height:1.5;color:#c7d6e9}
+.overview-card.active span{color:rgba(255,255,255,.9)}
+.presenter-tools{display:flex;align-items:center;gap:10px;margin-top:10px}
+.presenter-tools label{font-size:10px;color:#9fb2c8;display:flex;align-items:center;gap:6px;white-space:nowrap}
+.presenter-tools input{width:58px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.08);color:#fff;border-radius:6px;padding:4px 6px;font-size:11px}
+#autoplayBtn.running{background:var(--warning);border-color:var(--warning);color:#fff}
+/* Tier 3.5: zoom, pan & project manager */
+.zoom-controls{position:absolute;z-index:50;right:10px;top:10px;display:flex;gap:4px;align-items:center;background:rgba(255,255,255,.94);border:1px solid var(--line);border-radius:8px;padding:4px;box-shadow:0 6px 18px rgba(20,34,56,.14)}
+.zoom-controls button{min-width:26px;height:26px;padding:0 6px;border:1px solid transparent;background:transparent;color:var(--ink-soft);border-radius:5px;cursor:pointer;font-size:13px;line-height:1}
+.zoom-controls button:hover{background:var(--primary-pale);color:var(--primary);border-color:#c6d8ef}
+.zoom-controls .zoom-value{min-width:46px;text-align:center;font-size:11px;color:var(--ink-soft);font-variant-numeric:tabular-nums}
+.stage-frame.zoomed .stage{cursor:grab}
+.stage-frame.panning .stage{transition:none;cursor:grabbing}
+.project-manager{border-top:1px solid var(--line);margin-top:10px;padding:10px 0 2px}
+.project-manager-title{font-size:10px;text-transform:uppercase;color:var(--ink-faint);letter-spacing:.12em;padding:2px 8px 8px}
+.project-actions{display:flex;gap:6px;flex-wrap:wrap;padding:0 0 8px}
+.file-list-head{display:flex;align-items:center;justify-content:space-between;padding:6px 8px 3px;font-size:9px;text-transform:uppercase;color:var(--ink-faint);letter-spacing:.1em}
+.file-list{display:flex;flex-direction:column;gap:3px;max-height:160px;overflow:auto;font-size:11px;padding:0 2px 4px}
+.file-list.empty{color:var(--ink-faint);font-size:10px;padding:2px 8px}
+.file-item{display:flex;align-items:center;gap:6px;padding:4px 7px;border:1px solid transparent;border-radius:6px;cursor:pointer;color:var(--ink-soft);text-align:left;background:transparent;width:100%}
+.file-item:hover{background:#f4f7fb;color:var(--primary)}
+.file-item .fname{min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:1}
+.file-item.recent{cursor:default}
+.file-item.clickable{cursor:pointer}
+.btn.mini{font-size:10px;padding:2px 7px;border-radius:5px}
+body.presenter-mode .zoom-controls,body.editor-mode .zoom-controls{display:none}
+/* Tier 3: collapsible sidebar + page previews + side editor */
+.work-body{flex:1;min-height:0;display:flex}
+.brand-text{flex:1;min-width:0}
+.sidebar-toggle{flex:0 0 auto;border:0;background:transparent;color:var(--ink-faint);padding:0 3px;font-size:14px;line-height:1}
+.sidebar-toggle:hover{color:var(--primary)}
+.topbar-left{display:flex;align-items:center;gap:10px;min-width:0}
+.sidebar-open{display:none}
+.app.sidebar-collapsed{grid-template-columns:minmax(0,1fr)}
+.app.sidebar-collapsed .workspace{grid-column:1}
+.app.sidebar-collapsed .sidebar{display:none}
+.app.sidebar-collapsed .sidebar-open{display:inline-block}
+
+/* Tier 1–3 layout hardening */
+.sidebar{min-height:0;overflow:hidden}
+.thumbs{flex:1 1 auto;min-height:96px;min-width:0;overflow-x:hidden;overflow-y:auto;scrollbar-gutter:stable;padding-right:3px}
+/* The work body must be allowed to shrink before the editor panel is laid out.
+   Without min-width:0, the stage's previous inline width can become the flex
+   container's min-content width and push the panel over the presentation. */
+.work-body{min-width:0;min-height:0}
+.stage-area{flex:1 1 auto;min-width:0;min-height:0;overflow:hidden}
+.stage-frame{flex:0 0 auto;max-width:100%;max-height:100%;height:auto}
+.editor-panel{flex:0 1 clamp(280px,28vw,340px);min-width:0;width:clamp(280px,28vw,340px);max-width:340px}
+.editor-mode .stage-area{align-items:center;padding:20px;overflow:hidden}
+.editor-mode .stage-frame{max-height:100%;max-width:100%}
+.page-tools{flex:0 0 auto;border-top:1px solid var(--line);padding:8px 0 2px;display:grid;gap:6px}
+.page-tools-title{font-size:9px;text-transform:uppercase;color:var(--ink-faint);letter-spacing:.1em;padding:0 8px}
+.page-tools-row{display:flex;gap:6px;align-items:center}
+.page-tools select{min-width:0;flex:1;border:1px solid var(--line);border-radius:6px;padding:6px;background:#fff;color:var(--ink);font-size:10px}
+.page-tools .btn{flex:0 0 auto}
+.thumb{position:relative;user-select:none}
+.thumb[draggable="true"]{cursor:grab}
+.thumb.dragging{opacity:.4;outline:2px dashed var(--primary)}
+.thumb.drop-target{border-color:var(--primary);box-shadow:inset 0 0 0 1px var(--primary)}
+.thumb-head{padding-right:22px}
+.thumb-delete{position:absolute;right:6px;top:6px;border:0;background:transparent;color:var(--ink-faint);font-size:12px;line-height:1;cursor:pointer;padding:2px 4px;border-radius:4px}
+.thumb-delete:hover{background:#fff;color:var(--danger)}
+.file-item .file-action{margin-left:auto;border:0;background:transparent;color:var(--ink-faint);cursor:pointer;padding:1px 3px;border-radius:3px}
+.file-item .file-action:hover{color:var(--danger);background:var(--surface)}
+.top-actions{flex-wrap:wrap;justify-content:flex-end;max-height:58px;overflow:auto}
+.topbar-toggle{flex:0 0 auto}
+.topbar-open{display:none;position:fixed;top:10px;right:12px;z-index:360;width:32px;height:30px;padding:0;border-color:rgba(255,255,255,.28);background:rgba(20,34,56,.92);color:#fff;box-shadow:0 8px 20px rgba(20,34,56,.22)}
+.topbar-open:hover{background:var(--primary);border-color:var(--primary);color:#fff}
+.app.topbar-collapsed .topbar{display:none}
+.app.topbar-collapsed .topbar-open{display:inline-flex}
+body.presenter-mode .topbar-open{display:none!important}
+
+.chip{display:inline-flex;align-items:center;gap:5px;border:1px solid var(--line);border-radius:999px;padding:3px 9px;font:700 10px var(--font-en);color:var(--primary);background:#fff}
+.flow-strip{display:flex;align-items:stretch;gap:6px;flex-wrap:wrap}
+.flow-strip .step{display:flex;align-items:center;gap:7px}
+.flow-strip .step:not(:last-child)::after{content:"→";color:var(--line-strong);font:15px var(--font-en);align-self:center}
+.code-block{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--primary);border-radius:7px;padding:11px 13px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:10px;line-height:1.7;color:var(--ink-soft);overflow:auto;white-space:pre}
+.bullets{list-style:none;margin:0;padding:0;display:grid;gap:7px}
+.bullets li{position:relative;padding-left:14px;font-size:clamp(9px,.8vw,12px);line-height:1.5;color:var(--ink-soft)}
+.bullets li::before{content:"";position:absolute;left:0;top:.58em;width:6px;height:6px;border-radius:2px;background:var(--primary)}
+.bullets b{color:var(--ink)}
+.kv{display:grid;grid-template-columns:repeat(2,1fr);gap:10px 12px;margin-top:12px}
+.kv .k{font-size:9px;color:var(--ink-faint)}
+.kv .v{font-size:11px;color:var(--ink);font-weight:600;margin-top:2px}
+
+/* Tier 4: local recording, transcription and contextual text tools */
+.media-toggle{white-space:nowrap}.media-toggle.active{background:var(--danger);border-color:var(--danger);color:#fff}.media-toggle.transcribing.active{background:var(--positive);border-color:var(--positive);color:#fff}.deck-manager-hint,.project-manager-hint{font-size:9px;line-height:1.45;color:var(--ink-faint);padding:0 8px 7px;margin:0}.media-tray{position:fixed;right:18px;bottom:18px;width:min(380px,calc(100vw - 36px));z-index:340;background:rgba(20,34,56,.96);color:#fff;border:1px solid rgba(255,255,255,.18);border-radius:12px;padding:12px;box-shadow:0 18px 44px rgba(20,34,56,.28)}.media-tray[hidden],.floating-text-toolbar[hidden]{display:none}.media-tray-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px}.media-tray-head strong{font-size:12px}.media-tray-status{font-size:10px;color:#b9c7d7}.media-tray .btn{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.22);color:#fff;padding:5px 8px}.media-tray .btn:hover{background:rgba(255,255,255,.18);border-color:#fff;color:#fff}.media-tray-row{display:flex;gap:6px;align-items:center;flex-wrap:wrap}.media-tray-timer{font:700 18px var(--font-en);font-variant-numeric:tabular-nums;color:#fff;min-width:70px}.transcript-output{max-height:150px;overflow:auto;margin:8px 0 0;padding:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:7px;font-size:11px;line-height:1.55;white-space:pre-wrap;color:#eef4fb}.media-download{font-size:10px;color:#dceaff}.floating-text-toolbar{position:fixed;z-index:350;display:flex;align-items:center;gap:5px;max-width:calc(100vw - 20px);padding:6px;background:rgba(20,34,56,.96);border:1px solid rgba(255,255,255,.22);border-radius:9px;box-shadow:0 12px 30px rgba(20,34,56,.28);color:#fff}.floating-text-toolbar label{font-size:9px;color:#c5d3e3;display:flex;align-items:center;gap:3px}.floating-text-toolbar input,.floating-text-toolbar select{height:26px;border:1px solid rgba(255,255,255,.22);border-radius:5px;background:rgba(255,255,255,.1);color:#fff;font-size:11px;padding:3px 5px}.floating-text-toolbar input[type=number]{width:50px}.floating-text-toolbar input[type=color]{width:28px;padding:2px}.floating-text-toolbar select{width:68px}.floating-text-toolbar #ftFontFamily{width:100px}.floating-text-toolbar .ft-btn{height:26px;min-width:26px;padding:2px 6px;border:1px solid rgba(255,255,255,.22);border-radius:5px;background:rgba(255,255,255,.1);color:#fff;cursor:pointer;font-size:11px}.floating-text-toolbar .ft-btn:hover,.floating-text-toolbar .ft-btn.active{background:var(--primary);border-color:var(--primary)}.floating-text-toolbar .ft-sep{width:1px;height:20px;background:rgba(255,255,255,.22);margin:0 1px}.floating-text-toolbar .ft-close{font-size:13px;color:#c5d3e3}.floating-text-toolbar .ft-close:hover{background:var(--danger);border-color:var(--danger)}
+@media(max-width:1100px){.top-actions{gap:4px}.top-actions .media-toggle{padding:7px 7px}.floating-text-toolbar{flex-wrap:wrap;max-width:310px}.media-tray{bottom:10px;right:10px}}
+
+</style>
+</head>
+<body>
+<div class="app" id="app">
+  <aside class="sidebar">
+    <div class="brand"><div class="brand-mark">P</div><div class="brand-text"><div class="brand-title">Premium Deck</div><div class="brand-sub">Presentation Design System</div></div><button class="btn icon sidebar-toggle" id="sidebarToggle" title="收起页面列表" aria-label="收起页面列表">«</button></div>
+    <div class="rail-label">页面预览 · 可滚动 / 拖动排序</div>
+    <div class="thumbs" id="thumbs"></div>
+    <div class="page-tools">
+      <div class="page-tools-title">新增页面</div>
+      <div class="page-tools-row"><select id="templateSelect" aria-label="选择页面模板"></select><button class="btn" id="addTemplatePage" title="按选定模板新增页面">＋新增</button></div>
+    </div>
+    <div class="deck-manager">
+      <div class="deck-manager-title">浏览器草稿</div><p class="deck-manager-hint">草稿只保存在当前浏览器；要得到真正的 HTML 文件，请使用下方“另存为 HTML”。</p>
+      <div class="deck-manager-row"><select class="deck-select" id="deckSelect"></select></div>
+      <div class="deck-tools"><button class="btn" id="deckNew">＋新建草稿</button><button class="btn" id="deckRename">重命名</button><button class="btn" id="deckDelete">删除</button></div>
+    </div>
+    <div class="project-manager">
+      <div class="project-manager-title">本地文件</div><p class="project-manager-hint">打开文件夹或 HTML 文件；另存为 HTML 会生成独立文件，不依赖浏览器草稿。</p>
+      <div class="project-actions"><button class="btn" id="pickFolder" title="选择文件夹，列出其中的 HTML 文件">选择文件夹</button><button class="btn" id="pickFiles" title="选择一个或多个 HTML 文件">打开文件</button></div>
+      <div class="file-list-head"><span>文件夹内 HTML</span></div>
+      <div class="file-list" id="fileList"></div>
+      <div class="file-list-head"><span>最近打开</span><button class="btn mini" id="clearRecent" title="清空最近记录">清空</button></div>
+      <div class="file-list" id="recentList"></div>
+    </div>
+    <div class="sidebar-foot">白底、严谨网格、信息优先。<br>适用于研究、咨询、产品与答辩汇报。</div>
+  </aside>
+  <main class="workspace">
+    <button class="btn icon topbar-open" id="topbarOpen" title="显示顶部工具栏（⌘/Ctrl + Shift + H）" aria-label="显示顶部工具栏" aria-pressed="true">⌄</button>
+    <header class="topbar"><div class="topbar-left"><button class="btn icon sidebar-open" id="sidebarOpen" title="展开页面列表" aria-label="展开页面列表">»</button><div><h1>高级演示模板系统 <span class="muted">/ Premium v1</span></h1><p id="pageMeta">01 · Cover / 封面</p></div></div><div class="top-actions"><button class="btn" id="prevBtn">←</button><button class="btn" id="nextBtn">→</button><button class="btn" id="replayBtn">↻ 浮现</button><button class="btn" id="editBtn">编辑模式</button><button class="btn media-toggle" id="recordToggle" aria-pressed="false" title="开始 / 停止本地录音">● 录音</button><button class="btn media-toggle" id="transcribeToggle" aria-pressed="false" title="开始 / 停止浏览器语音转写">⌁ 转写</button><button class="btn icon" id="fullscreenBtn" title="全屏 / 退出 (F)">⛶</button><button class="btn icon help-btn" id="btnHelp" title="快捷键帮助 (?)">?</button><span class="page-counter" id="pageCounter">1 / 19</span><button class="timer" id="timerBtn" title="已演示时长，点击复位">00:00</button><button class="btn" id="exportPdf" title="导出 PDF">导出 PDF</button><button class="btn" id="exportPng" title="导出 PNG">导出 PNG</button><button class="btn" id="saveAs" title="另存为独立 HTML 文件">另存为 HTML</button><button class="btn" id="overviewBtn" title="页面概览">概览</button><button class="btn" id="presentBtn" title="演讲者模式">演讲者模式</button><button class="btn icon topbar-toggle" id="topbarToggle" title="隐藏顶部工具栏" aria-label="隐藏顶部工具栏" aria-pressed="false">⌃</button></div></header>
+    <div class="work-body"><section class="stage-area" id="stageArea"><div class="stage-frame" id="stageFrame"><div class="stage" id="stage"><div class="deck-progress" id="deckProgress" aria-hidden="true"><i></i></div>
+      <section class="slide active reveal-4" data-template="01 Cover" data-chapter="Opening" data-core="让复杂内容在 3 秒内被理解"><div class="slide-inner">
+        <div class="eyebrow editable" data-editable>PREMIUM PRESENTATION DESIGN SYSTEM</div><div class="type-hero editable" style="margin-top:7%;max-width:78%" data-editable>少即是多，<br><span class="accent">信息先于装饰。</span></div><div class="rule"></div><div class="type-subtitle editable" style="max-width:48%" data-editable>一套面向研究、咨询、产品与答辩汇报的高级 HTML / PPT 页面模板系统。</div><div class="footer"><div>Presentation System · v1.0</div><div class="center">Editorial · Executive · Precise</div><div class="right">01 / 19</div></div>
+        <div class="card blue editable" style="position:absolute;right:7%;bottom:17%;width:25%;padding:16px" data-editable><div class="type-label">Design principle</div><div class="type-section-title" style="margin-top:8px">结论 → 证据 → 解释 → 行动</div><div class="type-caption" style="margin-top:7px">每一页只表达一个核心观点。</div></div>
+      </div></section>
+      <section class="slide reveal-4" data-template="02 Executive Summary" data-chapter="01 / Summary" data-core="三条结论，先让决策者知道应该相信什么"><div class="slide-inner"><div class="slide-head"><div class="title-wrap"><div class="section-tag editable" data-editable>01 / EXECUTIVE SUMMARY</div><div class="type-page-title editable" data-editable>先说结论：我们已经知道什么，下一步要做什么。</div></div><div class="pill"><span class="dot"></span>Decision-ready</div></div><div class="grid-3"><div class="card blue reveal editable" data-editable><span class="number-badge">01</span><div class="type-section-title" style="margin-top:16px">问题已被定义</div><div class="type-body" style="margin-top:8px">边界清晰，关键约束可被验证，不再停留在感受层面。</div></div><div class="card green reveal editable" data-editable><span class="number-badge" style="background:var(--positive)">02</span><div class="type-section-title" style="margin-top:16px">方法已经跑通</div><div class="type-body" style="margin-top:8px">验证链路从假设延伸到数据，形成可复用的判断框架。</div></div><div class="card orange reveal editable" data-editable><span class="number-badge" style="background:var(--warning)">03</span><div class="type-section-title" style="margin-top:16px">行动可以开始</div><div class="type-body" style="margin-top:8px">资源投入与决策门已经明确，下一步不需要等待更多装饰。</div></div></div><div style="display:grid;grid-template-columns:1.1fr 1fr;gap:7%;margin-top:6%;align-items:end"><div class="quote reveal editable" data-editable><div class="type-section-title">核心判断</div><div class="type-subtitle" style="margin-top:8px">从“做更多”转向“更快验证最关键的假设”。</div></div><div class="grid-3"><div class="metric-card"><div class="type-label">Clarity</div><div class="type-metric" style="margin-top:8px">3×</div><div class="type-caption">关键信息结构化</div></div><div class="metric-card"><div class="type-label">Focus</div><div class="type-metric" style="margin-top:8px">32%</div><div class="type-caption">示例提升</div></div><div class="metric-card"><div class="type-label">Next</div><div class="type-metric" style="margin-top:8px">01</div><div class="type-caption">行动优先级</div></div></div></div><div class="footer"><div>01 / Summary</div><div class="center">先结论，后证据</div><div class="right">02 / 19</div></div></div></section>
+      <section class="slide dark reveal-4" data-template="03 Section Divider" data-chapter="02 / Diagnose" data-core="从现象进入问题本质"><div class="slide-inner"><div class="section-tag" style="color:#9fbce4">02 / DIAGNOSE</div><div class="type-hero editable" style="margin-top:14%;max-width:70%" data-editable>先把问题<br>说准确。</div><div class="type-subtitle editable" style="color:#c7d6e9;max-width:42%;margin-top:3%" data-editable>好的方案不是从答案开始，而是从一个可以被验证的问题开始。</div><div style="position:absolute;right:9%;bottom:18%;width:30%;border-top:1px solid rgba(255,255,255,.35);padding-top:14px;color:#c7d6e9;font-size:11px" class="editable" data-editable>Section objective<br><strong style="color:#fff">建立问题、背景与关键洞察的共同语言。</strong></div><div class="footer"><div>02 / Diagnose</div><div class="center">Problem before solution</div><div class="right">03 / 19</div></div></div></section>
+      <section class="slide reveal-4" data-template="04 Problem" data-chapter="02 / Diagnose" data-core="问题不是信息不足，而是判断链没有闭合"><div class="slide-inner"><div class="slide-head"><div class="title-wrap"><div class="section-tag editable" data-editable>04 / PROBLEM</div><div class="type-page-title editable" data-editable>问题：我们知道发生了什么，却还不能解释为什么。</div></div><div class="pill"><span class="dot orange"></span>Define precisely</div></div><div class="grid-2"><div><div class="card blue reveal editable" data-editable><div class="type-label">Observed</div><div class="type-section-title" style="margin-top:10px">现象反复出现，但口径不一致</div><div class="type-body" style="margin-top:8px">不同角色看到不同片段，导致讨论停留在“感觉”和“经验”。</div></div><div class="card reveal editable" style="margin-top:14px" data-editable><div class="type-label">Impact</div><div class="type-section-title" style="margin-top:10px">决策变慢，资源被平均分配</div><div class="type-body" style="margin-top:8px">没有清晰判断门，就无法知道何时继续、转向或停止。</div></div></div><div class="card soft reveal"><div class="type-label">Impact chain</div><div class="mini-list" style="margin-top:13px"><div><b>信息碎片</b><span class="muted">输入</span></div><div><b>判断分歧</b><span class="muted">解释</span></div><div><b>行动迟疑</b><span class="muted">决策</span></div><div><b class="accent">交付延迟</b><span class="accent">结果</span></div></div><div class="rule"></div><div class="type-caption editable" data-editable>一句话定义：当前最重要的不是增加信息，而是建立一条可验证的因果链。</div></div></div><div class="footer"><div>02 / Diagnose</div><div class="center">问题定义决定方案边界</div><div class="right">04 / 19</div></div></div></section>
+      <section class="slide reveal-4" data-template="05 Background" data-chapter="02 / Diagnose" data-core="背景不是百科全书，只保留改变判断的事实"><div class="slide-inner"><div class="slide-head"><div class="title-wrap"><div class="section-tag editable" data-editable>05 / BACKGROUND</div><div class="type-page-title editable" data-editable>背景：三组事实，足以解释为什么现在必须行动。</div></div><div class="pill"><span class="dot purple"></span>Context</div></div><div class="grid-3"><div class="card reveal editable" data-editable><div class="type-metric">01</div><div class="type-section-title" style="margin-top:10px">环境变化</div><div class="type-body" style="margin-top:8px">约束正在收紧，过去有效的经验不再稳定。</div></div><div class="card blue reveal editable" data-editable><div class="type-metric">02</div><div class="type-section-title" style="margin-top:10px">能力窗口</div><div class="type-body" style="margin-top:8px">数据、工具与组织能力已经具备，等待的是聚焦。</div></div><div class="card green reveal editable" data-editable><div class="type-metric">03</div><div class="type-section-title" style="margin-top:10px">行动时点</div><div class="type-body" style="margin-top:8px">越晚验证，沉没成本越高；现在适合小步快跑。</div></div></div><div style="margin-top:7%;display:grid;grid-template-columns:1fr 1.3fr;gap:7%;align-items:start"><div class="quote reveal editable" data-editable><div class="type-section-title">背景的作用</div><div class="type-body" style="margin-top:8px">只回答一个问题：哪些事实会改变我们的判断？</div></div><div class="card soft reveal"><div class="type-label">Context → implication</div><div class="mini-list" style="margin-top:12px"><div><span>约束变化</span><b class="accent">重新定义成功标准</b></div><div><span>资源有限</span><b class="accent">先验证关键路径</b></div><div><span>窗口有限</span><b class="accent">提前设定决策门</b></div></div></div></div><div class="footer"><div>02 / Diagnose</div><div class="center">背景只保留改变判断的事实</div><div class="right">05 / 19</div></div></div></section>
+      <section class="slide reveal-4" data-template="06 Key Insight" data-chapter="02 / Diagnose" data-core="真正的洞察，是把复杂事实压缩成可行动的判断"><div class="slide-inner"><div class="slide-head"><div class="title-wrap"><div class="section-tag editable" data-editable>06 / KEY INSIGHT</div><div class="type-page-title editable" data-editable>核心洞察：不要把“更完整”误认为“更有效”。</div></div><div class="pill"><span class="dot"></span>One clear idea</div></div><div class="card blue reveal editable" style="padding:28px 30px" data-editable><div class="type-label">Insight / 01</div><div class="type-hero" style="font-size:clamp(25px,3.4vw,52px);margin-top:14px;max-width:75%">最快的路径，<br>不是增加步骤，而是减少不确定性。</div><div class="type-body" style="max-width:57%;margin-top:15px">把每次汇报都变成一次判断：问题是什么、证据够不够、下一步做什么。</div></div><div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:3%;margin-top:4%"><div class="reveal editable" data-editable><div class="type-label">Before</div><div class="type-section-title" style="margin-top:7px">堆叠信息</div><div class="type-caption">“我还需要解释更多。”</div></div><div class="reveal editable" data-editable><div class="type-label">Shift</div><div class="type-section-title" style="margin-top:7px">重排优先级</div><div class="type-caption">“哪一条证据最能改变判断？”</div></div><div class="reveal editable" data-editable><div class="type-label">After</div><div class="type-section-title" style="margin-top:7px;color:var(--primary)">形成行动</div><div class="type-caption">“下一步只做一件事。”</div></div></div><div class="footer"><div>02 / Diagnose</div><div class="center">洞察必须能改变行动</div><div class="right">06 / 19</div></div></div></section>
+      <section class="slide reveal-4" data-template="07 Framework" data-chapter="03 / Design" data-core="用框架把散乱内容变成共同语言"><div class="slide-inner"><div class="slide-head"><div class="title-wrap"><div class="section-tag editable" data-editable>07 / FRAMEWORK</div><div class="type-page-title editable" data-editable>框架：从目标到执行，四层结构保持同一方向。</div></div><div class="pill"><span class="dot green"></span>Reusable model</div></div><div class="grid-2" style="align-items:center;margin-top:4%"><div class="card soft reveal"><div class="type-label">Strategic stack</div><div class="mini-list" style="margin-top:16px"><div><b>Vision</b><span>我们要改变什么</span></div><div><b>Strategy</b><span>选择哪条路径</span></div><div><b>Capability</b><span>需要什么能力</span></div><div><b>Execution</b><span>下一步做什么</span></div></div></div><div class="reveal"><div style="height:210px;display:grid;grid-template-rows:1fr 1.2fr 1.4fr 1.7fr;gap:6px;text-align:center"><div style="background:#dbe7f8;clip-path:polygon(50% 0,100% 100%,0 100%);padding:18px 0 0;font-weight:800">VISION</div><div style="background:#e5f0e9;padding:15px;font-weight:800">STRATEGY</div><div style="background:#fff0df;padding:15px;font-weight:800">CAPABILITY</div><div style="background:#f1effb;padding:15px;font-weight:800">EXECUTION</div></div></div></div><div class="footer"><div>03 / Design</div><div class="center">框架让讨论围绕同一问题展开</div><div class="right">07 / 19</div></div></div></section>
+      <section class="slide reveal-4" data-template="08 Process" data-chapter="03 / Design" data-core="流程页面要交代每一步为什么存在"><div class="slide-inner"><div class="slide-head"><div class="title-wrap"><div class="section-tag editable" data-editable>08 / PROCESS</div><div class="type-page-title editable" data-editable>流程：从问题定义，到证据，再到可交付的判断。</div></div><div class="pill"><span class="dot"></span>Horizontal process</div></div><div class="process" style="margin-top:10%"><div class="process-step reveal editable" data-editable><div class="process-icon">01</div><div class="type-section-title">定义问题</div><div class="type-caption">先确认要解决什么</div></div><div class="process-step reveal editable" data-editable><div class="process-icon green">02</div><div class="type-section-title">小推验证</div><div class="type-caption">证明路径能跑通</div></div><div class="process-step reveal editable" data-editable><div class="process-icon purple">03</div><div class="type-section-title">场景扩展</div><div class="type-caption">检验真实约束</div></div><div class="process-step reveal editable" data-editable><div class="process-icon orange">04</div><div class="type-section-title">形成交付</div><div class="type-caption">标准化并复用</div></div></div><div class="card soft reveal" style="margin-top:10%;display:grid;grid-template-columns:1fr 2fr;gap:20px;align-items:center"><div class="type-label">Gate condition</div><div class="type-body editable" data-editable>每一步都要有一个可观察的输出，否则流程只是装饰。</div></div><div class="footer"><div>03 / Design</div><div class="center">Process is a chain of reasons</div><div class="right">08 / 19</div></div></div></section>
+      <section class="slide reveal-4" data-template="09 Roadmap" data-chapter="03 / Design" data-core="路线图不是时间表，而是从判断到交付的因果链"><div class="slide-inner"><div class="slide-head"><div class="title-wrap"><div class="section-tag editable" data-editable>09 / ROADMAP</div><div class="type-page-title editable" data-editable>路线图：每个阶段都有目标、动作、里程碑和判断门。</div></div><div class="pill"><span class="dot orange"></span>Decision-led roadmap</div></div><div class="timeline" style="margin-top:6%"><div class="timeline-item reveal editable" data-editable><div class="type-label">Phase 01</div><div class="type-section-title" style="margin-top:10px">Problem</div><div class="type-body" style="margin-top:8px">定义问题与成功标准。</div><div class="type-caption" style="margin-top:9px">Gate：是否值得验证？</div></div><div class="timeline-item reveal editable" data-editable><div class="type-label" style="color:var(--positive)">Phase 02</div><div class="type-section-title" style="margin-top:10px">Validation</div><div class="type-body" style="margin-top:8px">用最小实验验证路径。</div><div class="type-caption" style="margin-top:9px">Gate：证据是否成立？</div></div><div class="timeline-item reveal editable" data-editable><div class="type-label" style="color:var(--secondary)">Phase 03</div><div class="type-section-title" style="margin-top:10px">Scale</div><div class="type-body" style="margin-top:8px">扩展到真实场景与约束。</div><div class="type-caption" style="margin-top:9px">Gate：能否稳定复用？</div></div><div class="timeline-item reveal editable" data-editable><div class="type-label" style="color:var(--warning)">Phase 04</div><div class="type-section-title" style="margin-top:10px">Delivery</div><div class="type-body" style="margin-top:8px">形成标准化交付与复盘。</div><div class="type-caption" style="margin-top:9px">Gate：谁来接手？</div></div></div><div class="footer"><div>03 / Design</div><div class="center">Roadmap = phases + gates</div><div class="right">09 / 19</div></div></div></section>
+      <section class="slide reveal-4" data-template="10 Timeline" data-chapter="03 / Design" data-core="时间线只强调关键节点，不展示无意义的忙碌"><div class="slide-inner"><div class="slide-head"><div class="title-wrap"><div class="section-tag editable" data-editable>10 / TIMELINE</div><div class="type-page-title editable" data-editable>时间线：用四个节点讲清楚事情是如何推进的。</div></div><div class="pill"><span class="dot purple"></span>Milestones</div></div><div class="timeline" style="margin-top:10%"><div class="timeline-item reveal editable" data-editable><div class="type-label">2026.01</div><div class="type-section-title" style="margin-top:10px">问题定义</div><div class="type-body" style="margin-top:8px">识别核心问题，确定边界。</div></div><div class="timeline-item reveal editable" data-editable><div class="type-label" style="color:var(--positive)">2026.03</div><div class="type-section-title" style="margin-top:10px">小推验证</div><div class="type-body" style="margin-top:8px">提出假设，跑通最小路径。</div></div><div class="timeline-item reveal editable" data-editable><div class="type-label" style="color:var(--secondary)">2026.06</div><div class="type-section-title" style="margin-top:10px">场景扩展</div><div class="type-body" style="margin-top:8px">在真实约束中检验方案。</div></div><div class="timeline-item reveal editable" data-editable><div class="type-label" style="color:var(--warning)">2026.09</div><div class="type-section-title" style="margin-top:10px">方案交付</div><div class="type-body" style="margin-top:8px">形成标准与复盘机制。</div></div></div><div class="card blue reveal editable" style="margin-top:10%;padding:15px 18px" data-editable><div class="type-label">Next milestone</div><div class="type-section-title" style="margin-top:7px">两周内完成关键假设的最小实验。</div></div><div class="footer"><div>03 / Design</div><div class="center">Milestones over busywork</div><div class="right">10 / 19</div></div></div></section>
+      <section class="slide reveal-4" data-template="11 Comparison" data-chapter="04 / Decide" data-core="对比页把选择标准放在方案之前"><div class="slide-inner"><div class="slide-head"><div class="title-wrap"><div class="section-tag editable" data-editable>11 / COMPARISON</div><div class="type-page-title editable" data-editable>方案对比：先明确评价标准，再比较不同路径。</div></div><div class="pill"><span class="dot orange"></span>Trade-offs</div></div><div class="card reveal" style="padding:0;overflow:hidden;margin-top:4%"><table style="width:100%;border-collapse:collapse;font-size:11px"><thead><tr style="background:var(--primary);color:#fff"><th style="padding:13px;text-align:left">评价维度</th><th style="padding:13px;text-align:left">方案 A</th><th style="padding:13px;text-align:left">方案 B</th><th style="padding:13px;text-align:left">方案 C</th></tr></thead><tbody><tr><th style="padding:13px;text-align:left;border-bottom:1px solid var(--line)">核心思路</th><td style="padding:13px;border-bottom:1px solid var(--line)">先验证后扩展</td><td style="padding:13px;border-bottom:1px solid var(--line)">快速试点</td><td style="padding:13px;border-bottom:1px solid var(--line)">标准化推进</td></tr><tr style="background:var(--surface)"><th style="padding:13px;text-align:left;border-bottom:1px solid var(--line)">风险水平</th><td style="padding:13px;border-bottom:1px solid var(--line)"><span class="green">低</span></td><td style="padding:13px;border-bottom:1px solid var(--line)"><span class="warning">中</span></td><td style="padding:13px;border-bottom:1px solid var(--line)"><span class="red">高</span></td></tr><tr><th style="padding:13px;text-align:left;border-bottom:1px solid var(--line)">适用场景</th><td style="padding:13px;border-bottom:1px solid var(--line)">关键项目</td><td style="padding:13px;border-bottom:1px solid var(--line)">探索阶段</td><td style="padding:13px;border-bottom:1px solid var(--line)">成熟业务</td></tr><tr style="background:var(--surface)"><th style="padding:13px;text-align:left">综合判断</th><td style="padding:13px;font-weight:800;color:var(--primary)">★★★★☆</td><td style="padding:13px">★★★☆☆</td><td style="padding:13px">★★☆☆☆</td></tr></tbody></table></div><div class="type-caption editable" style="margin-top:12px" data-editable>推荐：当前阶段优先选择可逆、可验证、能快速暴露问题的路径。</div><div class="footer"><div>04 / Decide</div><div class="center">Criteria before options</div><div class="right">11 / 19</div></div></div></section>
+      <section class="slide reveal-4" data-template="12 2×2 Matrix" data-chapter="04 / Decide" data-core="用两个关键维度，把优先级变成可讨论的空间"><div class="slide-inner"><div class="slide-head"><div class="title-wrap"><div class="section-tag editable" data-editable>12 / 2×2 MATRIX</div><div class="type-page-title editable" data-editable>四象限：高影响不等于高优先级，关键在于可行动性。</div></div><div class="pill"><span class="dot purple"></span>Prioritization</div></div><div class="axis"><div class="quad"><div class="q1 reveal editable" data-editable><b style="color:var(--primary)">Quick Win</b><br><span class="type-caption">优先推进<br>投入小，影响大</span></div><div class="q2 reveal editable" data-editable><b class="purple">重点突破</b><br><span class="type-caption">高影响，高难度<br>需要重点资源</span></div><div class="q3 reveal editable" data-editable><b class="green">常规优化</b><br><span class="type-caption">低影响，低难度<br>持续优化</span></div><div class="q4 reveal editable" data-editable><b class="red">谨慎评估</b><br><span class="type-caption">低影响，高难度<br>评估投入产出</span></div></div><div style="position:absolute;left:-26px;top:5%;font-size:10px;writing-mode:vertical-rl;color:var(--ink-faint)">影响高 ↑</div><div style="position:absolute;right:-3%;bottom:-24px;font-size:10px;color:var(--ink-faint)">投入高 →</div></div><div class="footer"><div>04 / Decide</div><div class="center">Prioritization is a conversation</div><div class="right">12 / 19</div></div></div></section>
+      <section class="slide reveal-4" data-template="13 Evidence Chain" data-chapter="04 / Decide" data-core="证据链把观点变成可以复核的判断"><div class="slide-inner"><div class="slide-head"><div class="title-wrap"><div class="section-tag editable" data-editable>13 / EVIDENCE CHAIN</div><div class="type-page-title editable" data-editable>证据链：每一个结论，都应该能回溯到一组事实。</div></div><div class="pill"><span class="dot green"></span>Traceable</div></div><div class="process" style="margin-top:10%"><div class="process-step reveal editable" data-editable><div class="process-icon">◉</div><div class="type-section-title">现象</div><div class="type-caption">发现关键现象</div></div><div class="process-step reveal editable" data-editable><div class="process-icon green">◒</div><div class="type-section-title">数据</div><div class="type-caption">收集与分析相关数据</div></div><div class="process-step reveal editable" data-editable><div class="process-icon purple">✦</div><div class="type-section-title">判断</div><div class="type-caption">基于数据得出结论</div></div><div class="process-step reveal editable" data-editable><div class="process-icon orange">◎</div><div class="type-section-title">决策</div><div class="type-caption">制定下一步行动</div></div></div><div class="card soft reveal" style="margin-top:9%;display:grid;grid-template-columns:repeat(4,1fr);gap:10px;text-align:center"><div><div class="type-label">Question</div><div class="type-caption">要回答什么</div></div><div><div class="type-label">Evidence</div><div class="type-caption">凭什么相信</div></div><div><div class="type-label">Decision</div><div class="type-caption">下一步做什么</div></div><div><div class="type-label">Owner</div><div class="type-caption">谁负责推进</div></div></div><div class="footer"><div>04 / Decide</div><div class="center">Evidence makes the chain reviewable</div><div class="right">13 / 19</div></div></div></section>
+      <section class="slide reveal-4" data-template="14 Data" data-chapter="05 / Evidence" data-core="数字只突出真正影响判断的变化"><div class="slide-inner"><div class="slide-head"><div class="title-wrap"><div class="section-tag editable" data-editable>14 / DATA</div><div class="type-page-title editable" data-editable>数据：重点数字应该非常突出，图表只承担解释。</div></div><div class="pill"><span class="dot"></span>KPI view</div></div><div class="grid-4" style="margin-top:6%"><div class="card metric-card reveal editable" data-editable><div class="type-label">Clarity</div><div class="type-metric" style="margin-top:12px">32%</div><div class="trend">↑ 12%</div><div class="type-caption">较上阶段</div></div><div class="card metric-card reveal editable" data-editable><div class="type-label">Users</div><div class="type-metric" style="margin-top:12px">18.6k</div><div class="trend">↑ 8%</div><div class="type-caption">有效触达</div></div><div class="card metric-card reveal editable" data-editable><div class="type-label">Output</div><div class="type-metric" style="margin-top:12px">2.45M</div><div class="trend">↑ 15%</div><div class="type-caption">累计产出</div></div><div class="card metric-card reveal editable" data-editable><div class="type-label">Cycle</div><div class="type-metric" style="margin-top:12px">25%</div><div class="trend" style="color:var(--warning)">↓ 9%</div><div class="type-caption">交付周期缩短</div></div></div><div class="grid-2" style="margin-top:7%"><div class="card soft reveal editable" data-editable><div class="type-label">Before</div><div class="type-section-title" style="margin-top:8px">信息分散，判断成本高</div><div class="type-body" style="margin-top:7px">多人多轮解释，同一问题反复讨论。</div></div><div class="card blue reveal editable" data-editable><div class="type-label">After</div><div class="type-section-title" style="margin-top:8px">结论前置，行动更快</div><div class="type-body" style="margin-top:7px">用一个核心数字锚定变化，再回看证据。</div></div></div><div class="footer"><div>05 / Evidence</div><div class="center">Numbers should change decisions</div><div class="right">14 / 19</div></div></div></section>
+      <section class="slide reveal-4" data-template="15 Chart" data-chapter="05 / Evidence" data-core="图表不是主角，趋势才是"><div class="slide-inner"><div class="slide-head"><div class="title-wrap"><div class="section-tag editable" data-editable>15 / CHART</div><div class="type-page-title editable" data-editable>图表：用最少的墨水，讲清楚变化方向。</div></div><div class="pill"><span class="dot purple"></span>Trend first</div></div><div class="grid-2" style="margin-top:5%;align-items:start"><div class="card reveal"><div style="display:flex;justify-content:space-between;align-items:center"><div><div class="type-label">Progress by phase</div><div class="type-section-title" style="margin-top:7px">阶段完成度</div></div><div class="type-metric" style="font-size:30px">78%</div></div><div class="bars" style="margin-top:18px"><div class="bar-wrap"><div>68</div><div class="bar" style="height:68%"></div><span>P1</span></div><div class="bar-wrap"><div>82</div><div class="bar alt" style="height:82%"></div><span>P2</span></div><div class="bar-wrap"><div>74</div><div class="bar green" style="height:74%"></div><span>P3</span></div><div class="bar-wrap"><div>92</div><div class="bar" style="height:92%"></div><span>P4</span></div></div></div><div class="card reveal"><div class="type-label">Trend over time</div><div class="type-section-title" style="margin-top:7px">核心指标持续改善</div><div class="line-chart" style="margin-top:18px"><svg viewBox="0 0 400 150" preserveAspectRatio="none"><polyline fill="none" stroke="var(--primary)" stroke-width="4" points="0,125 60,118 120,108 180,88 240,95 300,57 400,28"/><circle cx="400" cy="28" r="5" fill="var(--primary)"/></svg></div><div class="type-caption" style="margin-top:10px">重点：第 3 阶段后出现稳定拐点。</div></div></div><div class="footer"><div>05 / Evidence</div><div class="center">Use charts to explain, not decorate</div><div class="right">15 / 19</div></div></div></section>
+      <section class="slide reveal-4" data-template="16 Research" data-chapter="05 / Evidence" data-core="研究结果要把假设、实验、数据和判断放在同一页"><div class="slide-inner"><div class="slide-head"><div class="title-wrap"><div class="section-tag editable" data-editable>16 / RESEARCH</div><div class="type-page-title editable" data-editable>研究结果：验证链完整，结论才值得被复用。</div></div><div class="pill"><span class="dot green"></span>Hypothesis → evidence</div></div><div class="grid-2" style="margin-top:5%;align-items:stretch"><div class="card blue reveal editable" data-editable><div class="type-label">Hypothesis</div><div class="type-section-title" style="margin-top:10px">如果先定义判断门，团队会更快收敛。</div><div class="hairline" style="margin:15px 0"></div><div class="type-label">Experiment</div><div class="type-body" style="margin-top:8px">在两类真实场景中，对比“信息堆叠”和“结论前置”的汇报结构。</div></div><div class="card reveal"><div class="type-label">Evidence</div><div class="grid-3" style="margin-top:13px"><div><div class="type-metric" style="font-size:27px">3×</div><div class="type-caption">理解速度</div></div><div><div class="type-metric" style="font-size:27px">+12%</div><div class="type-caption">行动一致性</div></div><div><div class="type-metric" style="font-size:27px">2/2</div><div class="type-caption">场景复现</div></div></div><div class="hairline" style="margin:18px 0"></div><div class="type-label">Judgement</div><div class="type-section-title" style="margin-top:8px;color:var(--primary)">支持假设，进入扩大验证。</div></div></div><div class="footer"><div>05 / Evidence</div><div class="center">A conclusion earns its reuse</div><div class="right">16 / 19</div></div></div></section>
+      <section class="slide reveal-4" data-template="17 Case Study" data-chapter="06 / Apply" data-core="案例页要让读者看到方法如何在真实场景中工作"><div class="slide-inner"><div class="slide-head"><div class="title-wrap"><div class="section-tag editable" data-editable>17 / CASE STUDY</div><div class="type-page-title editable" data-editable>案例：从一个真实场景，看见方法的可迁移性。</div></div><div class="pill"><span class="dot orange"></span>Applied evidence</div></div><div class="grid-2" style="margin-top:5%;align-items:stretch"><div class="card soft reveal"><div class="type-label">Case / 01</div><div class="type-hero editable" style="font-size:clamp(22px,2.8vw,42px);margin-top:14px" data-editable>把复杂协作，<br><span class="accent">变成一条清晰路径。</span></div><div class="type-body editable" style="margin-top:14px" data-editable>通过问题定义、证据链和判断门，帮助团队在资源有限时先做最关键的验证。</div></div><div class="reveal"><div class="card blue editable" data-editable><div class="type-label">Outcome</div><div class="type-metric" style="margin-top:12px">25%</div><div class="type-section-title" style="margin-top:8px">周期缩短</div><div class="type-caption" style="margin-top:7px">从讨论到明确行动</div></div><div class="card green editable" style="margin-top:12px" data-editable><div class="type-label">Transfer</div><div class="type-section-title" style="margin-top:9px">可迁移到下一类问题</div><div class="type-body" style="margin-top:7px">模板不复制答案，只复制判断结构。</div></div></div></div><div class="footer"><div>06 / Apply</div><div class="center">Method becomes valuable in context</div><div class="right">17 / 19</div></div></div></section>
+      <section class="slide reveal-4" data-template="18 Architecture" data-chapter="06 / Apply" data-core="架构页说明输入如何经过处理成为可用输出"><div class="slide-inner"><div class="slide-head"><div class="title-wrap"><div class="section-tag editable" data-editable>18 / ARCHITECTURE</div><div class="type-page-title editable" data-editable>系统架构：Input → Processing → Model → Output。</div></div><div class="pill"><span class="dot"></span>System view</div></div><div class="arch" style="margin-top:11%"><div class="arch-node reveal editable" data-editable><div class="type-label">Input</div><div class="type-section-title" style="margin-top:10px">问题与数据</div><div class="type-caption" style="margin-top:7px">事实、约束、目标</div></div><div class="arch-node reveal editable" data-editable><div class="type-label" style="color:var(--positive)">Processing</div><div class="type-section-title" style="margin-top:10px">清洗与结构化</div><div class="type-caption" style="margin-top:7px">统一口径与关系</div></div><div class="arch-node reveal editable" data-editable><div class="type-label" style="color:var(--secondary)">Model</div><div class="type-section-title" style="margin-top:10px">判断与推理</div><div class="type-caption" style="margin-top:7px">方法、规则、模型</div></div><div class="arch-node reveal editable" data-editable><div class="type-label" style="color:var(--warning)">Output</div><div class="type-section-title" style="margin-top:10px">行动与交付</div><div class="type-caption" style="margin-top:7px">结果、反馈、复盘</div></div></div><div class="card soft reveal" style="margin-top:10%;display:grid;grid-template-columns:1fr 2fr;gap:20px"><div class="type-label">Design note</div><div class="type-body editable" data-editable>每层只承担一种职责，任何输出都要能回溯到输入与判断依据。</div></div><div class="footer"><div>06 / Apply</div><div class="center">A system is a chain of transformations</div><div class="right">18 / 19</div></div></div></section>
+      <section class="slide reveal-4" data-template="19 Decision" data-chapter="06 / Apply" data-core="决策页必须明确选择、理由、风险和下一步动作"><div class="slide-inner"><div class="slide-head"><div class="title-wrap"><div class="section-tag editable" data-editable>19 / DECISION</div><div class="type-page-title editable" data-editable>最终判断：选择可逆、可验证、能快速暴露问题的路径。</div></div><div class="pill"><span class="dot green"></span>Decision gate</div></div><div class="decision" style="margin-top:7%"><div class="reveal editable" data-editable><div class="type-label">GO</div><div class="type-section-title" style="margin-top:8px">立即推进</div><div class="type-body" style="margin-top:8px">证据充分，投入可控，下一步清晰。</div></div><div class="reveal editable" data-editable><div class="type-label" style="color:var(--warning)">PIVOT</div><div class="type-section-title" style="margin-top:8px">调整路径</div><div class="type-body" style="margin-top:8px">方向成立，但当前方法无法满足约束。</div></div><div class="reveal editable" data-editable><div class="type-label" style="color:var(--danger)">STOP</div><div class="type-section-title" style="margin-top:8px">停止投入</div><div class="type-body" style="margin-top:8px">证据不足或投入产出不成立。</div></div></div><div class="card blue reveal" style="margin-top:7%;display:grid;grid-template-columns:1fr 2fr;gap:20px;align-items:center"><div class="type-metric" style="font-size:32px">GO</div><div class="type-body editable" data-editable><b style="color:var(--ink)">理由：</b>风险可控、确定性强，能够在资源约束下最大化价值产出。</div></div><div class="footer"><div>06 / Apply</div><div class="center">Decision should name the next action</div><div class="right">19 / 19</div></div></div></section>
+      
+    </div>
+    <div class="zoom-controls" id="zoomControls"><button type="button" id="zoomFit" title="适应窗口">适屏</button><button type="button" id="zoomOut" title="缩小">−</button><span class="zoom-value" id="zoomValue">100%</span><button type="button" id="zoomIn" title="放大">＋</button><button type="button" id="zoomReset" title="复位">复位</button></div>
+    </div></section>
+    <aside class="editor-panel" id="editorPanel"><h3>页面内编辑</h3><p class="hint">文字可直接点击输入；选中元素后可调位置、尺寸与样式。修改自动保存到本机。</p><div class="theme-row"><label for="themeSelect">视觉主题</label><select id="themeSelect"><option value="default">海军蓝 · 红蓝白</option><option value="warm">暖白 · 砖红</option><option value="ink">浅灰 · 墨绿</option></select></div><div class="field-grid"><div class="field full"><label>当前元素文字</label><textarea id="fText" placeholder="选择一个文字元素"></textarea></div>
+<div class="field full"><label>本页演讲备注</label><textarea id="fNotes" placeholder="该页演讲者备注，JSON / 多方案一并保存"></textarea></div><div class="format-section-title full">位置与尺寸</div><div class="field"><label>X (%)</label><input id="fX" type="number" step="0.1"></div><div class="field"><label>Y (%)</label><input id="fY" type="number" step="0.1"></div><div class="field"><label>W (%)</label><input id="fW" type="number" step="0.1"></div><div class="field"><label>H (%)</label><input id="fH" type="number" step="0.1"></div><div class="format-section-title full">文字格式</div><div class="field full"><label>字体</label><select id="fFontFamily"><option value="">系统默认（中文）</option><option value="var(--font-en)">系统默认（英文 / 数字）</option><option value="&quot;PingFang SC&quot;,&quot;Microsoft YaHei&quot;,&quot;Heiti SC&quot;,sans-serif">黑体</option><option value="&quot;Songti SC&quot;,&quot;SimSun&quot;,serif">宋体</option><option value="&quot;Kaiti SC&quot;,&quot;STKaiti&quot;,serif">楷体</option><option value="Georgia,&quot;Times New Roman&quot;,serif">Georgia</option></select></div><div class="field"><label>字号 (px)</label><div class="stepper"><button type="button" class="stepper-btn" data-step-target="fFont" data-step="-1" aria-label="字号减小">−</button><input id="fFont" type="number" min="6" max="200" step="1"><button type="button" class="stepper-btn" data-step-target="fFont" data-step="1" aria-label="字号增大">＋</button></div></div><div class="field"><label>字重</label><select id="fWeight"><option value="400">常规</option><option value="500">中等</option><option value="600">半粗</option><option value="700">粗体</option><option value="800">特粗</option></select></div><div class="field"><label>行高</label><div class="stepper"><button type="button" class="stepper-btn" data-step-target="fLine" data-step="-0.05" aria-label="行高减小">−</button><input id="fLine" type="number" min="0.8" max="4" step="0.05"><button type="button" class="stepper-btn" data-step-target="fLine" data-step="0.05" aria-label="行高增大">＋</button></div></div><div class="field"><label>字间距 (px)</label><div class="stepper"><button type="button" class="stepper-btn" data-step-target="fLetter" data-step="-0.1" aria-label="字间距减小">−</button><input id="fLetter" type="number" step="0.1"><button type="button" class="stepper-btn" data-step-target="fLetter" data-step="0.1" aria-label="字间距增大">＋</button></div></div><div class="field"><label>对齐</label><select id="fTextAlign"><option value="left">左对齐</option><option value="center">居中</option><option value="right">右对齐</option><option value="justify">两端对齐</option></select></div><div class="field full"><label>文字样式</label><div class="format-toggle-row"><button type="button" class="format-toggle" id="fBold" data-format-toggle="bold">B 加粗</button><button type="button" class="format-toggle" id="fItalic" data-format-toggle="italic"><i>I</i> 斜体</button><button type="button" class="format-toggle" id="fUnderline" data-format-toggle="underline"><u>U</u> 下划线</button></div></div><div class="field"><label>水平内边距 (px)</label><input id="fPadX" type="number" step="1"></div><div class="field"><label>垂直内边距 (px)</label><input id="fPadY" type="number" step="1"></div><div class="field"><label>背景</label><div class="swatch-row"><input id="fBgColor" type="color"><input id="fBg" type="text" placeholder="#ffffff / transparent"></div></div><div class="field"><label>文字颜色</label><div class="swatch-row"><input id="fColorPicker" type="color"><input id="fColor" type="text" placeholder="#142238"></div></div><div class="field"><label>边框颜色</label><input id="fBorder" type="text" placeholder="#dce3eb"></div><div class="field"><label>边框宽度</label><input id="fBorderW" type="number" step="1"></div><div class="field"><label>圆角 (px)</label><input id="fRadius" type="number" step="1"></div><div class="field"><label>透明度</label><input id="fOpacity" type="number" min="0" max="1" step="0.05"></div><div class="field"><label>旋转 (deg)</label><input id="fRotate" type="number" step="1"></div><div class="field"><label>层级</label><input id="fZ" type="number" step="1"></div></div><div class="readout"><div>页码 <b id="rPage">—</b></div><div>类型 <b id="rType">—</b></div><div>像素位置 <b id="rPx">—</b></div><div>像素尺寸 <b id="rSize">—</b></div><div>实际字号 <b id="rComputedFont">—</b></div><div>当前颜色 <b id="rComputedColor">—</b></div></div><div class="tool-label">对齐（相对舞台）</div><div class="tool-row align"><button class="btn" id="alignLeft" title="左对齐">⇤ 左</button><button class="btn" id="alignCenterX" title="水平居中">↔ 中</button><button class="btn" id="alignRight" title="右对齐">⇥ 右</button><button class="btn" id="alignTop" title="顶对齐">⇧ 顶</button><button class="btn" id="alignCenterY" title="垂直居中">↕ 中</button><button class="btn" id="alignBottom" title="底对齐">⇩ 底</button></div><div class="tool-label">层级</div><div class="tool-row layer"><button class="btn" id="bringFront" title="置顶">置顶</button><button class="btn" id="bringForward" title="上移一层">上移</button><button class="btn" id="sendBackward" title="下移一层">下移</button><button class="btn" id="sendBack" title="置底">置底</button></div><div class="editor-actions"><button class="primary" id="addText">＋文本框</button><button id="addLine">＋分隔线</button><button id="addCard">＋卡片</button><button id="addImage">＋图片框</button><button id="undo">↶ 撤销</button><button id="redo">↷ 重做</button><button id="duplicate">复制</button><button id="delete">删除</button><button id="hide">显示 / 隐藏</button><button id="clearSelection">取消选中</button><button id="export">导出 JSON</button><button id="import">导入 JSON</button><button id="reset">恢复默认</button><button id="showEditor">显示入口</button><button id="hideEditor">隐藏入口</button><button id="copyElement">复制元素</button><button id="pasteElement">粘贴元素</button><button id="exportNotes">导出备注</button></div><input id="importFile" type="file" accept="application/json" hidden><p class="hint" style="margin-top:10px">快捷键：E 编辑，S 保存，←/→ 切页，空格下一页，⌘/Ctrl+D 复制，方向键微移，Shift+方向键快速移动。隐藏入口后按 E 恢复。</p></aside>
+    </div>
+  </main>
+</div>
+<div class="presenter-panel" id="presenterPanel" aria-hidden="true">
+  <div class="presenter-head"><b id="presenterPageMeta">1 / 19</b><button class="btn" id="presentExit" title="退出演讲者模式">✕ 退出</button></div>
+  <div class="presenter-grid">
+    <div class="presenter-notes-wrap"><div class="presenter-label">本页演讲备注</div><textarea id="presenterNotes" placeholder="暂无备注"></textarea></div>
+    <div><div class="presenter-label">下一页</div><div class="presenter-next-card" id="presenterNext"></div></div>
+  </div>
+  <div class="presenter-timer" id="presenterTimer">00:00</div><div class="presenter-tools"><button class="btn" id="autoplayBtn">▶ 自动播放</button><label>间隔 <input id="autoplayInterval" type="number" min="1" max="30" step="1" value="5"> 秒</label></div>
+</div>
+<div class="help-overlay" id="helpOverlay" role="dialog" aria-modal="true" aria-label="快捷键帮助"><div class="help-dialog"><button class="btn help-close" id="helpClose">✕ 关闭</button><h2>快捷键与操作</h2><p class="sub">Esc 或点击遮罩关闭（下面均为演示态快捷键，编辑态以面板为准）。</p><div class="grid2"><div><h3>翻页</h3><div class="help-row"><span class="kbd">→</span><span class="kbd">Space</span><span class="desc">下一页 / 下一条浮现</span></div><div class="help-row"><span class="kbd">←</span><span class="desc">上一页</span></div><div class="help-row"><span class="kbd">Home</span><span class="desc">第一页</span></div><div class="help-row"><span class="kbd">End</span><span class="desc">最后一页</span></div><div class="help-row"><span class="kbd">#</span><span class="desc">地址栏支持 #页码 直达</span></div><h3>视图</h3><div class="help-row"><span class="kbd">F</span><span class="desc">进入 / 退出全屏</span></div><div class="help-row"><span class="kbd">?</span><span class="desc">打开 / 关闭本帮助</span></div><div class="help-row"><span class="kbd">⌘/Ctrl</span><span class="kbd">⇧</span><span class="kbd">H</span><span class="desc">隐藏 / 显示顶部工具栏</span></div></div><div><h3>编辑</h3><div class="help-row"><span class="kbd">E</span><span class="desc">切换编辑模式</span></div><div class="help-row"><span class="kbd">S</span><span class="desc">保存到本机</span></div><div class="help-row"><span class="kbd">⌘</span><span class="kbd">Z</span><span class="desc">撤销 / 前向重做（Shift）</span></div><div class="help-row"><span class="kbd">⌘</span><span class="kbd">D</span><span class="desc">复制选中元素</span></div><div class="help-row"><span class="kbd">↑↓←→</span><span class="desc">微移选中元素（Shift 加速）</span></div><div class="help-row"><span class="kbd">⌘</span><span class="kbd">C</span><span class="kbd">V</span><span class="desc">复制 / 粘贴选中元素（可跨页）</span></div><h3>图片</h3><div class="help-row"><span class="kbd">＋图片框</span><span class="desc">上传本地图片填入选中占位框</span></div></div></div></div></div>
+<div class="overview-overlay" id="overviewOverlay"><div class="overview-head"><h2>页面概览 · 点击跳转</h2><button class="btn" id="overviewClose">✕ 关闭</button></div><div class="overview-grid" id="overviewGrid"></div></div><input id="imageUpload" type="file" accept="image/*" hidden>
+<input id="folderInput" type="file" webkitdirectory multiple hidden>
+<input id="fileInput" type="file" multiple accept=".html,.htm,text/html" hidden>
+<div class="media-tray" id="mediaTray" hidden aria-live="polite">
+  <div class="media-tray-head"><strong id="mediaTrayTitle">录音与转写</strong><button class="btn" id="mediaTrayClose" title="关闭浮层">✕</button></div>
+  <div class="media-tray-row"><span class="media-tray-timer" id="recordTimer">00:00</span><span class="media-tray-status" id="mediaTrayStatus">尚未开始</span></div>
+  <div class="transcript-output" id="transcriptOutput" hidden></div>
+  <div class="media-tray-row" style="margin-top:8px"><button class="btn" id="clearTranscript">清空转写</button><button class="btn" id="insertTranscript">插入当前页备注</button><a class="media-download" id="recordDownload" hidden>下载录音</a></div>
+</div>
+<div class="floating-text-toolbar" id="floatingTextToolbar" hidden aria-label="文字属性工具条">
+  <select id="ftFontFamily" aria-label="字体" title="字体"><option value="">默认字体</option><option value="var(--font-en)">英文 / 数字</option><option value="&quot;PingFang SC&quot;,&quot;Microsoft YaHei&quot;,&quot;Heiti SC&quot;,sans-serif">黑体</option><option value="&quot;Songti SC&quot;,&quot;SimSun&quot;,serif">宋体</option><option value="&quot;Kaiti SC&quot;,&quot;STKaiti&quot;,serif">楷体</option><option value="Georgia,&quot;Times New Roman&quot;,serif">Georgia</option></select>
+  <label>字号 <input id="ftFont" type="number" min="6" max="200" step="1" value="16"></label>
+  <select id="ftWeight" aria-label="字重"><option value="400">常规</option><option value="500">中等</option><option value="600">半粗</option><option value="700">粗体</option><option value="800">特粗</option></select>
+  <input id="ftColor" type="color" value="#142238" aria-label="文字颜色">
+  <label>行高 <input id="ftLine" type="number" min="0.8" max="4" step="0.05" value="1.4"></label>
+  <label>字距 <input id="ftLetter" type="number" min="-10" max="50" step="0.1" value="0"></label>
+  <span class="ft-sep" aria-hidden="true"></span>
+  <button class="ft-btn" type="button" data-ft-action="bold" title="切换粗体"><b>B</b></button>
+  <button class="ft-btn" type="button" data-ft-action="italic" title="切换斜体"><i>I</i></button>
+  <button class="ft-btn" type="button" data-ft-action="underline" title="切换下划线"><u>U</u></button>
+  <button class="ft-btn" type="button" data-ft-align="left" title="左对齐">左</button><button class="ft-btn" type="button" data-ft-align="center" title="居中">中</button><button class="ft-btn" type="button" data-ft-align="right" title="右对齐">右</button>
+  <button class="ft-btn ft-close" type="button" id="ftClose" title="关闭工具条">×</button>
+</div>
+<script>
+(()=>{
+'use strict';
+const stage=document.getElementById('stage'); let slides=[...stage.querySelectorAll('.slide')]; const thumbs=document.getElementById('thumbs'), meta=document.getElementById('pageMeta'), app=document.getElementById('app'), panel=document.getElementById('editorPanel'), deckProgress=document.getElementById('deckProgress');
+const KEY='premium-presentation-design-system-v1', DECK_LIST_KEY='premium-deck-list', DECK_PREFIX='premium-deck:', SIDEBAR_KEY='premium-sidebar-collapsed', TOPBAR_KEY='premium-topbar-collapsed'; let page=0, reveal=4, editing=false, selected=null, hiddenEntry=false, history=[], redoStack=[]; let topbarCollapsed=false; let notes=Array(slides.length).fill(''), presenterOpen=false, activeDeckId=null; let timerStart=Date.now(), timerId=0, helpOpen=false;
+let lastEditorPoint={x:0,y:0}, mediaStream=null, mediaRecorder=null, recordingChunks=[], recordingStartedAt=0, recordingTimerId=0, isRecording=false, speechRecognition=null, isTranscribing=false, transcriptFinal='', transcriptInterim='', lastRecordingUrl='';
+const qs=id=>document.getElementById(id); const clamp=(n,a,b)=>Math.max(a,Math.min(b,n)); const px=(n)=>Number.isFinite(n)?n:0;
+/* ===== 缩放 / 平移 / 项目管理 ===== */
+const stageFrame=document.getElementById('stageFrame');
+const ZOOM_MIN=.2, ZOOM_MAX=6, RECENT_KEY='premium-html-recent-v1';
+let zoom=1, panX=0, panY=0, panning=false, dragMoved=false, presentationReferenceWidth=0;
+let startSX=0, startSY=0, startPanX=0, startPanY=0;
+let pickedFiles=[], serverFiles=[];
+function applyView(){
+  stage.style.transform='translate('+panX+'px,'+panY+'px) scale('+zoom+')';
+  const zv=qs('zoomValue'); if(zv) zv.textContent=Math.round(zoom*100)+'%';
+  stageFrame.classList.toggle('zoomed', zoom>1.0001);
+  stageFrame.classList.toggle('panning', panning&&dragMoved);
+}
+function resetView(){ zoom=1; panX=0; panY=0; applyView(); }
+function setZoomVal(nz,e){
+  nz=clamp(nz,ZOOM_MIN,ZOOM_MAX);
+  if(Math.abs(nz-zoom)<1e-6) return;
+  const fr=stageFrame.getBoundingClientRect();
+  const sx=e?e.clientX-fr.left:fr.width/2, sy=e?e.clientY-fr.top:fr.height/2;
+  const oz=zoom; zoom=nz;
+  panX=sx-(sx-panX)/oz*zoom; panY=sy-(sy-panY)/oz*zoom;
+  applyView();
+}
+function zoomBy(f,e){ setZoomVal(zoom*f,e); }
+function spawnRipple(e){
+  const fr=stageFrame.getBoundingClientRect();
+  const ripple=document.createElement('i'); ripple.className='ripple';
+  ripple.style.left=((e.clientX-fr.left-panX)/zoom)+'px';
+  ripple.style.top=((e.clientY-fr.top-panY)/zoom)+'px';
+  stage.appendChild(ripple); setTimeout(()=>ripple.remove(),700);
+}
+function updateGlow(e){
+  let g=stage.querySelector('.cursor-glow');
+  if(!g){ g=document.createElement('i'); g.className='cursor-glow'; stage.appendChild(g); }
+  const fr=stageFrame.getBoundingClientRect();
+  g.style.left=((e.clientX-fr.left-panX)/zoom)+'px';
+  g.style.top=((e.clientY-fr.top-panY)/zoom)+'px';
+}
+function stagePointerDown(e){
+  if(editing) return;
+  if(document.body.classList.contains('presenter-mode')){ panning=false; dragMoved=false; return; }
+  panning=true; dragMoved=false;
+  startSX=e.clientX; startSY=e.clientY; startPanX=panX; startPanY=panY;
+  try{ stage.setPointerCapture(e.pointerId); }catch(err){}
+}
+function stagePointerMove(e){
+  if(editing||document.body.classList.contains('presenter-mode')) return;
+  if(!panning){ updateGlow(e); return; }
+  const dx=e.clientX-startSX, dy=e.clientY-startSY;
+  if(!dragMoved && Math.hypot(dx,dy)>3) dragMoved=true;
+  if(dragMoved){ panX=startPanX+dx; panY=startPanY+dy; applyView(); }
+  updateGlow(e);
+}
+function stagePointerUp(e){
+  if(editing) return;
+  if(!document.body.classList.contains('presenter-mode')){
+    const wasDrag=dragMoved;
+    panning=false; dragMoved=false; applyView();
+    if(wasDrag) return;
+  }
+  spawnRipple(e);
+  const fr=stageFrame.getBoundingClientRect();
+  if((e.clientX-fr.left)<fr.width*.25) prev(); else next();
+}
+function stageWheel(e){
+  if(editing||document.body.classList.contains('presenter-mode')) return;
+  e.preventDefault();
+  zoomBy(e.deltaY<0?1.12:1/1.12, e);
+}
+function wireZoom(){
+  qs('zoomIn').onclick=()=>zoomBy(1.2);
+  qs('zoomOut').onclick=()=>zoomBy(1/1.2);
+  qs('zoomFit').onclick=()=>resetView();
+  qs('zoomReset').onclick=()=>resetView();
+  let layoutTimer=0;
+  let layoutSecondFrame=0;
+  window.fitStageFrame=()=>{
+    if(document.body.classList.contains('presenter-mode')) return;
+    const area=document.getElementById('stageArea');
+    if(!area) return;
+    const rect=area.getBoundingClientRect();
+    const cs=getComputedStyle(area);
+    const padX=(parseFloat(cs.paddingLeft)||0)+(parseFloat(cs.paddingRight)||0);
+    const padY=(parseFloat(cs.paddingTop)||0)+(parseFloat(cs.paddingBottom)||0);
+    // Measure the actual flex item after the editor panel has joined/left the
+    // work body. This keeps the 16:9 stage inside the remaining area instead
+    // of relying on the previous frame width and letting the panel overlap it.
+    const maxW=Math.max(0, rect.width-padX);
+    const maxH=Math.max(0, rect.height-padY);
+    const w=Math.min(maxW, maxH*16/9);
+    const h=w*9/16;
+    // Keep the slide's internal typography proportional to the presentation
+    // canvas.  The editor panel changes available width, but it must not make
+    // a template's vw-based text reflow differently from presentation mode.
+    if(!editing || !presentationReferenceWidth) presentationReferenceWidth=w;
+    const fontScale=(!editing||!presentationReferenceWidth)?1:clamp(w/presentationReferenceWidth,.35,1);
+    stage.style.setProperty('--presentation-font-scale',String(fontScale));
+    stageFrame.style.width=Math.round(w)+'px';
+    stageFrame.style.height=Math.round(h)+'px';
+  };
+  const applyQueuedStageLayout=()=>{
+    window.fitStageFrame();
+    resetView();
+    refreshSlideFits(true);
+    refreshThumbScales();
+  };
+  window.queueStageLayout=()=>{
+    cancelAnimationFrame(layoutTimer);
+    cancelAnimationFrame(layoutSecondFrame);
+    layoutTimer=requestAnimationFrame(()=>{
+      applyQueuedStageLayout();
+      // A second frame is intentional: toggling editor mode changes flex
+      // geometry after style recalculation in some browsers. Re-measure then
+      // so the presentation follows the final remaining width.
+      layoutSecondFrame=requestAnimationFrame(applyQueuedStageLayout);
+    });
+  };
+  if('ResizeObserver' in window){
+    const stageLayoutObserver=new ResizeObserver(()=>window.queueStageLayout?.());
+    const area=document.getElementById('stageArea');
+    const body=document.querySelector('.work-body');
+    if(area)stageLayoutObserver.observe(area);
+    if(body)stageLayoutObserver.observe(body);
+  }
+}
+function readRecent(){ try{ const a=JSON.parse(localStorage.getItem(RECENT_KEY)||'[]'); return Array.isArray(a)?a:[]; }catch(e){ return []; } }
+function writeRecent(a){ try{ localStorage.setItem(RECENT_KEY, JSON.stringify((a||[]).slice(0,40))); }catch(e){} }
+const FILE_DB='premium-file-history-db-v1';
+let currentFileHandle=null, currentFileName='高级演示模板系统', currentFilePath='';
+function openFileDb(){return new Promise((resolve,reject)=>{if(!('indexedDB' in window))return resolve(null);const r=indexedDB.open(FILE_DB,1);r.onupgradeneeded=()=>{if(!r.result.objectStoreNames.contains('handles'))r.result.createObjectStore('handles')};r.onsuccess=()=>resolve(r.result);r.onerror=()=>resolve(null)})}
+async function putFileHandle(key,handle){try{const db=await openFileDb();if(!db||!handle)return;await new Promise((res,rej)=>{const tx=db.transaction('handles','readwrite');tx.objectStore('handles').put(handle,key);tx.oncomplete=res;tx.onerror=rej});db.close()}catch(e){}}
+async function getFileHandle(key){try{const db=await openFileDb();if(!db)return null;const value=await new Promise((res,rej)=>{const tx=db.transaction('handles','readonly');const q=tx.objectStore('handles').get(key);q.onsuccess=()=>res(q.result||null);q.onerror=rej});db.close();return value}catch(e){return null}}
+async function removeFileHandle(key){try{const db=await openFileDb();if(!db)return;await new Promise((res,rej)=>{const tx=db.transaction('handles','readwrite');tx.objectStore('handles').delete(key);tx.oncomplete=res;tx.onerror=rej});db.close()}catch(e){}}
+function fileRecentKey(f){return f.key||f.path||f.url||('name:'+f.name)}
+function recordRecent(f){
+  if(!f||!f.name)return;
+  const key=fileRecentKey(f);
+  let a=readRecent().filter(x=>x&&x.key!==key&&x.name!==f.name);
+  const item={key:key,name:f.name,path:f.path||f.rel||'',url:f.url||null,kind:f.kind||'html',at:Date.now()};
+  a.unshift(item); writeRecent(a); renderRecent();
+  if(f.handle)putFileHandle(key,f.handle);
+}
+function recentLabel(r){return r.path||r.name||''}
+async function ensureHandlePermission(handle,write){if(!handle)return false;try{const opts=write?{mode:'readwrite'}:{mode:'read'};if(handle.queryPermission&&await handle.queryPermission(opts)==='granted')return true;if(handle.requestPermission)return (await handle.requestPermission(opts))==='granted';return true}catch(e){return false}}
+async function readFileHandle(handle){if(!handle||!(await ensureHandlePermission(handle,false)))return null;try{return await handle.getFile()}catch(e){return null}}
+function scopeImportedCss(css,scope){
+  if(!css||!scope)return css||'';
+  const scopeSelector=scope.trim();
+  const containerAtRules=/^@(media|supports|container|layer|document|scope)\b/i;
+  const preserveAtRules=/^@(keyframes|-webkit-keyframes|font-face|page|property|counter-style|viewport|-ms-viewport)\b/i;
+  function matchingClose(text,open){
+    let depth=1,quote='',comment=false;
+    for(let i=open+1;i<text.length;i++){
+      const ch=text[i],next=text[i+1];
+      if(comment){if(ch==='*'&&next==='/'){comment=false;i++}continue}
+      if(quote){if(ch==='\\')i++;else if(ch===quote)quote='';continue}
+      if(ch==='/'&&next==='*'){comment=true;i++;continue}
+      if(ch==='"'||ch==="'"){quote=ch;continue}
+      if(ch==='{')depth++;
+      else if(ch==='}'&&!--depth)return i;
+    }
+    return text.length-1;
+  }
+  function selectorFor(sel){
+    let v=sel.trim(); if(!v)return v;
+    if(/^:root\b/i.test(v))return scopeSelector+v.slice(5);
+    v=v.replace(/^html\b/i,scopeSelector).replace(/^body\b/i,scopeSelector);
+    if(v===scopeSelector||v.startsWith(scopeSelector+' ')||v.startsWith(scopeSelector+'>')||v.startsWith(scopeSelector+':'))return v;
+    if(v==='*')return scopeSelector+','+scopeSelector+' *';
+    if(v.startsWith('*'))return scopeSelector+v.slice(1)+','+scopeSelector+' '+v;
+    return scopeSelector+' '+v;
+  }
+  function transform(text){
+    let out='',cursor=0,i=0,quote='',comment=false;
+    while(i<text.length){
+      const ch=text[i],next=text[i+1];
+      if(comment){if(ch==='*'&&next==='/'){comment=false;i+=2;continue}i++;continue}
+      if(quote){if(ch==='\\')i+=2;else if(ch===quote){quote='';i++}else i++;continue}
+      if(ch==='/'&&next==='*'){comment=true;i+=2;continue}
+      if(ch==='"'||ch==="'"){quote=ch;i++;continue}
+      if(ch!=='{'){i++;continue}
+      const raw=text.slice(cursor,i),trimmed=raw.trim();
+      const leading=raw.slice(0,raw.indexOf(trimmed));
+      const close=matchingClose(text,i),body=text.slice(i+1,close);
+      if(trimmed.startsWith('@')){
+        out+=leading+trimmed+'{'+(containerAtRules.test(trimmed)?transform(body):body)+'}';
+      }else{
+        out+=leading+trimmed.split(',').map(selectorFor).join(',')+'{'+body+'}';
+      }
+      cursor=close+1;i=cursor;
+    }
+    return out+text.slice(cursor);
+  }
+  return transform(css);
+}
+function injectOpenedStyles(doc,scope=''){
+  let st=document.getElementById('openedDeckStyle');
+  if(!st){st=document.createElement('style');st.id='openedDeckStyle';const base=document.head.querySelector('style');if(base)document.head.insertBefore(st,base);else document.head.appendChild(st)}
+  const css=[...doc.querySelectorAll('style')].map(x=>x.textContent||'').join('\n');
+  st.textContent=scope?scopeImportedCss(css,scope):css;
+}
+const EDITABLE_SELECTOR='.editable,[data-editable]';
+const IMAGE_SELECTOR='.image-placeholder,.editable[data-kind="image"],[data-editable][data-kind="image"]';
+function isEditableElement(el){return !!el?.matches?.(EDITABLE_SELECTOR)}
+function isTableContent(el){return !!el?.closest?.('table')}
+function markEditableElements(root){root?.querySelectorAll?.('[data-editable]').forEach(el=>el.classList.add('editable'))}
+function markNestedTypeElements(root){
+  root?.querySelectorAll?.('.editable .type-hero,.editable .type-page-title,.editable .type-section-title,.editable .type-subtitle,.editable .type-body,.editable .type-caption,.editable .type-metric,.editable .type-label,.editable .accent').forEach(el=>{
+    if(el.classList.contains('editable')||el.closest('table'))return;
+    el.classList.add('editable');
+    el.dataset.editable='';
+    el.dataset.nestedType='1';
+  });
+}
+function ensureSlideInner(slide){
+  if(!slide)return null;
+  let inner=slide.querySelector(':scope > .slide-inner');
+  if(inner){
+    if(slide.classList.contains('imported-slide')){
+      inner.classList.add('imported-slide-inner');
+      inner.style.pointerEvents='none';
+    }
+    return inner;
+  }
+  inner=document.createElement('div');
+  inner.className='slide-inner imported-slide-inner';
+  inner.style.padding='0';
+  inner.style.pointerEvents='none';
+  if(slide.classList.contains('imported-slide')){
+    while(slide.firstChild)inner.appendChild(slide.firstChild);
+  }
+  slide.appendChild(inner);
+  return inner;
+}
+const IMPORTED_TEXT_EXCLUDED='script,style,button,input,textarea,select,option,img,svg,canvas,video,audio,[data-no-text],[data-icon],[data-upload]';
+function hasDirectText(el){return [...(el?.childNodes||[])].some(node=>node.nodeType===Node.TEXT_NODE&&node.textContent.trim())}
+function markImportedEditableElements(root){
+  if(!root)return;
+  markEditableElements(root);
+  const elements=[root,...root.querySelectorAll?.('*')||[]];
+  elements.forEach(el=>{
+    if(!el||el.nodeType!==1||el.matches(IMPORTED_TEXT_EXCLUDED)||el.closest(IMPORTED_TEXT_EXCLUDED))return;
+    if(el!==root&&el.closest('[data-editable]')&&el.closest('[data-editable]')!==el)return;
+    if(!hasDirectText(el))return;
+    // Keep existing mixed-content structure intact.  Only the direct text
+    // nodes are wrapped, so a card/layout container is never turned into one
+    // giant text box and its nested formatting remains editable.
+    const childElements=[...el.children].filter(child=>!child.matches('.resize-handle'));
+    if(childElements.length){
+      [...el.childNodes].forEach(node=>{
+        if(node.nodeType!==Node.TEXT_NODE||!node.textContent.trim())return;
+        const span=document.createElement('span');
+        span.className='editable imported-inline-text';
+        span.dataset.editable='';
+        span.dataset.inlineText='1';
+        node.parentNode.replaceChild(span,node);
+        span.appendChild(node);
+      });
+      return;
+    }
+    el.classList.add('editable');
+    el.dataset.editable='';
+  });
+}
+function inferImportedTargetWidth(source){
+  const css=typeof source==='string'
+    ? [...source.matchAll(/<style\b[^>]*>([\s\S]*?)<\/style>/gi)].map(m=>m[1]||'').join('\n')
+    : [...source?.querySelectorAll?.('style')||[]].map(x=>x.textContent||'').join('\n');
+  const candidates=[];
+  // Prefer layout widths that describe a page/container, such as
+  // `width:min(1240px, ...)` or `max-width:1200px`; ignore tiny component widths.
+  const preferred=/(?:width|max-width)\s*:\s*(?:min|max)\(\s*(\d+(?:\.\d+)?)px/gi;
+  let m; while((m=preferred.exec(css))) candidates.push(parseFloat(m[1]));
+  const bounded=/(?:^|[;{])\s*max-width\s*:\s*(\d+(?:\.\d+)?)px/gi;
+  while((m=bounded.exec(css))) candidates.push(parseFloat(m[1]));
+  const usable=candidates.filter(n=>Number.isFinite(n)&&n>=720&&n<=2400);
+  return usable.length?Math.max(...usable):0;
+}
+function prepareImportedTextBoxes(root){
+  root?.querySelectorAll?.('.editable').forEach(el=>{
+    if(el.dataset.noText||el.dataset.inlineText||el.closest('.imported-inline-text')||el.querySelector('.resize-handle,.imported-text-content,.imported-inline-text,[data-upload],button,a,input,textarea,select,img,svg,[data-lucide]'))return;
+    const content=document.createElement('span');
+    content.className='imported-text-content';
+    content.dataset.textContent='1';
+    while(el.firstChild)content.appendChild(el.firstChild);
+    el.appendChild(content);
+  });
+}
+function applyImportedTextBoxCompensation(slide){
+  if(!slide?.classList.contains('imported-slide'))return;
+  // The page is fitted with a single uniform scale, so glyphs are never
+  // stretched and no per-box counter-transform is needed.  Any sizing left on
+  // a text wrapper by an older deck must be cleared: resizing a box inside the
+  // imported grid/flow reflows its siblings and moves text off its position.
+  slide.querySelectorAll(':scope > .slide-inner .imported-text-content').forEach(content=>{
+    content.style.display='';
+    content.style.boxSizing='';
+    content.style.maxWidth='';
+    content.style.maxHeight='';
+    content.style.width='';
+    content.style.height='';
+    content.style.transformOrigin='';
+    content.style.transform='';
+  });
+}
+function normalizeSlideData(s){
+  const c=s.cloneNode(true); c.classList.add('imported-slide'); markEditableElements(c); ensureSlideInner(c); c.querySelectorAll('.resize-handle,.cursor-glow,.ripple').forEach(x=>x.remove());
+  // Imported text gets temporary inverse transforms while fitted into the
+  // editor stage. Do not persist those compensation styles in snapshots:
+  // restoring them would make the next measurement drift and cause a jump.
+  c.querySelectorAll('.imported-text-content').forEach(content=>{
+    const parent=content.parentNode;
+    if(!parent)return;
+    while(content.firstChild)parent.insertBefore(content.firstChild,content);
+    content.remove();
+  });
+  c.querySelectorAll('[data-bound]').forEach(x=>x.removeAttribute('data-bound')); c.querySelectorAll('.selected').forEach(x=>x.classList.remove('selected')); c.querySelectorAll(EDITABLE_SELECTOR).forEach(x=>x.removeAttribute('contenteditable'));
+  c.classList.remove('active','reveal-1','reveal-2','reveal-3','reveal-4'); c.classList.add('slide'); prepareImportedTextBoxes(c);
+  return {html:c.innerHTML,template:c.dataset.template||'',chapter:c.dataset.chapter||'',core:c.dataset.core||'',className:c.className||'slide',sourceTargetWidth:c.dataset.sourceTargetWidth||'',imported:true};
+}
+function createSlideFromData(d){
+  const s=document.createElement('section'); const cn=String(d&&d.className||'slide').split(/\s+/).filter(Boolean).filter(x=>!/^reveal-[1-4]$/.test(x)&&x!=='active');
+  if(!cn.includes('slide'))cn.unshift('slide'); if(d&&d.imported&&!cn.includes('imported-slide'))cn.push('imported-slide'); s.className=cn.join(' '); s.dataset.template=d&&d.template||'未命名页面'; s.dataset.chapter=d&&d.chapter||''; s.dataset.core=d&&d.core||''; if(d&&d.sourceTargetWidth)s.dataset.sourceTargetWidth=d.sourceTargetWidth; s.innerHTML=d&&typeof d.html==='string'?d.html:'<div class="slide-inner"></div>'; ensureSlideInner(s); markEditableElements(s); if(d&&d.imported)prepareImportedTextBoxes(s); return s;
+}
+function syncSlides(){slides=[...stage.querySelectorAll(':scope > .slide')];if(!slides.length){const s=createSlideFromData({template:'空白页面',core:'新建页面'});stage.appendChild(s);slides=[s]}notes=(notes||[]).slice(0,slides.length).concat(Array(Math.max(0,slides.length-(notes||[]).length)).fill(''));page=clamp(page,0,slides.length-1)}
+function rebuildSlides(data){stage.querySelectorAll(':scope > .slide').forEach(s=>s.remove());(Array.isArray(data)&&data.length?data:[{template:'空白页面',core:'新建页面'}]).forEach(d=>stage.appendChild(createSlideFromData(d)));syncSlides()}
+function templatesFromCurrent(){return {id:'premium-v1',label:'通用模板 · 19 页',slides:slides.map(normalizeSlideData)}}
+const TEMPLATE_LIBRARY={'premium-v1':templatesFromCurrent()};
+function renderTemplateSelect(){const el=qs('templateSelect');if(!el)return;el.innerHTML=Object.values(TEMPLATE_LIBRARY).map(t=>`<option value="${escapeHtml(t.id)}">${escapeHtml(t.label)}</option>`).join('')}
+function templateSlideData(id){const t=TEMPLATE_LIBRARY[id]||TEMPLATE_LIBRARY['premium-v1'];const d=t.slides[Math.floor(Math.random()*t.slides.length)]||{template:'空白页面',core:'新建页面',html:'<div class="slide-inner"></div>'};return {...d,className:d.className||'slide'} }
+function addTemplatePage(){const id=qs('templateSelect')?.value||'premium-v1';push();const d=templateSlideData(id);const s=createSlideFromData(d);stage.appendChild(s);syncSlides();notes.push('');page=slides.length-1;bindEditable();makeThumbs();render();save();toast('已新增页面：'+(d.template||'模板页面'))}
+function movePage(from,to){if(from===to||from<0||to<0||from>=slides.length||to>=slides.length)return;push();const moving=slides[from];const target=slides[to];if(from<to)target.after(moving);else target.before(moving);const oldPage=page;const oldNotes=notes.slice();syncSlides();notes=oldNotes.slice();if(page===from)page=to;else if(from<page&&page<=to)page--;else if(to<=page&&page<from)page++;makeThumbs();render();save()}
+function deletePage(index){if(slides.length<=1){toast('至少保留一个页面');return}const i=Number.isInteger(index)?index:page;if(!confirm('删除第 '+(i+1)+' 页？'))return;push();slides[i].remove();notes.splice(i,1);syncSlides();page=clamp(i>=slides.length?slides.length-1:i,0,slides.length-1);makeThumbs();render();save();toast('页面已删除')}
+async function loadDeckHtml(html, info){
+  clearSelect();
+  const doc=new DOMParser().parseFromString(html,'text/html');
+  let found=[...doc.querySelectorAll('.slide')];
+  const sourceTargetWidth=inferImportedTargetWidth(doc)||inferImportedTargetWidth(html);
+  let importedDocument=false;
+  if(!found.length){
+    const body=doc.body;
+    if(!body){toast('HTML 文件没有可显示的页面内容');return false}
+    // Treat a regular document as one long imported page.  The source body is
+    // copied into an editor-owned wrapper so its styles can be scoped and its
+    // scripts can never execute inside the editor.
+    const host=doc.createElement('section');
+    host.className='slide imported-slide imported-document-slide';
+    host.dataset.template=doc.title||info?.name?.replace(/\.html?$/i,'')||'HTML 页面';
+    host.dataset.chapter='HTML';
+    host.dataset.core='普通 HTML 文档';
+    if(sourceTargetWidth)host.dataset.sourceTargetWidth=String(sourceTargetWidth);
+    const inner=doc.createElement('div');
+    inner.className='slide-inner imported-slide-inner imported-document-body';
+    const bodyClass=body.getAttribute('class');
+    if(bodyClass)inner.classList.add(...bodyClass.split(/\s+/).filter(Boolean));
+    const bodyStyle=body.getAttribute('style');
+    if(bodyStyle)inner.setAttribute('style',bodyStyle);
+    [...body.childNodes].forEach(node=>{
+      if(node.nodeType===1&&node.matches('script,iframe,object,embed,link,style'))return;
+      inner.appendChild(node.cloneNode(true));
+    });
+    host.appendChild(inner); found=[host]; importedDocument=true;
+  }
+  injectOpenedStyles(doc,importedDocument?'.imported-document-body':'');
+  const data=found.map(s=>{s.classList.add('imported-slide');if(sourceTargetWidth)s.dataset.sourceTargetWidth=String(sourceTargetWidth);markImportedEditableElements(s);return normalizeSlideData(s)});
+  rebuildSlides(data); currentFileName=info?.name||'已打开 HTML';currentFilePath=info?.path||info?.rel||'';currentFileHandle=info?.handle||null;
+  const d=readDeckList().find(x=>x.id===activeDeckId);if(d){d.title=(currentFileName||d.title).replace(/\.html?$/i,'');d.updatedAt=Date.now();writeDeckList(readDeckList());refreshDeckSelect()}
+  page=0;reveal=4;history=[];redoStack=[];notes=Array(slides.length).fill('');bindEditable();makeThumbs();render();save();queueStageLayout?.();return true;
+}
+async function openLocalFile(f, extra){if(!f)return false;try{const file=f instanceof File?f:await readFileHandle(f);if(!file){toast('无法读取该本地文件，可能需要重新授权');return false}const info={name:file.name||extra?.name||'本地 HTML',path:file.path||extra?.path||extra?.rel||'',rel:extra?.rel||'',handle:extra?.handle||(!(f instanceof File)?f:null),key:extra?.key||file.path||file.name,kind:'local'};recordRecent(info);return await loadDeckHtml(await file.text(),info)}catch(e){toast('打开 HTML 失败：'+(e.message||'文件不可读'));return false}}
+async function launchFile(f){
+  if(!f)return;
+  if(f.handle)return openLocalFile(f.handle,{name:f.name,path:f.path,rel:f.rel,key:f.key});
+  if(f.file)return openLocalFile(f.file,f);
+  if(f.url){try{const res=await fetch(f.url,{cache:'no-store'});if(!res.ok)throw new Error('HTTP '+res.status);recordRecent(f);return await loadDeckHtml(await res.text(),f)}catch(e){toast('无法打开：'+f.name);return false}}
+  toast('无法打开：'+f.name);return false;
+}
+function makeFileItem(f){
+  const b=document.createElement('div');b.className='file-item clickable';b.title=f.rel||f.path||f.name||'';const ic=document.createElement('span');ic.textContent='📄';const nm=document.createElement('span');nm.className='fname';nm.textContent=f.name||'';b.append(ic,nm);b.onclick=()=>launchFile(f);return b;
+}
+function renderFiles(){const el=qs('fileList');if(!el)return;const seen=new Set(),items=[];[...pickedFiles,...serverFiles].forEach(f=>{const k=f&&((f.path||f.rel||f.name)+'');if(!f||!f.name||seen.has(k))return;seen.add(k);items.push(f)});el.innerHTML='';if(!items.length){el.className='file-list empty';el.textContent='未选择文件夹，或当前目录没有可列出的 HTML';return}el.className='file-list';items.slice(0,300).forEach(f=>el.appendChild(makeFileItem(f)))}
+async function reopenRecent(r){if(!r)return;const h=await getFileHandle(r.key);if(h){await launchFile({handle:h,name:r.name,path:r.path,key:r.key});return}if(r.url){launchFile(r);return}toast('浏览器未保留该文件的读取权限，请点击“打开文件”重新选择：'+r.name)}
+function renderRecent(){const el=qs('recentList');if(!el)return;el.innerHTML='';const a=readRecent();if(!a.length){el.className='file-list empty';el.textContent='暂无记录';return}el.className='file-list';a.forEach(r=>{if(!r||!r.name)return;const b=document.createElement('div');b.className='file-item recent clickable';b.title=recentLabel(r);const ic=document.createElement('span');ic.textContent='↗';const nm=document.createElement('span');nm.className='fname';nm.textContent=r.name;nm.title=recentLabel(r);const del=document.createElement('button');del.className='file-action';del.type='button';del.textContent='×';del.title='移除记录';del.onclick=e=>{e.stopPropagation();writeRecent(readRecent().filter(x=>x.key!==r.key));removeFileHandle(r.key);renderRecent()};b.append(ic,nm,del);b.onclick=()=>reopenRecent(r);el.appendChild(b)})}
+async function listDirectoryHandle(dir){const arr=[];try{for await(const [name,h] of dir.entries()){if(h.kind==='file'&&/\.html?$/i.test(name)){arr.push({name,rel:name,path:name,handle:h,key:'dir:'+name,kind:'local'})}}}catch(e){}arr.sort((a,b)=>a.name.localeCompare(b.name));pickedFiles=arr;serverFiles=[];renderFiles();return arr}
+async function chooseFolder(){if(window.showDirectoryPicker){try{const dir=await window.showDirectoryPicker({mode:'read'});await putFileHandle('folder:last',dir);await listDirectoryHandle(dir);toast('已载入文件夹：'+dir.name);return}catch(e){if(e.name==='AbortError')return}}qs('folderInput').click()}
+async function chooseFiles(){if(window.showOpenFilePicker){try{const hs=await window.showOpenFilePicker({multiple:true,types:[{description:'HTML 文件',accept:{'text/html':['.html','.htm']}}]});const files=[];for(const h of hs){const f=await readFileHandle(h);if(f){files.push({name:f.name,path:f.path||f.name,rel:f.name,handle:h,key:'file:'+f.name+':'+(f.lastModified||0),kind:'local'});await openLocalFile(h,{name:f.name,handle:h,key:'file:'+f.name+':'+(f.lastModified||0)})}}if(files.length){pickedFiles=files;renderFiles();toast('已打开 '+files.length+' 个 HTML 文件')}return}catch(e){if(e.name==='AbortError')return}}qs('fileInput').click()}
+function addFolder(list){const arr=[],seen=new Set();list.forEach(f=>{const n=f.name||'';if(!/\.html?$/i.test(n))return;const rel=f.webkitRelativePath||n;if(seen.has(rel))return;seen.add(rel);arr.push({name:n,rel,path:f.path||rel,file:f,key:'fallback:'+rel,kind:'local'})});if(!arr.length){toast('该文件夹内没有 HTML 文件');return}arr.sort((a,b)=>a.rel.localeCompare(b.rel));pickedFiles=arr;serverFiles=[];renderFiles();toast('已载入 '+arr.length+' 个 HTML 文件')}
+function addFiles(list){const added=[];list.forEach(f=>{const n=f.name||'';if(!/\.html?$/i.test(n)||pickedFiles.some(x=>x.name===n))return;pickedFiles.push({name:n,rel:n,path:f.path||n,file:f,key:'fallback:'+n,kind:'local'});added.push(n)});renderFiles();toast(added.length?'已加入 '+added.length+' 个文件':'没有新的 HTML 文件')}
+function wireProject(){qs('pickFolder').onclick=chooseFolder;qs('pickFiles').onclick=chooseFiles;qs('folderInput').addEventListener('change',e=>{const f=[...e.target.files];if(f.length)addFolder(f);e.target.value=''});qs('fileInput').addEventListener('change',e=>{const f=[...e.target.files];if(f.length){addFiles(f);if(f.length===1)launchFile(pickedFiles[pickedFiles.length-1])}e.target.value=''});qs('clearRecent').onclick=()=>{writeRecent([]);renderRecent();toast('已清空最近记录')}}
+async function scanServerDir(){if(!/^https?:$/.test(location.protocol))return;try{const base=new URL('.',location.href),res=await fetch(base.href,{cache:'no-store'});if(!res.ok)return;const txt=await res.text(),seen=new Set(),arr=[],re=/href\s*=\s*["']([^"']+)["']/gi;let m;while((m=re.exec(txt))){let href=m[1];if(href.startsWith('data:'))continue;let u;try{u=new URL(href,base)}catch(e){continue}const name=decodeURIComponent(u.pathname.split('/').pop()||'');if(!name||!/\.html?$/i.test(name)||u.origin!==base.origin||seen.has(name))continue;seen.add(name);arr.push({name,rel:name,path:u.href,url:u.href,key:u.href,kind:'server'})}if(arr.length){arr.sort((a,b)=>a.name.localeCompare(b.name));serverFiles=arr;renderFiles()}}catch(e){}}
+async function restoreLastFolder(){const dir=await getFileHandle('folder:last');if(!dir)return;try{if(await ensureHandlePermission(dir,false))listDirectoryHandle(dir)}catch(e){}}
+wireZoom(); wireProject(); wireFloatingTextToolbar(); wireMedia(); applyView(); renderFiles(); renderRecent(); scanServerDir();
+function snapshot(){return slides.map(normalizeSlideData)}
+const ORIGINAL_SLIDES=snapshot();
+const escapeHtml=x=>String(x??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+const manageNotes=v=>{const el=qs('fNotes');if(!el||document.activeElement===el)return;el.value=v};
+function currentPayload(){return {version:3,page,slides:snapshot(),theme:document.body.dataset.theme||'default',hiddenEntry,notes:notes.slice(),source:{name:currentFileName,path:currentFilePath}}}
+function save(){try{if(activeDeckId){localStorage.setItem(deckKey(activeDeckId),JSON.stringify(currentPayload()));const list=readDeckList();const d=list.find(x=>x.id===activeDeckId);if(d){d.updatedAt=Date.now();writeDeckList(list)}}}catch(e){console.warn('保存到本机失败(可能超出容量)')}}
+function pushSnapshot(data){history.push(data);if(history.length>40)history.shift();redoStack=[];save()}
+function push(){pushSnapshot(snapshot())}
+function restore(data){clearSelect();rebuildSlides(data);bindEditable();makeThumbs();render();queueStageLayout?.()}
+function load(useDraft=true){
+  notes=[];hiddenEntry=false;let data=ORIGINAL_SLIDES;
+  if(useDraft){
+    try{
+      const d=JSON.parse(localStorage.getItem(deckKey(activeDeckId))||'null');
+      if(d&&Array.isArray(d.slides)&&d.slides.length)data=d.slides;
+      page=clamp(d?.page||0,0,Math.max(0,(data.length||1)-1));
+      document.body.dataset.theme=d?.theme||'default';
+      hiddenEntry=!!d?.hiddenEntry;
+      notes=Array.isArray(d?.notes)?d.notes.slice():[];
+      currentFileName=d?.source?.name||currentFileName;
+      currentFilePath=d?.source?.path||currentFilePath;
+    }catch(e){}
+  }else{
+    page=0;
+    document.body.dataset.theme='default';
+  }
+  rebuildSlides(data);bindEditable();
+}
+function deckKey(id){return DECK_PREFIX+id}
+function freshDeckId(){return Date.now().toString(36)+Math.random().toString(36).slice(2,6)}
+function readDeckList(){try{const a=JSON.parse(localStorage.getItem(DECK_LIST_KEY)||'[]');return Array.isArray(a)?a:[]}catch(e){return[]}}
+function writeDeckList(list){try{localStorage.setItem(DECK_LIST_KEY,JSON.stringify(list))}catch(e){console.warn('方案列表保存失败')}}
+function refreshDeckSelect(){const sel=qs('deckSelect');if(!sel)return;const list=readDeckList();sel.innerHTML=list.map(d=>`<option value="${escapeHtml(d.id)}"${d.id===activeDeckId?' selected':''}>${escapeHtml(d.title)}</option>`).join('')}
+function migrate(){const raw=localStorage.getItem(KEY);if(!raw||localStorage.getItem(DECK_LIST_KEY))return null;try{const old=JSON.parse(raw);const arr=Array.isArray(old)?old:(Array.isArray(old.slides)?old.slides:null);const id=freshDeckId();const payload={page:old&&Number.isInteger(old.page)?old.page:0,slides:arr&&arr.length?arr:ORIGINAL_SLIDES,theme:(old&&old.theme)||'default',hiddenEntry:!!(old&&old.hiddenEntry),notes:Array.isArray(old?.notes)?old.notes:[]};localStorage.setItem(deckKey(id),JSON.stringify(payload));writeDeckList([{id,title:'默认草稿（已迁移）',createdAt:Date.now(),updatedAt:Date.now()}]);return id}catch(e){return null}}
+function ensureDeckList(){let list=readDeckList();if(!list.length){const id=freshDeckId();list=[{id,title:'默认草稿',createdAt:Date.now(),updatedAt:Date.now()}];writeDeckList(list);if(!localStorage.getItem(deckKey(id)))localStorage.setItem(deckKey(id),JSON.stringify({page:0,slides:ORIGINAL_SLIDES,theme:'default',hiddenEntry:false,notes:[]}))}return list}
+function initDecks(){const mid=migrate();const list=ensureDeckList();activeDeckId=mid||list[0].id;refreshDeckSelect();load(false)}
+function switchDeck(id){if(!id||id===activeDeckId)return;save();activeDeckId=id;history=[];redoStack=[];clearSelect();load();bindEditable();makeThumbs();render();qs('themeSelect').value=document.body.dataset.theme||'default';qs('editBtn').style.display=hiddenEntry?'none':'';queueStageLayout?.()}
+function updatePresenter(){const pm=qs('presenterPageMeta');if(pm)pm.textContent=`${page+1} / ${slides.length}`;const pn=qs('presenterNotes');if(pn&&document.activeElement!==pn)pn.value=notes[page]||'';const nx=qs('presenterNext');if(nx){const n=slides[page+1];nx.innerHTML=n?`<div class="t">${escapeHtml(n.dataset.template||'')}</div><div class="c">${escapeHtml(n.dataset.core||'')}</div>`:'<div class="t">结束</div><div class="c">本方案已到最后一页</div>'}const pt=qs('presenterTimer');if(pt)updateTimer(true)}
+function togglePresenter(v){presenterOpen=typeof v==='boolean'?v:!presenterOpen;document.body.classList.toggle('presenter-mode',presenterOpen);const p=qs('presenterPanel');if(p)p.setAttribute('aria-hidden',presenterOpen?'false':'true');stageFrame.style.width='';stageFrame.style.height='';resetView();if(presenterOpen){if(editing)toggleEdit(false);updatePresenter()}else{clearSelect();stopAutoplay();queueStageLayout?.()}}
+function resetDeck(){if(!confirm('恢复默认会清除当前方案的编辑内容，确定吗？'))return;const id=activeDeckId;localStorage.removeItem(deckKey(id));let list=readDeckList();if(list.length<=1){list[0]={id,title:'默认草稿',createdAt:Date.now(),updatedAt:Date.now()};localStorage.setItem(deckKey(id),JSON.stringify({page:0,slides:ORIGINAL_SLIDES,theme:'default',hiddenEntry:false,notes:[]}))}else{list=list.filter(x=>x.id!==id);activeDeckId=list[0].id}writeDeckList(list);refreshDeckSelect();load();bindEditable();makeThumbs();render();qs('themeSelect').value=document.body.dataset.theme||'default';qs('editBtn').style.display=hiddenEntry?'none':'';queueStageLayout?.()}
+function exportPNG(){try{const s=active();const w=1280,h=720;const clone=s.cloneNode(true);clone.classList.remove('reveal-1','reveal-2','reveal-3','reveal-4');clone.classList.add('reveal-4');clone.querySelectorAll('.resize-handle,.cursor-glow,.ripple,.selected').forEach(x=>x.remove());const svg='<svg xmlns="http://www.w3.org/2000/svg" width="'+w+'" height="'+h+'"><foreignObject width="100%" height="100%"><div xmlns="http://www.w3.org/1999/xhtml">'+new XMLSerializer().serializeToString(clone)+'</div></foreignObject></svg>';const url=URL.createObjectURL(new Blob([svg],{type:'image/svg+xml'}));const img=new Image();img.onload=()=>{const c=document.createElement('canvas');c.width=w;c.height=h;const ctx=c.getContext('2d');ctx.drawImage(img,0,0,w,h);URL.revokeObjectURL(url);try{c.toBlob(b=>{if(!b){alert('PNG 导出失败，请改用 PDF 打印。');return}const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='premium-slide-'+(page+1)+'.png';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)},'image/png')}catch(e){alert('PNG 导出失败，请改用 PDF 打印。')}};img.onerror=()=>{URL.revokeObjectURL(url);alert('PNG 导出失败，请改用 PDF 打印。')};img.src=url}catch(e){alert('PNG 导出失败，请改用 PDF 打印。')}}
+function active(){syncSlides();return slides[page]}
+function render(){syncSlides();slides.forEach((s,i)=>s.classList.toggle('active',i===page));active().classList.remove('reveal-1','reveal-2','reveal-3','reveal-4');active().classList.add(`reveal-${editing?4:reveal}`);meta.textContent=`${String(page+1).padStart(2,'0')} · ${active().dataset.template||'未命名页面'} · ${active().dataset.core||''}`;const pc=qs('pageCounter');if(pc)pc.textContent=`${page+1} / ${slides.length}`;[...thumbs.children].forEach((t,i)=>t.classList.toggle('active',i===page));if(deckProgress)deckProgress.firstElementChild.style.width=((page+1)/slides.length*100)+'%';if(selected&&!active().contains(selected))selected=null;manageNotes(notes[page]||'');updatePanel();updatePresenter()}
+function go(n){page=clamp(n,0,slides.length-1);reveal=4;clearSelect();render();save();try{history.replaceState(null,'','#'+(page+1))}catch(e){}}
+function next(){go(page+1)}
+function prev(){go(page-1)}
+function makeThumbs(){
+  thumbs.innerHTML='';
+  slides.forEach((s,i)=>{
+    const b=document.createElement('div');b.className='thumb';b.draggable=true;b.dataset.index=String(i);b.setAttribute('role','button');b.setAttribute('tabindex','0');b.setAttribute('aria-label','第'+(i+1)+'页 · '+(s.dataset.template||''));
+    const head=document.createElement('span');head.className='thumb-head';head.innerHTML=`<span class="thumb-no">${String(i+1).padStart(2,'0')}</span><span class="thumb-title">${escapeHtml(s.dataset.template||'')}</span>`;
+    const del=document.createElement('button');del.type='button';del.className='thumb-delete';del.dataset.thumbDelete='1';del.title='删除页面';del.textContent='×';head.appendChild(del);
+    const pv=document.createElement('span');pv.className='thumb-preview';const frame=document.createElement('span');frame.className='thumb-frame';const cc=s.cloneNode(true);cc.querySelectorAll('.resize-handle,.cursor-glow,.ripple').forEach(x=>x.remove());cc.querySelectorAll('[data-bound]').forEach(x=>x.removeAttribute('data-bound'));cc.querySelectorAll('.selected').forEach(x=>x.classList.remove('selected'));cc.querySelectorAll(EDITABLE_SELECTOR).forEach(x=>x.removeAttribute('contenteditable'));frame.appendChild(cc);pv.appendChild(frame);b.append(head,pv);
+    b.addEventListener('click',e=>{if(e.target.closest('[data-thumb-delete]'))return;go(i)});b.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();go(i)}});b.addEventListener('dragstart',e=>{b.classList.add('dragging');e.dataTransfer.effectAllowed='move';e.dataTransfer.setData('text/plain',String(i))});b.addEventListener('dragend',()=>{b.classList.remove('dragging');thumbs.querySelectorAll('.drop-target').forEach(x=>x.classList.remove('drop-target'))});b.addEventListener('dragover',e=>{e.preventDefault();b.classList.add('drop-target');e.dataTransfer.dropEffect='move'});b.addEventListener('dragleave',()=>b.classList.remove('drop-target'));b.addEventListener('drop',e=>{e.preventDefault();b.classList.remove('drop-target');const from=parseInt(e.dataTransfer.getData('text/plain'),10);if(Number.isInteger(from))movePage(from,i)});del.onclick=e=>{e.stopPropagation();deletePage(i)};thumbs.appendChild(b)
+  });
+  refreshThumbScales();
+}
+function syncImportedInnerBox(slide,inner){
+  if(!slide||!inner)return;
+  const cs=getComputedStyle(slide);
+  // Imported templates commonly put their page padding/min-height on `.slide`.
+  // Move that visual padding into the fitting wrapper so the outer stage can
+  // remain a fixed 16:9 viewport without clipping the page's natural height.
+  if(!slide.dataset.sourceSlidePadding){
+    slide.dataset.sourceSlidePadding=[cs.paddingTop,cs.paddingRight,cs.paddingBottom,cs.paddingLeft].join(' ');
+  }
+  const borderTop=cs.borderTopWidth||'0px',borderRight=cs.borderRightWidth||'0px';
+  const borderBottom=cs.borderBottomWidth||'0px',borderLeft=cs.borderLeftWidth||'0px';
+  inner.style.position='absolute';
+  inner.style.top=borderTop; inner.style.right=borderRight;
+  inner.style.bottom=borderBottom; inner.style.left=borderLeft;
+  inner.style.padding=slide.dataset.sourceSlidePadding||'0px';
+  inner.style.boxSizing='border-box';
+  inner.style.minHeight='0';
+  inner.style.maxHeight='none';
+  inner.style.overflow='visible';
+  slide.style.boxSizing='border-box';
+  slide.style.minHeight='0';
+  slide.style.height='100%';
+  slide.style.maxHeight='100%';
+  slide.style.padding='0';
+  slide.style.margin='0';
+  slide.style.overflow='hidden';
+}
+function measureImportedSlide(slide){
+  const inner=slide?.querySelector(':scope > .slide-inner');
+  if(!inner)return;
+  const wasDisplay=slide.style.display,wasVisibility=slide.style.visibility;
+  const wasAnimation=slide.style.animation,wasOverflow=slide.style.overflow;
+  const wasActive=slide.classList.contains('active');
+  const tempProps=['position','top','right','bottom','left','width','height','minHeight','maxHeight','overflow','transform'];
+  const oldInner=Object.fromEntries(tempProps.map(prop=>[prop,inner.style[prop]]));
+  // Text boxes are compensated after fitting.  Remove that visual compensation
+  // while measuring, otherwise the next refresh measures the already-scaled
+  // glyph layer and the fit value drifts every time edit mode is toggled.
+  const textContents=[...inner.querySelectorAll('.imported-text-content')];
+  const textProps=['display','boxSizing','maxWidth','maxHeight','width','height','transformOrigin','transform'];
+  const oldTextContents=textContents.map(content=>Object.fromEntries(textProps.map(prop=>[prop,content.style[prop]])));
+  textContents.forEach(content=>{
+    content.style.display='block';
+    content.style.boxSizing='border-box';
+    content.style.maxWidth='none';
+    content.style.maxHeight='none';
+    content.style.width='100%';
+    content.style.height='auto';
+    content.style.transformOrigin='0 0';
+    content.style.transform='none';
+  });
+  const restoreTextContents=()=>textContents.forEach((content,index)=>textProps.forEach(prop=>{content.style[prop]=oldTextContents[index][prop]||''}));
+  slide.classList.remove('active');
+  slide.style.display='block';
+  slide.style.visibility='hidden';
+  slide.style.animation='none';
+  slide.style.overflow='visible';
+  slide.style.setProperty('--slide-content-scale','1');
+  slide.style.setProperty('--slide-content-offset-x','0px');
+  slide.style.setProperty('--slide-content-offset-y','0px');
+  syncImportedInnerBox(slide,inner);
+  // Let the wrapper assume its natural height while measuring. This makes
+  // scrollHeight and descendant bounds reflect the complete imported page,
+  // including content below the fixed stage viewport.
+  inner.style.position='relative';
+  inner.style.top='0'; inner.style.right='auto'; inner.style.bottom='auto'; inner.style.left='auto';
+  let targetWidth=parseFloat(slide.dataset.sourceTargetWidth||'0');
+  if(!Number.isFinite(targetWidth)||targetWidth<=0){
+    targetWidth=inferImportedTargetWidth(document);
+    if(Number.isFinite(targetWidth)&&targetWidth>0)slide.dataset.sourceTargetWidth=String(targetWidth);
+  }
+  // Measure at the imported document's intended desktop width when it is
+  // known. Measuring after the wrapper has already collapsed to the 16:9
+  // canvas makes responsive grids reflow too early and produces fitScaleX=1,
+  // which is exactly the wide-empty-margin case this fitting pass avoids.
+  inner.style.width=(Number.isFinite(targetWidth)&&targetWidth>0?targetWidth+'px':'100%');
+  inner.style.height='auto';
+  inner.style.minHeight='0'; inner.style.maxHeight='none';
+  inner.style.overflow='visible'; inner.style.transform='none';
+  const ir=inner.getBoundingClientRect();
+  const borderW=(parseFloat(getComputedStyle(slide).borderLeftWidth)||0)+(parseFloat(getComputedStyle(slide).borderRightWidth)||0);
+  const borderH=(parseFloat(getComputedStyle(slide).borderTopWidth)||0)+(parseFloat(getComputedStyle(slide).borderBottomWidth)||0);
+  const availableW=Math.max(1,(slide.clientWidth||stage.clientWidth)-borderW);
+  const availableH=Math.max(1,(slide.clientHeight||stage.clientHeight)-borderH);
+  let minX=0,minY=0,maxX=Math.max(ir.width,inner.scrollWidth||0),maxY=Math.max(ir.height,inner.scrollHeight||0);
+  inner.querySelectorAll('*').forEach(el=>{
+    if(el.matches('.resize-handle,.cursor-glow,.ripple'))return;
+    const r=el.getBoundingClientRect();
+    if(!r.width&&!r.height)return;
+    minX=Math.min(minX,r.left-ir.left); minY=Math.min(minY,r.top-ir.top);
+    maxX=Math.max(maxX,r.right-ir.left); maxY=Math.max(maxY,r.bottom-ir.top);
+  });
+  const contentW=Math.max(1,maxX-minX),contentH=Math.max(1,maxY-minY);
+  // Fit with ONE uniform ratio. Scaling the axes independently stretches every
+  // glyph (wide text) and, once each text box is counter-scaled to hide that,
+  // the resized boxes reflow their siblings and text lands off its position.
+  // Contain the page in both axes instead: aspect ratio is preserved and the
+  // whole page stays visible.
+  const scale=Math.max(.05,Math.min(1,Math.min(availableW/contentW,availableH/contentH)));
+  slide.dataset.fitScaleX=scale.toFixed(4);
+  slide.dataset.fitScaleY=scale.toFixed(4);
+  slide.dataset.fitScale=scale.toFixed(4);
+  slide.style.setProperty('--slide-content-scale',String(scale));
+  // A uniform ratio can leave slack on one axis. Centre the fitted page in the
+  // leftover space instead of stretching it to fill the canvas.
+  const offsetX=Math.max(0,(availableW-contentW*scale)/2);
+  const offsetY=Math.max(0,(availableH-contentH*scale)/2);
+  slide.style.setProperty('--slide-content-offset-x',offsetX.toFixed(2)+'px');
+  slide.style.setProperty('--slide-content-offset-y',offsetY.toFixed(2)+'px');
+  // Clear the anisotropic vars written by older versions of this editor so a
+  // deck saved before this fix cannot keep stretching its text.
+  slide.style.removeProperty('--slide-content-scale-x');
+  slide.style.removeProperty('--slide-content-scale-y');
+  tempProps.forEach(prop=>{inner.style[prop]=oldInner[prop]||''});
+  restoreTextContents();
+  // Keep the imported page at its intended desktop width while it is displayed.
+  // The inner wrapper is what gets fitted to the 16:9 canvas; leaving it at the
+  // canvas width would make responsive grids reflow a second time and would
+  // shrink text inside its box, creating the large empty side margins that the
+  // fit pass is meant to remove.
+  if(Number.isFinite(targetWidth)&&targetWidth>0){
+    const cs=getComputedStyle(slide);
+    const borderTop=cs.borderTopWidth||'0px',borderLeft=cs.borderLeftWidth||'0px';
+    inner.style.position='absolute';
+    inner.style.top=borderTop; inner.style.left=borderLeft;
+    inner.style.right='auto'; inner.style.bottom='auto';
+    inner.style.width=targetWidth+'px'; inner.style.height='auto';
+    inner.style.minHeight='0'; inner.style.maxHeight='none';
+    inner.style.overflow='visible';
+  }
+  applyImportedTextBoxCompensation(slide);
+  slide.style.display=wasDisplay;
+  slide.style.visibility=wasVisibility;
+  slide.style.animation=wasAnimation;
+  slide.style.overflow=wasOverflow||'hidden';
+  if(wasActive)slide.classList.add('active');
+}
+function refreshSlideFits(force=false){
+  if(editing&&!force)return;
+  requestAnimationFrame(()=>{
+    slides.forEach(slide=>{if(slide.classList.contains('imported-slide'))measureImportedSlide(slide)});
+    if(selected)updatePanel();
+  });
+}
+function refreshThumbScales(){requestAnimationFrame(()=>{[...thumbs.querySelectorAll('.thumb-preview')].forEach(pv=>{const f=pv.querySelector('.thumb-frame');if(!f)return;const w=Math.max(0,pv.clientWidth||0);f.style.transform=w?'scale('+(w/960)+')':'scale(0)'})})}
+function setSidebarCollapsed(v){const c=typeof v==='boolean'?v:false;app.classList.toggle('sidebar-collapsed',c);try{localStorage.setItem(SIDEBAR_KEY,c?'1':'0')}catch(e){};queueStageLayout?.()}
+function applySidebarState(){try{if(localStorage.getItem(SIDEBAR_KEY)==='1')app.classList.add('sidebar-collapsed')}catch(e){}}
+function setTopbarCollapsed(v,persist=true){const c=!!v;topbarCollapsed=c;app.classList.toggle('topbar-collapsed',c);const toggle=qs('topbarToggle'),open=qs('topbarOpen');if(toggle){toggle.setAttribute('aria-pressed',String(c));toggle.title=c?'顶部工具栏已隐藏':'隐藏顶部工具栏';toggle.setAttribute('aria-label',c?'顶部工具栏已隐藏':'隐藏顶部工具栏')}if(open)open.setAttribute('aria-pressed',String(!c));if(persist){try{localStorage.setItem(TOPBAR_KEY,c?'1':'0')}catch(e){}}queueStageLayout?.()}
+function applyTopbarState(){let collapsed=false;try{collapsed=localStorage.getItem(TOPBAR_KEY)==='1'}catch(e){}setTopbarCollapsed(collapsed,false)}
+function colorToHex(c){if(!c||c==='transparent')return '#ffffff'; if(c.startsWith('#'))return c; const m=c.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)/); return m?'#'+[m[1],m[2],m[3]].map(x=>Number(x).toString(16).padStart(2,'0')).join(''):'#ffffff'}
+function attachHandles(el){
+  el.querySelectorAll('.resize-handle').forEach(x=>x.remove());
+  if(isTableContent(el))return;
+  ['nw','n','ne','e','se','s','sw','w'].forEach(pos=>{
+    const h=document.createElement('i');
+    h.className=`resize-handle rh-${pos}`;
+    h.dataset.resize=pos;
+    h.contentEditable='false';
+    h.dataset.noText='1';
+    h.setAttribute('aria-hidden','true');
+    el.appendChild(h);
+  });
+}
+function select(el){if(!editing||!el)return; if(selected&&selected!==el){selected.classList.remove('selected');selected.querySelectorAll('.resize-handle').forEach(x=>x.remove())} selected=el; if(el.dataset.inlineText!=='1'&&!el.dataset.nestedType&&!isTableContent(el))attachHandles(el); el.classList.add('selected'); updatePanel(); showFloatingTextToolbar(el)}
+function clearSelect(){if(selected){selected.classList.remove('selected');selected.querySelectorAll('.resize-handle').forEach(x=>x.remove())}selected=null;hideFloatingTextToolbar();updatePanel()}
+function getFitScale(el,axis='y'){const slide=el?.closest?.('.slide');const key=axis==='x'?'fitScaleX':'fitScaleY';const fallback=parseFloat(slide?.dataset.fitScale||'1');const n=parseFloat(slide?.dataset[key]??fallback);return Number.isFinite(n)&&n>0?n:1}
+function slideRoot(el){return el?.closest?.('.slide-inner')||el?.closest?.('.slide')||stage}
+// An absolutely positioned box resolves left/top/width/height against its
+// containing block: the nearest ancestor that is positioned or creates a
+// containing block (transform/filter/perspective).  Imported decks put text
+// inside such ancestors (.process-step, .arch-node, .timeline-item), so the
+// editor must measure and write against the SAME box the browser uses.
+// Measuring against .slide-inner while the browser resolved against a small
+// ancestor is what made a dragged box refuse to follow the cursor.
+function boxParent(el){
+  const root=slideRoot(el);
+  let p=el?.parentElement;
+  while(p&&p!==root&&root.contains(p)){
+    const cs=getComputedStyle(p);
+    if(cs.position!=='static'||cs.transform!=='none'||cs.filter!=='none'||cs.perspective!=='none')return p;
+    p=p.parentElement;
+  }
+  return root;
+}
+// Percentages resolve against the containing block's PADDING box, while
+// getBoundingClientRect returns its border box (already scaled by the page fit
+// transform).  Convert border widths into the same visual scale before use.
+function paddingBox(p){
+  const r=p.getBoundingClientRect(),cs=getComputedStyle(p);
+  const k=p.offsetWidth?r.width/p.offsetWidth:1;
+  const bl=(parseFloat(cs.borderLeftWidth)||0)*k,br=(parseFloat(cs.borderRightWidth)||0)*k;
+  const bt=(parseFloat(cs.borderTopWidth)||0)*k,bb=(parseFloat(cs.borderBottomWidth)||0)*k;
+  return {left:r.left+bl,top:r.top+bt,width:Math.max(1,r.width-bl-br),height:Math.max(1,r.height-bt-bb)};
+}
+function getBox(el){
+  const r=el.getBoundingClientRect(),pr=paddingBox(boxParent(el));
+  return {x:(r.left-pr.left)/pr.width*100,y:(r.top-pr.top)/pr.height*100,w:r.width/pr.width*100,h:r.height/pr.height*100};
+}
+// Going position:absolute pulls a box out of normal flow, so every sibling in
+// the imported grid/stack reflows and other text visibly jumps.  Leave a hidden
+// placeholder holding exactly the space the box occupied: the flow keeps its
+// shape and only the dragged box moves.
+function freezeFlowSlot(el){
+  if(!el||isTableContent(el)||el.dataset.flowFrozen==='1'||!el.parentNode||el.parentNode===stage)return;
+  const cs=getComputedStyle(el);
+  if(cs.position==='absolute'||cs.position==='fixed'){el.dataset.flowFrozen='1';return}
+  const w=el.offsetWidth,h=el.offsetHeight;
+  if(!w&&!h){el.dataset.flowFrozen='1';return}
+  const ph=document.createElement('div');
+  ph.dataset.flowPlaceholder='1';
+  ph.setAttribute('aria-hidden','true');
+  ph.style.cssText='width:'+w+'px;height:'+h+'px;margin:'+cs.marginTop+' '+cs.marginRight+' '+cs.marginBottom+' '+cs.marginLeft+';flex:0 0 auto;visibility:hidden;pointer-events:none';
+  if(cs.gridArea&&cs.gridArea!=='auto'&&cs.gridArea!=='auto / auto / auto / auto')ph.style.gridArea=cs.gridArea;
+  el.parentNode.insertBefore(ph,el);
+  // A freed box must stay visible when it leaves its original slot.
+  let a=el.parentElement;const root=slideRoot(el);
+  while(a&&a!==root&&root.contains(a)){const acs=getComputedStyle(a);if(acs.overflow!=='visible')a.style.overflow='visible';a=a.parentElement}
+  el.dataset.flowFrozen='1';
+}
+function setBox(el,x,y,w,h){
+  if(isTableContent(el)||el?.dataset.nestedType==='1')return;
+  const ww=clamp(w,1,100),hh=clamp(h,1,100);
+  freezeFlowSlot(el);
+  el.style.position='absolute';
+  // Imported templates often keep layout constraints such as max-width: 78%.
+  // They are correct for presentation flow but would silently block the editor
+  // from applying the requested box width/height.  Remove only those constraints
+  // when the user explicitly changes geometry; the glyph layer remains untouched.
+  el.style.minWidth='0';
+  el.style.minHeight='0';
+  el.style.maxWidth='none';
+  el.style.maxHeight='none';
+  // Static imported elements may carry margin-based layout offsets (for
+  // example margin-top: 7%). Once converted to absolute positioning, keeping
+  // that margin applies the offset a second time and makes the box jump.
+  el.style.margin='0';
+  // Do NOT clamp into the containing block.  That block is often a small
+  // ancestor (a grid cell), so clamping to 0..100-w pinned the box inside its
+  // own cell and the drag stopped dead a few pixels from where it started.
+  // The stage limits are enforced in canvas space by clampToStage instead.
+  el.style.left=x+'%';
+  el.style.top=y+'%';
+  el.style.width=ww+'%';
+  el.style.height=hh+'%';
+}
+// Keep a box reachable inside the visible canvas without pinning it to its own
+// containing block: convert the stage limits into the box's percentage space.
+function clampToStage(el,x,y,w,h){
+  const pr=paddingBox(boxParent(el)),sr=stage.getBoundingClientRect();
+  const keep=12; // leave a grabbable sliver on screen
+  const minX=(sr.left+keep-pr.width*w/100-pr.left)/pr.width*100;
+  const maxX=(sr.right-keep-pr.left)/pr.width*100;
+  const minY=(sr.top+keep-pr.height*h/100-pr.top)/pr.height*100;
+  const maxY=(sr.bottom-keep-pr.top)/pr.height*100;
+  return {x:minX<maxX?clamp(x,minX,maxX):x,y:minY<maxY?clamp(y,minY,maxY):y};
+}
+function val(id, fallback){const v=parseFloat(qs(id).value);return Number.isFinite(v)?v:fallback}
+function editableText(el){
+  if(!el||el.dataset.noText)return '';
+  const clone=el.cloneNode(true);
+  clone.querySelectorAll('.resize-handle,[data-upload],button').forEach(x=>x.remove());
+  return (clone.innerText||clone.textContent||'').trim();
+}
+function setPanelValue(id,value){const el=qs(id);if(el&&document.activeElement!==el)el.value=value}
+function setPanelDisabled(id,value){const el=qs(id);if(el&&document.activeElement!==el)el.disabled=!!value}
+function setFormatFieldState(selectedElement){
+  const geometryIds=['fX','fY','fW','fH'];
+  const hidden=!!selectedElement?.dataset.nestedType||isTableContent(selectedElement);
+  geometryIds.forEach(id=>{const field=qs(id)?.closest('.field');if(field)field.style.display=hidden?'none':''});
+}
+function hasStructuredContent(el){
+  if(!el)return false;
+  const direct=[...el.children].filter(child=>!child.matches('.resize-handle,.imported-text-content'));
+  if(direct.length)return true;
+  const content=el.querySelector(':scope > .imported-text-content');
+  return !!content?.querySelector('*');
+}
+function updatePanel(){
+  if(!editing){panel.style.display='';manageNotes(notes[page]||'');return}
+  panel.style.display='';
+  const ids=['fText','fX','fY','fW','fH','fFontFamily','fFont','fWeight','fLine','fLetter','fTextAlign','fPadX','fPadY','fBg','fColor','fBorder','fBorderW','fRadius','fOpacity','fRotate','fZ'];
+  if(!selected){
+    ids.forEach(id=>{const el=qs(id);if(el&&document.activeElement!==el){el.value='';el.disabled=false}});
+    setFormatFieldState(null);['fBold','fItalic','fUnderline'].forEach(id=>qs(id)?.classList.remove('active'));
+    qs('rPage').textContent=`${page+1} / ${slides.length}`;qs('rType').textContent='未选中';return;
+  }
+  const b=getBox(selected),cs=getComputedStyle(selected),fontSize=parseFloat(cs.fontSize)||16,lineHeight=parseFloat(cs.lineHeight),letterSpacing=parseFloat(cs.letterSpacing),hasNested=hasStructuredContent(selected);
+  setPanelValue('fText',editableText(selected));setPanelDisabled('fText',hasNested);const textBox=qs('fText');if(textBox&&document.activeElement!==textBox)textBox.placeholder=hasNested?'含格式化内容，请直接在画布中编辑':'选择一个文字元素';selected.dataset.panelText=qs('fText').value;
+  setPanelValue('fX',b.x.toFixed(1));setPanelValue('fY',b.y.toFixed(1));setPanelValue('fW',b.w.toFixed(1));setPanelValue('fH',b.h.toFixed(1));setPanelValue('fFontFamily',selected.style.fontFamily||'');setPanelValue('fFont',fontSize.toFixed(0));setPanelValue('fWeight',cs.fontWeight||'400');setPanelValue('fLine',Number.isFinite(lineHeight)&&fontSize?Math.round(lineHeight/fontSize*100)/100:1.4);setPanelValue('fLetter',Number.isFinite(letterSpacing)?letterSpacing:0);
+  setPanelValue('fBg',selected.style.background||colorToHex(cs.backgroundColor));setPanelValue('fBgColor',colorToHex(cs.backgroundColor));setPanelValue('fColor',selected.style.color||colorToHex(cs.color));setPanelValue('fColorPicker',colorToHex(cs.color));setPanelValue('fBorder',selected.style.borderColor||colorToHex(cs.borderColor));setPanelValue('fBorderW',parseFloat(cs.borderWidth)||0);setPanelValue('fRadius',parseFloat(cs.borderRadius)||0);setPanelValue('fOpacity',cs.opacity||1);setPanelValue('fRotate',selected.dataset.rotate||0);setPanelValue('fZ',selected.style.zIndex||1);setPanelValue('fTextAlign',cs.textAlign||'left');setPanelValue('fPadX',parseFloat(cs.paddingLeft)||0);setPanelValue('fPadY',parseFloat(cs.paddingTop)||0);
+  ['fBold','fItalic','fUnderline'].forEach(id=>qs(id)?.classList.remove('active'));if(parseInt(cs.fontWeight,10)>=600)qs('fBold')?.classList.add('active');if(cs.fontStyle==='italic')qs('fItalic')?.classList.add('active');if((cs.textDecorationLine||'').includes('underline'))qs('fUnderline')?.classList.add('active');setFormatFieldState(selected);
+  const type=selected.className.split(' ').filter(x=>x!=='editable'&&x!=='selected').join(' ')||'element';qs('rPage').textContent=`${page+1} / ${slides.length}`;qs('rType').textContent=hasNested?`${type} · 含嵌套内容`:type;qs('rPx').textContent=`${Math.round(b.x*stage.clientWidth/100)}, ${Math.round(b.y*stage.clientHeight/100)}`;qs('rSize').textContent=`${Math.round(b.w*stage.clientWidth/100)} × ${Math.round(b.h*stage.clientHeight/100)}`;qs('rComputedFont').textContent=cs.fontSize;qs('rComputedColor').textContent=cs.color;
+}
+function applyTextStyle(kind,value){
+  if(!selected||!editing)return;
+  let next=null;
+  if(kind==='fontSize'){const n=parseFloat(value);if(!Number.isFinite(n))return;next=clamp(n,6,200)+'px'}
+  else if(kind==='fontFamily')next=value||'';
+  else if(kind==='fontWeight')next=value||'400';
+  else if(kind==='lineHeight'){const n=parseFloat(value);if(!Number.isFinite(n))return;next=clamp(n,.8,4)}
+  else if(kind==='letterSpacing'){const n=parseFloat(value);if(!Number.isFinite(n))return;next=clamp(n,-10,50)+'px'}
+  else if(kind==='background')next=value||'';
+  else if(kind==='color')next=value||'';
+  else if(kind==='borderColor')next=value||'';
+  else if(kind==='borderWidth'){const n=parseFloat(value);if(!Number.isFinite(n))return;next=clamp(n,0,20)+'px'}
+  else if(kind==='borderRadius'){const n=parseFloat(value);if(!Number.isFinite(n))return;next=clamp(n,0,100)+'px'}
+  else if(kind==='opacity'){const n=parseFloat(value);if(!Number.isFinite(n))return;next=clamp(n,0,1)}
+  else if(kind==='textAlign')next=value||'left';
+  else if(kind==='paddingX'){const n=parseFloat(value);if(!Number.isFinite(n))return;next=clamp(n,0,200)+'px'}
+  else if(kind==='paddingY'){const n=parseFloat(value);if(!Number.isFinite(n))return;next=clamp(n,0,200)+'px'}
+  else if(kind==='fontStyle')next=value||'normal';
+  else if(kind==='textDecoration')next=value||'none';
+  else return;
+  push();
+  if(kind==='fontSize'){selected.style.fontSize=next;selected.dataset.userFontSize='1'}
+  else if(kind==='fontFamily')selected.style.fontFamily=next;
+  else if(kind==='fontWeight')selected.style.fontWeight=next;
+  else if(kind==='lineHeight')selected.style.lineHeight=next;
+  else if(kind==='letterSpacing')selected.style.letterSpacing=next;
+  else if(kind==='background')selected.style.background=next;
+  else if(kind==='color')selected.style.color=next;
+  else if(kind==='borderColor')selected.style.borderColor=next;
+  else if(kind==='borderWidth'){selected.style.borderWidth=next;selected.style.borderStyle=parseFloat(next)>0?'solid':''}
+  else if(kind==='borderRadius')selected.style.borderRadius=next;
+  else if(kind==='opacity')selected.style.opacity=next;
+  else if(kind==='textAlign')selected.style.textAlign=next;
+  else if(kind==='paddingX'){selected.style.paddingLeft=next;selected.style.paddingRight=next}
+  else if(kind==='paddingY'){selected.style.paddingTop=next;selected.style.paddingBottom=next}
+  else if(kind==='fontStyle')selected.style.fontStyle=next;
+  else if(kind==='textDecoration')selected.style.textDecoration=next;
+  save();updatePanel();showFloatingTextToolbar(selected);
+}
+function applyBoxGeometry(){
+  if(!selected||selected.dataset.inlineText==='1'||selected.dataset.nestedType==='1'||isTableContent(selected))return;
+  push();const b=getBox(selected);setBox(selected,val('fX',b.x),val('fY',b.y),val('fW',b.w),val('fH',b.h));attachHandles(selected);save();updatePanel();showFloatingTextToolbar(selected);
+}
+function setRotate(value){if(!selected||selected.dataset.inlineText==='1'||selected.dataset.nestedType==='1'||isTableContent(selected))return;const n=parseFloat(value);if(!Number.isFinite(n))return;push();selected.dataset.rotate=String(n);selected.style.transform=`rotate(${n}deg)`;save();updatePanel()}
+function setZIndex(value){if(!selected||selected.dataset.inlineText==='1'||selected.dataset.nestedType==='1'||isTableContent(selected))return;const n=parseFloat(value);if(!Number.isFinite(n))return;push();selected.style.zIndex=String(n);save();updatePanel()}
+function applyTextContent(){
+  if(!selected||selected.dataset.noText||selected.dataset.nestedType==='1')return;
+  const contentChildren=[...selected.children].filter(el=>!el.matches('.resize-handle,.imported-text-content'));
+  if(contentChildren.length)return;
+  const value=qs('fText').value;if(value===selected.dataset.panelText)return;
+  push();const content=selected.querySelector(':scope > .imported-text-content');
+  if(content)content.textContent=value;else selected.innerText=value;
+  selected.dataset.panelText=value;save();updatePanel();
+}
+function undoAction(){if(!history.length)return;redoStack.push(snapshot());restore(history.pop());save()}
+function redoAction(){if(!redoStack.length)return;history.push(snapshot());restore(redoStack.pop());save()}
+function hideSelected(){if(!selected)return;push();selected.hidden=!selected.hidden;save();updatePanel()}
+function showEditorEntry(){hiddenEntry=false;qs('editBtn').style.display='';save()}
+
+const textEditHistory=new WeakMap();
+function bindEditable(){
+  markEditableElements(stage);
+  markNestedTypeElements(stage);
+  stage.querySelectorAll('.editable').forEach(el=>{
+    el.contentEditable=el.dataset.noText?'false':(editing?'true':'false');
+    if(el.querySelector('[data-upload]')){
+      el.querySelector('[data-upload]').onclick=ev=>{
+        if(!editing)return;
+        ev.stopPropagation();
+        uploadImage(el,false);
+      }
+    }
+    if(el.dataset.bound)return;
+    el.dataset.bound='1';
+    el.addEventListener('click',e=>{
+      if(editing){
+        if(e.target.closest('a'))e.preventDefault();
+        e.stopPropagation();
+        lastEditorPoint={x:e.clientX,y:e.clientY};
+        select(el);
+      }
+    });
+    el.addEventListener('focusin',()=>{
+      if(editing&&!el.dataset.noText&&!textEditHistory.has(el)){
+        textEditHistory.set(el,snapshot());
+      }
+    });
+    el.addEventListener('blur',()=>{ textEditHistory.delete(el); });
+    el.addEventListener('input',e=>{
+      if(editing&&(e.target===el||el.contains(e.target))){
+        // Keep one application-level checkpoint for the whole text edit.
+        // This makes Command/Ctrl+Z reliable without re-fitting the page or
+        // moving the caret on every keystroke.
+        const before=textEditHistory.get(el);
+        if(before){pushSnapshot(before);textEditHistory.delete(el);}
+        save();
+        updatePanel();
+      }
+    });
+    el.addEventListener('pointerdown',e=>{
+      const handle=e.target.closest('.resize-handle');
+      const interactive=e.target.closest('[data-upload],button,input,textarea,select,a');
+      if(!editing||el.dataset.inlineText==='1'||handle||interactive||e.button!==0)return;
+      if(el.dataset.nestedType==='1'||isTableContent(el)){e.stopPropagation();return}
+      e.stopPropagation();
+      const startX=e.clientX,startY=e.clientY;
+      const before=snapshot(),pointerId=e.pointerId;
+      // Keep the original flow layout for a click. The placeholder is inserted
+      // only after the pointer crosses the drag threshold, so selecting a text
+      // box never changes its position.
+      const parentRect=paddingBox(boxParent(el));
+      const b=getBox(el);
+      lastEditorPoint={x:e.clientX,y:e.clientY};
+      select(el);
+      let moved=false,historyPushed=false;
+      let captured=false;
+      const cleanup=()=>{
+        window.removeEventListener('pointermove',move);
+        window.removeEventListener('pointerup',up);
+        window.removeEventListener('pointercancel',up);
+        if(captured){try{el.releasePointerCapture(pointerId)}catch(err){}}
+        el.classList.remove('is-dragging');
+        stage.classList.remove('dragging-element');
+        removeGuides();
+      };
+      const move=ev=>{
+        if(ev.pointerId!==pointerId)return;
+        const dxPx=ev.clientX-startX,dyPx=ev.clientY-startY;
+        if(!moved&&Math.hypot(dxPx,dyPx)<4)return;
+        ev.preventDefault();
+        if(!moved){
+          moved=true;
+          if(document.activeElement===el)el.blur();
+          if(!historyPushed){pushSnapshot(before);historyPushed=true}
+          el.classList.add('is-dragging');
+          stage.classList.add('dragging-element');
+          window.getSelection?.()?.removeAllRanges();
+          // Do not capture the pointer on a simple click: contenteditable must
+          // retain the native caret/selection. Capture only after the drag
+          // threshold is crossed, so the first movement is relative to the
+          // original box rather than an absolute mouse position.
+          try{el.setPointerCapture(pointerId);captured=true}catch(err){}
+        }
+        // parentRect is already in on-screen (post-fit-scale) pixels, so the raw
+        // pointer delta converts directly. No extra scale division: that would
+        // double-compensate and make the box lag behind the cursor.
+        const dx=dxPx/parentRect.width*100,dy=dyPx/parentRect.height*100;
+        let nx=b.x+dx,ny=b.y+dy;
+        const sp=snapRect(nx,ny,b.w,b.h,el);
+        if(sp.x!=null)nx=sp.x;
+        if(sp.y!=null)ny=sp.y;
+        const cl=clampToStage(el,nx,ny,b.w,b.h);
+        setBox(el,cl.x,cl.y,b.w,b.h);
+        showGuides(sp);
+        updatePanel();
+      };
+      const up=ev=>{
+        if(ev.pointerId!==pointerId)return;
+        cleanup();
+        if(moved){
+          save();
+          updatePanel();
+          showFloatingTextToolbar(el);
+        }
+      };
+      window.addEventListener('pointermove',move);
+      window.addEventListener('pointerup',up);
+      window.addEventListener('pointercancel',up);
+    });
+    el.addEventListener('pointerdown',e=>{
+      const handle=e.target.closest('.resize-handle');
+      if(!editing||isTableContent(el)||!handle||e.button!==0)return;
+      e.preventDefault();
+      e.stopPropagation();
+      const pos=handle.dataset.resize,pointerId=e.pointerId;
+      const startX=e.clientX,startY=e.clientY;
+      const before=snapshot();
+      const parentRect=paddingBox(boxParent(el));
+      const b=getBox(el);
+      freezeFlowSlot(el);
+      let moved=false,historyPushed=false;
+      const cleanup=()=>{
+        window.removeEventListener('pointermove',move);
+        window.removeEventListener('pointerup',up);
+        window.removeEventListener('pointercancel',up);
+        try{el.releasePointerCapture(pointerId)}catch(err){}
+        el.classList.remove('is-resizing');
+        stage.classList.remove('dragging-element');
+      };
+      const move=ev=>{
+        if(ev.pointerId!==pointerId)return;
+        const dxPx=ev.clientX-startX,dyPx=ev.clientY-startY;
+        if(!moved&&Math.hypot(dxPx,dyPx)<3)return;
+        ev.preventDefault();
+        if(!moved){
+          moved=true;
+          if(!historyPushed){pushSnapshot(before);historyPushed=true}
+          el.classList.add('is-resizing');
+          stage.classList.add('dragging-element');
+        }
+        const dx=dxPx/parentRect.width*100,dy=dyPx/parentRect.height*100;
+        let{x,y,w,h}=b;
+        if(pos.includes('e'))w=Math.max(2,b.w+dx);
+        if(pos.includes('s'))h=Math.max(2,b.h+dy);
+        if(pos.includes('w')){x=b.x+dx;w=b.w-dx}
+        if(pos.includes('n')){y=b.y+dy;h=b.h-dy}
+        setBox(el,x,y,w,h);
+        updatePanel();
+      };
+      const up=ev=>{
+        if(ev.pointerId!==pointerId)return;
+        cleanup();
+        if(moved){save();updatePanel();showFloatingTextToolbar(el)}
+      };
+      try{el.setPointerCapture(pointerId)}catch(err){}
+      window.addEventListener('pointermove',move);
+      window.addEventListener('pointerup',up);
+      window.addEventListener('pointercancel',up);
+    });
+  });
+}
+function addElement(kind){push();const el=document.createElement('div');el.className='editable';el.dataset.editable='';el.dataset.new='1';el.style.zIndex='10';let focus=true;
+if(kind==='card'){el.classList.add('card','blue');setBox(el,34,40,32,15);el.contentEditable='true';el.innerText='新卡片\n补充一个关键判断。'}
+else if(kind==='line'){el.classList.add('inserted-line');el.dataset.noText='1';setBox(el,34,48,32,.6);el.contentEditable='false';focus=false}
+else if(kind==='image'){el.classList.add('image-placeholder');el.dataset.noText='1';setBox(el,34,36,32,22);el.contentEditable='false';el.innerHTML='<strong>IMAGE / CHART</strong><small>图片或图表占位框</small><button type="button" class="image-upload-btn" data-upload>上传图片</button>';focus=false}
+else{el.classList.add('type-body');setBox(el,34,40,28,8);el.contentEditable='true';el.innerText='新增文本框'}
+const inner=ensureSlideInner(active());el.style.pointerEvents='auto';inner.appendChild(el);bindEditable();select(el);if(focus)el.focus();save()}
+function duplicate(){if(!selected)return;push();const c=selected.cloneNode(true);c.querySelectorAll('.resize-handle').forEach(x=>x.remove());c.removeAttribute('data-bound');c.dataset.new='1';const b=getBox(selected);setBox(c,b.x+2,b.y+2,b.w,b.h);const inner=ensureSlideInner(active());c.style.pointerEvents='auto';inner.appendChild(c);bindEditable();select(c);save()}
+function removeSelected(){if(!selected)return;push();selected.remove();selected=null;save();updatePanel()}
+function toggleEdit(force){editing=force??!editing;app.classList.toggle('editor-mode',editing);bindEditable();qs('editBtn').textContent=editing?'退出编辑':'编辑模式';if(editing){reveal=4;document.body.classList.add('editor-mode');stopAutoplay()}else{clearSelect();document.body.classList.remove('editor-mode');hideFloatingTextToolbar()}updatePanel();save();queueStageLayout?.()}
+function exportJSON(){const d=currentPayload();d.version=2;const blob=new Blob([JSON.stringify(d,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='premium-presentation-design-system.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)}
+function startImport(){qs('importFile').click()}qs('importFile').addEventListener('change',async e=>{const f=e.target.files[0];if(!f)return;try{const d=JSON.parse(await f.text());if(d&&Array.isArray(d.slides)&&d.slides.length){push();restore(d.slides);document.body.dataset.theme=d.theme||'default';hiddenEntry=!!d.hiddenEntry;notes=Array.isArray(d.notes)?d.notes.slice():Array(slides.length).fill('');page=clamp(d.page||0,0,slides.length-1);render();save()}else throw new Error('bad shape')}catch(err){alert('JSON 导入失败，请检查文件格式。')}e.target.value=''})
+function savedFileTitle(){const d=readDeckList().find(x=>x.id===activeDeckId);return ((d&&d.title)||currentFileName||'premium-presentation').replace(/\.html?$/i,'').replace(/[\\/:*?"<>|]+/g,'-')||'premium-presentation'}
+
+function hideFloatingTextToolbar(){const bar=qs('floatingTextToolbar');if(bar)bar.hidden=true}
+function setFloatingValue(id,value){const el=qs(id);if(el&&document.activeElement!==el)el.value=value}
+function updateFloatingTextToolbar(){const bar=qs('floatingTextToolbar');if(!bar||!editing||!selected||selected.dataset.noText){hideFloatingTextToolbar();return}const cs=getComputedStyle(selected);const fs=parseFloat(cs.fontSize)||16;const lh=parseFloat(cs.lineHeight),ls=parseFloat(cs.letterSpacing);setFloatingValue('ftFontFamily',selected.style.fontFamily||'');setFloatingValue('ftFont',Math.round(fs));setFloatingValue('ftWeight',String(parseInt(cs.fontWeight,10)||400));setFloatingValue('ftColor',colorToHex(cs.color));setFloatingValue('ftLine',Number.isFinite(lh)&&fs?Math.round(lh/fs*100)/100:1.4);setFloatingValue('ftLetter',Number.isFinite(ls)?ls:0);bar.querySelector('[data-ft-action="bold"]').classList.toggle('active',parseInt(cs.fontWeight,10)>=600);bar.querySelector('[data-ft-action="italic"]').classList.toggle('active',cs.fontStyle==='italic');bar.querySelector('[data-ft-action="underline"]').classList.toggle('active',(cs.textDecorationLine||'').includes('underline'));bar.querySelectorAll('[data-ft-align]').forEach(b=>b.classList.toggle('active',b.dataset.ftAlign===(cs.textAlign||'left')))}
+function showFloatingTextToolbar(el){const bar=qs('floatingTextToolbar');if(!bar||!editing||!el||el.dataset.noText){hideFloatingTextToolbar();return}updateFloatingTextToolbar();bar.hidden=false;const r=el.getBoundingClientRect();const anchorX=lastEditorPoint.x||r.left+r.width/2;const anchorY=lastEditorPoint.y||r.top;const gap=10;let left=anchorX+gap,top=anchorY+gap;if(left+bar.offsetWidth>window.innerWidth-10)left=Math.max(10,window.innerWidth-bar.offsetWidth-10);if(top+bar.offsetHeight>window.innerHeight-10)top=Math.max(10,r.top-bar.offsetHeight-gap);bar.style.left=Math.round(left)+'px';bar.style.top=Math.round(top)+'px'}
+function applyFloatingTextStyle(kind,value){applyTextStyle(kind,value)}
+function wireFloatingTextToolbar(){const bar=qs('floatingTextToolbar');if(!bar)return;bar.addEventListener('pointerdown',e=>e.stopPropagation());bar.addEventListener('click',e=>{const b=e.target.closest('[data-ft-action]'),a=e.target.closest('[data-ft-align]');if(b){if(b.dataset.ftAction==='bold')applyTextStyle('fontWeight',parseInt(getComputedStyle(selected).fontWeight,10)>=600?'400':'700');if(b.dataset.ftAction==='italic')applyTextStyle('fontStyle',getComputedStyle(selected).fontStyle==='italic'?'normal':'italic');if(b.dataset.ftAction==='underline')applyTextStyle('textDecoration',(getComputedStyle(selected).textDecorationLine||'').includes('underline')?'none':'underline')}if(a)applyTextStyle('textAlign',a.dataset.ftAlign)});qs('ftFontFamily').addEventListener('change',e=>applyTextStyle('fontFamily',e.target.value));qs('ftFont').addEventListener('input',e=>applyTextStyle('fontSize',e.target.value));qs('ftWeight').addEventListener('change',e=>applyTextStyle('fontWeight',e.target.value));qs('ftColor').addEventListener('input',e=>applyTextStyle('color',e.target.value));qs('ftLine').addEventListener('input',e=>applyTextStyle('lineHeight',e.target.value));qs('ftLetter').addEventListener('input',e=>applyTextStyle('letterSpacing',e.target.value));qs('ftClose').onclick=hideFloatingTextToolbar}
+function formatClock(ms){const sec=Math.max(0,Math.floor(ms/1000)),m=Math.floor(sec/60),s=sec%60;return String(m).padStart(2,'0')+':'+String(s).padStart(2,'0')}
+function updateMediaTray(){const tray=qs('mediaTray'),out=qs('transcriptOutput'),toggleR=qs('recordToggle'),toggleT=qs('transcribeToggle');if(!tray)return;tray.hidden=!(isRecording||isTranscribing||transcriptFinal||transcriptInterim||lastRecordingUrl);toggleR.classList.toggle('active',isRecording);toggleR.setAttribute('aria-pressed',String(isRecording));toggleT.classList.toggle('active',isTranscribing);toggleT.classList.toggle('transcribing',isTranscribing);toggleT.setAttribute('aria-pressed',String(isTranscribing));qs('mediaTrayStatus').textContent=isRecording?'正在录音…':isTranscribing?'正在转写…':lastRecordingUrl?'录音已生成，可下载':'就绪';qs('recordTimer').textContent=isRecording?formatClock(Date.now()-recordingStartedAt):'00:00';const text=(transcriptFinal+(transcriptInterim?' '+transcriptInterim:'')).trim();out.textContent=text;out.hidden=!text;qs('recordDownload').hidden=!lastRecordingUrl}
+function startRecording(){if(!navigator.mediaDevices?.getUserMedia||!window.MediaRecorder){toast('当前浏览器不支持本地录音，请改用新版 Chrome / Edge');return}navigator.mediaDevices.getUserMedia({audio:true}).then(stream=>{mediaStream=stream;recordingChunks=[];const mime=['audio/webm;codecs=opus','audio/webm','audio/mp4'].find(x=>window.MediaRecorder.isTypeSupported?.(x));mediaRecorder=new MediaRecorder(stream,mime?{mimeType:mime}:undefined);mediaRecorder.ondataavailable=e=>{if(e.data?.size)recordingChunks.push(e.data)};mediaRecorder.onstop=()=>{const blob=new Blob(recordingChunks,{type:mediaRecorder.mimeType||'audio/webm'});if(lastRecordingUrl)URL.revokeObjectURL(lastRecordingUrl);lastRecordingUrl=URL.createObjectURL(blob);const a=qs('recordDownload');a.href=lastRecordingUrl;a.download='presentation-recording-'+new Date().toISOString().replace(/[:.]/g,'-')+'.webm';a.textContent='下载录音';recordingChunks=[];mediaStream?.getTracks().forEach(t=>t.stop());mediaStream=null;updateMediaTray();toast('录音已停止，可下载本地音频')};mediaRecorder.start(250);isRecording=true;recordingStartedAt=Date.now();recordingTimerId=window.setInterval(updateMediaTray,250);updateMediaTray();}).catch(e=>toast(e.name==='NotAllowedError'?'录音权限被拒绝，请允许麦克风访问':'无法启动录音：'+(e.message||'未知错误')))}
+function stopRecording(){if(!mediaRecorder||mediaRecorder.state==='inactive'){isRecording=false;updateMediaTray();return}isRecording=false;clearInterval(recordingTimerId);recordingTimerId=0;mediaRecorder.stop();updateMediaTray()}
+function startTranscription(){const Ctor=window.SpeechRecognition||window.webkitSpeechRecognition;if(!Ctor){toast('当前浏览器不支持语音转写，请改用新版 Chrome / Edge');return}try{speechRecognition=new Ctor();speechRecognition.lang='zh-CN';speechRecognition.continuous=true;speechRecognition.interimResults=true;speechRecognition.onresult=e=>{let interim='';for(let i=e.resultIndex;i<e.results.length;i++){const t=e.results[i][0]?.transcript||'';if(e.results[i].isFinal)transcriptFinal+=(transcriptFinal?' ':'')+t;else interim+=(interim?' ':'')+t}transcriptInterim=interim;updateMediaTray()};speechRecognition.onerror=e=>{if(e.error!=='aborted')toast('转写失败：'+(e.error||'未知错误'))};speechRecognition.onend=()=>{if(isTranscribing){try{speechRecognition.start()}catch(err){}}};speechRecognition.start();isTranscribing=true;updateMediaTray()}catch(e){toast('无法启动语音转写：'+(e.message||'未知错误'))}}
+function stopTranscription(){isTranscribing=false;try{speechRecognition?.stop()}catch(e){}speechRecognition=null;transcriptInterim='';updateMediaTray()}
+function insertTranscript(){const text=(transcriptFinal+(transcriptInterim?' '+transcriptInterim:'')).trim();if(!text){toast('暂无可插入的转写内容');return}notes[page]=notes[page]?notes[page].trimEnd()+'\n'+text:text;save();manageNotes(notes[page]);toast('已插入当前页演讲备注')}
+function clearTranscript(){transcriptFinal='';transcriptInterim='';updateMediaTray();if(!isRecording&&!isTranscribing)qs('mediaTray').hidden=true}
+function wireMedia(){
+  const record=qs('recordToggle'),transcribe=qs('transcribeToggle'),tray=qs('mediaTray');
+  if(!record||!transcribe||!tray)return;
+  record.onclick=()=>isRecording?stopRecording():startRecording();
+  transcribe.onclick=()=>isTranscribing?stopTranscription():startTranscription();
+  qs('mediaTrayClose')?.addEventListener('click',()=>{if(isRecording)stopRecording();if(isTranscribing)stopTranscription();tray.hidden=true});
+  qs('clearTranscript')?.addEventListener('click',clearTranscript);
+  qs('insertTranscript')?.addEventListener('click',insertTranscript);
+  window.addEventListener('beforeunload',()=>{if(isRecording)stopRecording();if(isTranscribing)stopTranscription()});
+}
+function buildSavedHtml(){
+  const doc=document.documentElement.cloneNode(true);doc.classList.remove('editor-mode');doc.querySelector('#app')?.classList.remove('editor-mode','sidebar-collapsed','topbar-collapsed');doc.querySelector('#editorPanel')?.remove();doc.querySelectorAll('.selected,.resize-handle,.cursor-glow,.ripple,.guide-v,.guide-h,.media-tray,.floating-text-toolbar,#recordToggle,#transcribeToggle').forEach(x=>x.remove());doc.querySelectorAll('.slide').forEach(s=>{s.classList.remove('active','reveal-1','reveal-2','reveal-3');s.classList.add('slide','reveal-4');s.querySelectorAll('[data-bound]').forEach(x=>x.removeAttribute('data-bound'));s.querySelectorAll(EDITABLE_SELECTOR).forEach(x=>x.removeAttribute('contenteditable'))});const title=doc.querySelector('title');if(title)title.textContent=savedFileTitle()+' · Premium HTML Presentation';return '<!doctype html>\n'+doc.outerHTML}
+async function saveAsHtml(){const html=buildSavedHtml(),name=savedFileTitle()+'.html';try{if(window.showSaveFilePicker){const h=await window.showSaveFilePicker({suggestedName:name,types:[{description:'HTML 文件',accept:{'text/html':['.html']}}]});if(!(await ensureHandlePermission(h,true)))throw new Error('未获得写入权限');const w=await h.createWritable();await w.write(html);await w.close();currentFileHandle=h;currentFileName=h.name;currentFilePath=h.name;recordRecent({name:h.name,path:h.name,handle:h,key:'file:'+h.name,kind:'local'});toast('已另存为 HTML：'+h.name);return}const blob=new Blob([html],{type:'text/html;charset=utf-8'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);recordRecent({name,path:name,key:'download:'+name,kind:'download'});toast('已下载 HTML 文件；当前浏览器不支持直接选择保存路径')}catch(e){if(e.name!=='AbortError')toast('另存为失败：'+(e.message||'无法写入'))}}
+qs('editBtn').onclick=()=>toggleEdit();qs('sidebarToggle').onclick=()=>setSidebarCollapsed(true);qs('sidebarOpen').onclick=()=>setSidebarCollapsed(false);qs('topbarToggle').onclick=()=>setTopbarCollapsed(true);qs('topbarOpen').onclick=()=>setTopbarCollapsed(false);qs('prevBtn').onclick=prev;qs('nextBtn').onclick=next;qs('replayBtn').onclick=()=>{reveal=0;render()};qs('fullscreenBtn').onclick=()=>toggleFullscreen();qs('btnHelp').onclick=()=>toggleHelp();qs('helpClose').onclick=()=>toggleHelp(false);qs('timerBtn').onclick=()=>{timerStart=Date.now();updateTimer(true)};qs('addTemplatePage').onclick=addTemplatePage;qs('saveAs').onclick=saveAsHtml;qs('addText').onclick=()=>addElement('text');qs('addLine').onclick=()=>addElement('line');qs('addCard').onclick=()=>addElement('card');qs('addImage').onclick=()=>uploadImage(null,true);qs('undo').onclick=undoAction;qs('redo').onclick=redoAction;qs('duplicate').onclick=duplicate;qs('delete').onclick=removeSelected;qs('hide').onclick=hideSelected;qs('clearSelection').onclick=clearSelect;qs('export').onclick=exportJSON;qs('import').onclick=startImport;qs('reset').onclick=resetDeck;qs('hideEditor').onclick=()=>{hiddenEntry=true;qs('editBtn').style.display='none';save()};qs('showEditor').onclick=showEditorEntry;qs('themeSelect').onchange=()=>{push();document.body.dataset.theme=qs('themeSelect').value;save();updatePanel()};
+qs('deckSelect').addEventListener('change',e=>switchDeck(e.target.value));
+qs('deckNew').onclick=()=>{save();const id=freshDeckId();const list=readDeckList();list.push({id:id,title:'新草稿 '+(list.length+1),createdAt:Date.now(),updatedAt:Date.now()});writeDeckList(list);localStorage.setItem(deckKey(id),JSON.stringify({page:0,slides:snapshot(),theme:document.body.dataset.theme||'default',hiddenEntry:false,notes:Array(slides.length).fill('')}));activeDeckId=id;refreshDeckSelect();load();bindEditable();render();qs('themeSelect').value=document.body.dataset.theme||'default';if(hiddenEntry)qs('editBtn').style.display='none';else qs('editBtn').style.display=''};
+qs('deckRename').onclick=()=>{const list=readDeckList();const d=list.find(x=>x.id===activeDeckId);if(!d)return;const t=prompt('草稿名称',d.title);if(t===null)return;d.title=t.trim()||d.title;d.updatedAt=Date.now();writeDeckList(list);refreshDeckSelect()};
+qs('deckDelete').onclick=()=>{let list=readDeckList();if(list.length<=1){alert('至少保留一个草稿');return}const i=list.findIndex(x=>x.id===activeDeckId);if(i<0)return;if(!confirm('删除草稿「'+list[i].title+'」？该操作不可撤销。'))return;localStorage.removeItem(deckKey(activeDeckId));list.splice(i,1);writeDeckList(list);activeDeckId=list[0].id;refreshDeckSelect();load();bindEditable();render();qs('themeSelect').value=document.body.dataset.theme||'default';if(hiddenEntry)qs('editBtn').style.display='none';else qs('editBtn').style.display=''};
+qs('exportPdf').onclick=()=>window.print();
+qs('exportPng').onclick=exportPNG;
+qs('presentBtn').onclick=()=>togglePresenter();
+qs('presentExit').onclick=()=>togglePresenter(false);
+qs('presenterNotes').addEventListener('input',e=>{notes[page]=e.target.value;save()});
+qs('fNotes').addEventListener('input',e=>{notes[page]=e.target.value;save()});
+qs('fNotes').addEventListener('change',e=>{notes[page]=e.target.value;save()});
+qs('reset').onclick=resetDeck;
+window.addEventListener('beforeprint',()=>{if(editing)toggleEdit(false);resetView();stage.querySelectorAll('.cursor-glow,.ripple').forEach(x=>x.remove());stage.style.transform='none'});window.addEventListener('afterprint',()=>resetView());
+['fText'].forEach(id=>qs(id).addEventListener('change',applyTextContent));['fX','fY','fW','fH'].forEach(id=>qs(id).addEventListener('change',applyBoxGeometry));qs('fFontFamily').addEventListener('change',e=>applyTextStyle('fontFamily',e.target.value));qs('fFont').addEventListener('input',e=>applyTextStyle('fontSize',e.target.value));qs('fWeight').addEventListener('change',e=>applyTextStyle('fontWeight',e.target.value));qs('fLine').addEventListener('input',e=>applyTextStyle('lineHeight',e.target.value));qs('fLetter').addEventListener('input',e=>applyTextStyle('letterSpacing',e.target.value));qs('fTextAlign').addEventListener('change',e=>applyTextStyle('textAlign',e.target.value));qs('fPadX').addEventListener('change',e=>applyTextStyle('paddingX',e.target.value));qs('fPadY').addEventListener('change',e=>applyTextStyle('paddingY',e.target.value));qs('fBg').addEventListener('change',e=>applyTextStyle('background',e.target.value));qs('fColor').addEventListener('change',e=>applyTextStyle('color',e.target.value));qs('fBorder').addEventListener('change',e=>applyTextStyle('borderColor',e.target.value));qs('fBorderW').addEventListener('change',e=>applyTextStyle('borderWidth',e.target.value));qs('fRadius').addEventListener('change',e=>applyTextStyle('borderRadius',e.target.value));qs('fOpacity').addEventListener('change',e=>applyTextStyle('opacity',e.target.value));qs('fRotate').addEventListener('change',e=>setRotate(e.target.value));qs('fZ').addEventListener('change',e=>setZIndex(e.target.value));qs('fBgColor').addEventListener('input',e=>{qs('fBg').value=e.target.value;applyTextStyle('background',e.target.value)});qs('fColorPicker').addEventListener('input',e=>{qs('fColor').value=e.target.value;applyTextStyle('color',e.target.value)});document.querySelectorAll('[data-format-toggle]').forEach(btn=>btn.addEventListener('click',()=>{if(!selected||!editing)return;const kind=btn.dataset.formatToggle;if(kind==='bold')applyTextStyle('fontWeight',parseInt(getComputedStyle(selected).fontWeight,10)>=600?'400':'700');if(kind==='italic')applyTextStyle('fontStyle',getComputedStyle(selected).fontStyle==='italic'?'normal':'italic');if(kind==='underline')applyTextStyle('textDecoration',(getComputedStyle(selected).textDecorationLine||'').includes('underline')?'none':'underline')}));document.querySelectorAll('[data-step-target]').forEach(btn=>btn.addEventListener('click',()=>{const input=qs(btn.dataset.stepTarget);if(!input||input.disabled)return;const current=parseFloat(input.value)||0;const step=parseFloat(btn.dataset.step)||1;input.value=(current+step).toFixed(Math.max(0,(String(step).split('.')[1]||'').length));input.dispatchEvent(new Event('input',{bubbles:true}))}));
+stage.addEventListener('pointerdown',stagePointerDown);stage.addEventListener('pointermove',stagePointerMove);stage.addEventListener('pointerup',stagePointerUp);stage.addEventListener('pointercancel',stagePointerUp);stage.addEventListener('mouseleave',()=>stage.querySelector('.cursor-glow')?.remove());stage.addEventListener('wheel',stageWheel,{passive:false});stage.addEventListener('click',e=>{lastEditorPoint={x:e.clientX,y:e.clientY};if(editing&&(e.target===stage||e.target.classList.contains('slide-inner')))clearSelect()});
+document.addEventListener('keydown',e=>{const tag=document.activeElement?.tagName;const activeIsTextEditor=!!document.activeElement?.isContentEditable||tag==='TEXTAREA';const mod=e.metaKey||e.ctrlKey;if(mod&&e.shiftKey&&e.key.toLowerCase()==='h'){e.preventDefault();setTopbarCollapsed(!topbarCollapsed);return}if(!editing&&mod&&e.key.toLowerCase()==='z'){e.preventDefault();e.shiftKey?redoAction():undoAction();return}if(editing&&mod&&e.key.toLowerCase()==='z'&&(!activeIsTextEditor||document.activeElement?.isContentEditable)){e.preventDefault();e.stopPropagation();e.shiftKey?redoAction():undoAction();return}if((tag==='INPUT'||tag==='TEXTAREA'||document.activeElement?.isContentEditable)&&e.key!=='Escape'){if(mod&&e.key.toLowerCase()==='s'){e.preventDefault();save()}return}if(e.key==='?'){e.preventDefault();toggleHelp();return}if(e.key.toLowerCase()==='f'){e.preventDefault();toggleFullscreen();return}if(e.key==='Escape'){if(helpOpen){toggleHelp(false);return}if(overviewOpen){toggleOverview(false);return}if(presenterOpen){togglePresenter(false);return}}if(e.key.toLowerCase()==='e'){if(hiddenEntry){hiddenEntry=false;qs('editBtn').style.display='';save()}toggleEdit();return}if(e.key.toLowerCase()==='s'){save();return}if(e.key==='Home'){e.preventDefault();go(0);return}if(e.key==='End'){e.preventDefault();go(slides.length-1);return}if(e.key==='ArrowRight'||e.key===' '){e.preventDefault();next()}if(e.key==='ArrowLeft'){e.preventDefault();prev()}if(editing&&selected&&selected.dataset.inlineText!=='1'&&!selected.dataset.nestedType&&!isTableContent(selected)&&['ArrowUp','ArrowDown','ArrowLeft','ArrowRight'].includes(e.key)){e.preventDefault();const b=getBox(selected),step=e.shiftKey?1:.2;push();setBox(selected,b.x+(e.key==='ArrowRight'?step:e.key==='ArrowLeft'?-step:0),b.y+(e.key==='ArrowDown'?step:e.key==='ArrowUp'?-step:0),b.w,b.h);save();updatePanel()}if(editing&&mod&&e.key.toLowerCase()==='d'){e.preventDefault();duplicate()}});
+function updateTimer(force){const el=qs('timerBtn'); if(!el)return; const t=Date.now()-timerStart; const m=Math.floor(t/60000), sec=Math.floor((t%60000)/1000); const txt=`${String(m).padStart(2,'0')}:${String(sec).padStart(2,'0')}`; el.textContent=txt; const pt=qs('presenterTimer'); if(pt)pt.textContent=txt}
+function toggleFullscreen(){const d=document; if(!(d.fullscreenElement||d.webkitFullscreenElement)){const el=d.documentElement; (el.requestFullscreen||el.webkitRequestFullscreen||function(){})?.call(el)} else {(d.exitFullscreen||d.webkitExitFullscreen||function(){})?.call(d)}}
+function toggleHelp(v){const h=qs('helpOverlay'); if(!h)return; helpOpen=typeof v==='boolean'?v:!helpOpen; h.classList.toggle('open',helpOpen); if(helpOpen)h.setAttribute('aria-hidden','false'); else h.setAttribute('aria-hidden','true')}
+function createImagePlaceholder(){
+  const el=document.createElement('div');
+  el.className='editable image-placeholder';
+  el.dataset.editable='';
+  el.dataset.noText='1';
+  el.dataset.kind='image';
+  el.dataset.new='1';
+  el.style.zIndex='10';
+  setBox(el,30,30,32,25);
+  el.contentEditable='false';
+  el.style.pointerEvents='auto';
+  el.innerHTML='<strong>IMAGE / CHART</strong><small>图片或图表占位框</small><button type="button" class="image-upload-btn" data-upload>上传图片</button>';
+  ensureSlideInner(active()).appendChild(el);
+  return el;
+}
+function uploadImage(target=null,createNew=false){
+  const fi=qs('imageUpload');
+  if(!fi)return;
+  fi.value='';
+  pendingUploadTarget=target;
+  pendingUploadCreateNew=!!createNew;
+  fi.click();
+}
+qs('helpOverlay')?.addEventListener('click',e=>{if(e.target===e.currentTarget)toggleHelp(false)});
+let pendingUploadTarget=null,pendingUploadCreateNew=false;
+qs('imageUpload')?.addEventListener('change',function(e){
+  const f=e.target.files[0];
+  if(!f)return;
+  let target=pendingUploadTarget;
+  const createNew=pendingUploadCreateNew;
+  pendingUploadTarget=null;
+  pendingUploadCreateNew=false;
+  const r=new FileReader();
+  r.onload=()=>{
+    push();
+    if(createNew)target=createImagePlaceholder();
+    if(!target||!isEditableElement(target)||!document.body.contains(target))target=createImagePlaceholder();
+    target.classList.add('image-placeholder');
+    target.dataset.editable='';
+    target.dataset.noText='1';
+    target.dataset.kind='image';
+    target.contentEditable='false';
+    target.style.pointerEvents='auto';
+    target.innerHTML='<img class="uploaded" alt="已上传图片"><button type="button" class="image-upload-btn" data-upload>更换图片</button>';
+    target.querySelector('img').src=r.result;
+    bindEditable();
+    select(target);
+    save();
+  };
+  r.onerror=()=>alert('图片读取失败，请重试。');
+  r.readAsDataURL(f);
+});
+
+let clipEl=null,clipBox=null,overviewOpen=false,autoplayRunning=false,autoplayTimerId=0,gV=null,gH=null,toastTimer=0;
+function snapValue(edges,targets,th){let best=null;for(const e of edges){for(const t of targets){const d=t-e;if(Math.abs(d)<=th&&(!best||Math.abs(d)<Math.abs(best.d)))best={t:t,d:d}}}return best}
+function snapRect(x,y,w,h,el){
+  const p=boxParent(el),pr=paddingBox(p),pw=pr.width,ph=pr.height,th=5;
+  const xs=[0,pw/2,pw],ys=[0,ph/2,ph];
+  if(p)p.querySelectorAll(EDITABLE_SELECTOR).forEach(o=>{
+    if(o===el||o.hidden||o.dataset.inlineText==='1')return;
+    const r=o.getBoundingClientRect();
+    xs.push(r.left-pr.left,r.left-pr.left+r.width/2,r.right-pr.left);
+    ys.push(r.top-pr.top,r.top-pr.top+r.height/2,r.bottom-pr.top);
+  });
+  const L=x*pw/100,W=w*pw/100,T=y*ph/100,H=h*ph/100;
+  const v=snapValue([L,L+W/2,L+W],xs,th),hz=snapValue([T,T+H/2,T+H],ys,th);
+  const o={x:null,y:null,gx:null,gy:null};
+  if(v){o.x=x+v.d/pw*100;o.gx=pr.left+v.t}
+  if(hz){o.y=y+hz.d/ph*100;o.gy=pr.top+hz.t}
+  return o;
+}
+function showGuides(sp){removeGuides();if(sp.gx!=null){gV=document.createElement('i');gV.className='guide-v';gV.style.left=sp.gx+'px';stage.appendChild(gV)}if(sp.gy!=null){gH=document.createElement('i');gH.className='guide-h';gH.style.top=sp.gy+'px';stage.appendChild(gH)}}
+function removeGuides(){if(gV){gV.remove();gV=null}if(gH){gH.remove();gH=null}}
+function alignSelected(mode){if(!selected||selected.dataset.inlineText==='1'||selected.dataset.nestedType==='1'||isTableContent(selected))return;push();const b=getBox(selected);if(mode==='left')setBox(selected,0,b.y,b.w,b.h);else if(mode==='centerX')setBox(selected,(100-b.w)/2,b.y,b.w,b.h);else if(mode==='right')setBox(selected,100-b.w,b.y,b.w,b.h);else if(mode==='top')setBox(selected,b.x,0,b.w,b.h);else if(mode==='centerY')setBox(selected,b.x,(100-b.h)/2,b.w,b.h);else if(mode==='bottom')setBox(selected,b.x,100-b.h,b.w,b.h);save();updatePanel()}
+function zOf(e){return parseFloat(e.style.zIndex)||1}
+function reorderLayer(dir){if(!selected)return;if(getComputedStyle(selected).position==='static'){toast('该元素在文档流中，不参与层级叠加');return}push();const z=zOf(selected),p=selected.parentElement,abs=[...p.children].filter(x=>x!==selected&&x.classList.contains('editable')&&getComputedStyle(x).position==='absolute');if(dir==='front')selected.style.zIndex=abs.reduce((m,x)=>Math.max(m,zOf(x)),1)+1;else if(dir==='back')selected.style.zIndex=abs.reduce((m,x)=>Math.min(m,zOf(x)),1)-1;else if(dir==='forward'){const up=abs.filter(x=>zOf(x)>z).sort((a,b)=>zOf(a)-zOf(b))[0];if(up){const uz=zOf(up);selected.style.zIndex=uz;up.style.zIndex=z}}else if(dir==='backward'){const dn=abs.filter(x=>zOf(x)<z).sort((a,b)=>zOf(b)-zOf(a))[0];if(dn){const dz=zOf(dn);selected.style.zIndex=dz;dn.style.zIndex=z}}save();updatePanel()}
+function copyElement(){if(!selected)return;clipEl=selected.cloneNode(true);clipEl.classList.remove('selected');clipEl.querySelectorAll('.resize-handle').forEach(x=>x.remove());clipBox=getBox(selected);toast('已复制元素，可切换到其他页粘贴')}
+function pasteElement(){if(!clipEl)return;push();const c=clipEl.cloneNode(true);const p=ensureSlideInner(active());c.style.pointerEvents='auto';c.querySelectorAll('.resize-handle').forEach(x=>x.remove());c.removeAttribute('data-bound');c.classList.remove('selected');c.dataset.new='1';p.appendChild(c);c.style.position='absolute';setBox(c,clipBox.x,clipBox.y,clipBox.w,clipBox.h);bindEditable();select(c);save()}
+function toast(msg){let t=qs('toast');if(!t){t=document.createElement('div');t.id='toast';t.className='toast';document.body.appendChild(t)}t.textContent=msg;t.classList.add('show');if(toastTimer)clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.classList.remove('show'),1800)}
+function exportNotes(){const title=((readDeckList().find(d=>d.id===activeDeckId)||{}).title)||'演示备注';const lines=['# 演讲备注 · '+title];slides.forEach((s,i)=>{lines.push('\n## '+(i+1)+' · '+s.dataset.template);if(notes[i]&&notes[i].trim())lines.push(notes[i].trim())});const blob=new Blob([lines.join('\n\n')],{type:'text/markdown'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='premium-notes.md';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);toast('已导出演讲备注')}
+function renderOverview(){const g=qs('overviewGrid');if(!g)return;g.innerHTML='';slides.forEach((s,i)=>{const b=document.createElement('button');b.className='overview-card'+(i===page?' active':'');b.innerHTML=`<span class="no">${String(i+1).padStart(2,'0')}</span><b>${escapeHtml(s.dataset.template||'')}</b><span>${escapeHtml(s.dataset.core||'')}</span>`;b.onclick=()=>{toggleOverview(false);go(i)};g.appendChild(b)})}
+function toggleOverview(v){overviewOpen=typeof v==='boolean'?v:!overviewOpen;const o=qs('overviewOverlay');if(o)o.classList.toggle('open',overviewOpen);if(overviewOpen)renderOverview()}
+function autoplaySec(){const v=parseFloat(qs('autoplayInterval')?.value);return Number.isFinite(v)&&v>0?Math.min(30,Math.max(1,v)):5}
+function startAutoplay(){if(autoplayRunning)return;autoplayRunning=true;const b=qs('autoplayBtn');if(b){b.textContent='⏸ 暂停';b.classList.add('running')}tickAutoplay()}
+function stopAutoplay(){autoplayRunning=false;if(autoplayTimerId){clearTimeout(autoplayTimerId);autoplayTimerId=0}const b=qs('autoplayBtn');if(b){b.textContent='▶ 自动播放';b.classList.remove('running')}}
+function tickAutoplay(){if(!autoplayRunning)return;autoplayTimerId=setTimeout(()=>{if(!autoplayRunning)return;if(page>=slides.length-1&&reveal>=4){stopAutoplay();toast('自动播放已结束');return}next();tickAutoplay()},autoplaySec()*1000)}
+qs('overviewBtn').onclick=()=>toggleOverview();qs('overviewClose').onclick=()=>toggleOverview(false);qs('overviewOverlay').addEventListener('click',e=>{if(e.target===e.currentTarget)toggleOverview(false)});
+qs('alignLeft').onclick=()=>alignSelected('left');qs('alignCenterX').onclick=()=>alignSelected('centerX');qs('alignRight').onclick=()=>alignSelected('right');qs('alignTop').onclick=()=>alignSelected('top');qs('alignCenterY').onclick=()=>alignSelected('centerY');qs('alignBottom').onclick=()=>alignSelected('bottom');
+qs('bringFront').onclick=()=>reorderLayer('front');qs('bringForward').onclick=()=>reorderLayer('forward');qs('sendBackward').onclick=()=>reorderLayer('backward');qs('sendBack').onclick=()=>reorderLayer('back');
+qs('copyElement').onclick=copyElement;qs('pasteElement').onclick=pasteElement;qs('exportNotes').onclick=exportNotes;qs('autoplayBtn').onclick=()=>autoplayRunning?stopAutoplay():startAutoplay();
+applySidebarState();applyTopbarState();window.addEventListener('resize',()=>{refreshThumbScales();queueStageLayout?.()});initDecks();renderTemplateSelect();makeThumbs();qs('themeSelect').value=document.body.dataset.theme||'default';if(hiddenEntry)qs('editBtn').style.display='none';else qs('editBtn').style.display='';bindEditable();render();restoreLastFolder();try{if(location.hash&&/^#\d+$/.test(location.hash)){const n=parseInt(location.hash.slice(1),10); if(n>=1&&n<=slides.length){page=n-1;reveal=4;render()}}}catch(e){}window.addEventListener('hashchange',()=>{try{const m=/^#(\d+)$/.exec(location.hash); if(m){const n=parseInt(m[1],10); if(n>=1&&n<=slides.length&&n-1!==page){go(n-1)}}}catch(e){}});updateTimer(true);timerId=setInterval(()=>{updateTimer();window.fitStageFrame?.()},1000);queueStageLayout?.();
+})();
+</script>
+</body></html>
